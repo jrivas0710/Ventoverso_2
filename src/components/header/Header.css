@@ -1,0 +1,125 @@
+html {
+    box-sizing: border-box;
+    margin: auto 0;
+   }
+   *,
+   *::before,
+   *::after {
+    box-sizing: inherit;
+    
+   }
+  
+  /* este es mi contenedor grid que es como a nivel del body, contendra todos los componentes del body */
+    .grid-container{
+     width: 100vw;
+     /* display: grid; COMENTADO PARA IMPORTAR COMPONENTE CARRUSEL EN HOME */
+     grid-template-rows: 1fr 2fr 1fr 2fr 1fr; /* hice 5 filas porque arriba estara el header, al medio el main con 3 filas y bajo el footer con 1*/
+     grid-template-areas: /* les asigne nombres literales a cada area definida arriba */
+     'header'
+     'section1'
+     'iconos'
+     'section2'
+     'section3'
+     'footer';
+
+     padding-bottom: 30px;
+    }
+  
+  /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+  
+   /* HEADER / CATEGORIAS / ICONOS  */
+  
+  /* este es mi header, le asigne una grid area dentro de mi contenedor grid */
+    .header-grid{
+     grid-area: header; 
+     width: 100%;
+     
+    }
+  
+    .header-flex{
+      background-color: rgb(211, 210, 210);
+      height: 6rem;
+      align-items: center;
+      position: relative;
+     
+    }
+     
+    .header-flex, .categories-flex{
+     display: flex;
+     justify-content: space-around;
+     margin: 0;
+    
+    }
+    
+    .categories-flex{
+     list-style: none;
+     justify-content: space-between;
+     padding-left: 2rem;
+     padding-right: 2rem;
+     background-color: black;
+     color: whitesmoke;
+     height: 3rem;
+     align-items: center;
+     
+    }
+  
+    ul > a{
+      color: whitesmoke;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      align-items: center;
+      padding-top: 0.6rem ;
+      
+    }
+  
+    ul > a:hover{
+      background-color: rgb(74, 192, 192);;
+      color: white;
+      
+    }
+  
+    .logo-header{
+      background-color: rgb(86, 212, 212);
+      padding:0.5rem;
+      border-radius: 1rem;
+    }
+  
+    .filter{
+      border-radius: 2rem;
+      height: 2.3rem;
+      width: 23rem;
+      border: none;
+      text-align: center;
+     }
+  
+    .filter-button{
+      position: absolute;
+      top: 30.8%;
+      right: 61%;
+      height: 2.3rem;
+      width: 2.9rem;
+      border-radius: 3rem;
+      background-color: rgb(0,0,0,0);
+      border: none;
+      }
+   
+    .filter-icon {
+      height: 1rem;
+      width: 1rem;
+      }
+  
+    .icons{
+      display: flex;
+      justify-content: space-between;
+      width: 10rem;
+    }
+  
+    .like, .user, .carrito{
+      width: 17px;
+      height: 17px;
+      
+    }
+  
+  
+  /*   ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */  

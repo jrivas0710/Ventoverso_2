@@ -1,0 +1,29 @@
+
+
+.iconos {
+    grid-area: iconos;
+    background-color: rgb(86, 212, 212);
+    height: auto;
+    margin-bottom: 6rem;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.iconos > div {
+    width: auto;
+    height: auto;
+    font-weight: bold;
+    display: flex;
+    gap: 0.5rem;
+
+}
+
+.imagenes-iconos {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1rem;
+}
+

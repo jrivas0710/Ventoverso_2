@@ -1,0 +1,37 @@
+.grid-footer {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: rgb(211, 210, 210);
+    grid-area: footer;
+    margin-top: 2rem;
+  }
+  .footer1 { 
+      
+      padding: 20 px;
+      font-size: 13px;
+      text-align: center;
+  
+  }
+  .footer2 {
+    
+      padding: 20 px;
+      font-size: 13px;
+      text-align: center;
+  
+    
+  }
+  .footer3 {
+    
+      padding: 20 px;
+      font-size: 13px;
+      text-align: center;
+  
+  }
+  
+  .footer4 {
+    
+      padding: 20 px;
+      font-size: 13px;
+      text-align: center;
+  
+  }
