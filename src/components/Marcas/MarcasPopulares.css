@@ -1,0 +1,30 @@
+
+
+.seccion-populares{
+    display: flex;
+    
+    justify-content: space-around;
+    grid-area: section3;
+    font-weight: bold;
+    padding-top:3rem;
+    position:relative;
+    margin-top: 11rem;
+    }
+
+.texto-marcas-populares{
+    position: absolute;
+    bottom:91%;
+    right: 42%;
+    margin: 0 auto
+    
+}
+
+
+.seccion-populares > div {
+    
+    height: 10rem;
+    width: 15rem;
+    background-color: rgb(211, 210, 210);
+
+}
+

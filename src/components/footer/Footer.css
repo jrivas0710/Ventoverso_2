@@ -1,4 +1,4 @@
-.grid-footer {
+/* .grid-footer {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     background-color: rgb(211, 210, 210);
@@ -34,4 +34,84 @@
       font-size: 13px;
       text-align: center;
   
+  } */
+
+  /* .grid-footer {
+    grid-area: footer;
+    display: flex;
+    background-color: rgb(211, 210, 210);
+    margin-top: 2rem;
+    
+}
+ */
+
+ 
+.grid-footer {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: rgb(211, 210, 210);
+    grid-area: footer;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 5rem;
+    padding-top: 1rem;
+    
+  }
+  
+  
+  .footer1 { 
+      
+      padding: 20 px;
+      font-size: 13px;
+      text-align: center;
+  
+  }
+  .footer2 {
+      
+      padding: 20 px;
+      font-size: 13px;
+      ;
+  
+    
+  }
+  .footer3 {
+    
+      padding: 20 px;
+      font-size: 13px;
+     
+  
+  }
+  
+  .footer4 {
+    
+      padding: 20 px;
+      font-size: 13px;
+      
+  
+  }
+  
+  .facebook, .instagram, .tik-tok{
+      height: 2rem;
+      width: 2rem;
+      
+      margin-right: 1rem ;
+     
+  }
+  
+  
+  
+  .logo{
+      height: 3rem;
+      width: 10rem;
+      margin-left: 3rem;
+      margin-top: 1rem;
+      background-color: rgb(74, 192, 192); 
+      align-items: center;
+      padding-top: 0.8rem;
+      text-align: center;
+  }
+  
+  .direccion{
+      margin-right: 80px;
+     
   }

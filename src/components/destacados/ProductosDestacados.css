@@ -1,0 +1,63 @@
+
+
+.productos-destacados{
+    grid-area: section2;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+    padding-top: 3rem;
+    margin-bottom: 4rem;
+   
+   
+}
+
+.productos-destacados > div {
+    
+    height: 13rem;
+    width: 15rem;
+    
+}
+
+.producto{
+    background-color: rgb(211, 210, 210);
+    height: 12rem;
+    width: 14rem;
+    
+    
+}
+
+
+.ranking{
+    
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nombre-producto{
+ 
+    text-align: start;
+
+}
+.precio{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.nombre-precio-ranking{
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-productos-destacados{
+    position: absolute;
+    bottom: 96%;
+    right: 40%;
+    margin: 0 auto
+ 
+    
+    
+}
