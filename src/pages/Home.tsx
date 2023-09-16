@@ -1,33 +1,27 @@
 import { MarcasPopulares } from "../components/Marcas/MarcasPopulares"
-import { Carrusel } from "../components/carrusel/Carrusel"
-import { ProductosDestacados } from "../components/destacados/ProductosDestacados"
+import {Carrusel}  from "../components/carrusel/Carrusel"
+import { Destacados } from "../components/destacados/ProductosDestacados"
 import {Footer} from "../components/footer/Footer"
 import { Header } from "../components/header/Header"
 import Iconos from "../components/iconos/Iconos"
 import SideSheet from "../components/sidesheet/SideSheet"
 
-interface props {
-  imagen:string;
-  rating:string;
-  nombre:string;
-  precio:string;
- }
- 
+//la data se supone que es el json de back para Carrusel y Destacados
 
-const Home = ({imagen, nombre, rating, precio}:props) => {
-    TODO: 'IMPORTAR FOOTER ABAJO'
+
+
+const Home = () => {
+    
 
   return (
     <>
         <Header />
-        <Carrusel />
+        <Carrusel
+         /* data = {dataCarrusel} *//>
         <SideSheet/>
         <Iconos/>
-        <ProductosDestacados 
-        imagen = {imagen}
-        nombre ={nombre}
-        rating = {rating}
-        precio = {precio}
+        <Destacados 
+         /* data = {dataDestacados} */
         />
         <MarcasPopulares/>
         <Footer/>

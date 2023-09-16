@@ -1,6 +1,6 @@
-import "./Carrusel.css"
+ import "./Carrusel.css"
 
-function Carrusel() {
+export function Carrusel() {
   return (
     <section className="carrusel-grid">
       <div id="conteItemsCarrusel">
@@ -77,5 +77,55 @@ function Carrusel() {
     </section>
   );
 }
+ 
 
-export { Carrusel };
+ 
+
+
+//AQUI EMPIEZA EL COMPONENTE CARRUSEL. 
+
+/* 
+import React, { useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+interface CarouselProps {
+  dataCarrusel: { image: string; text: string }[];
+}
+
+const Carrusel: React.FC<CarouselProps> = ({ dataCarrusel }) => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    beforeChange: (current: number, next: number) => setCurrentIndex(next),
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  return (
+    <div className="carousel">
+      <Slider {...settings} slickGoTo={currentIndex}> 
+        {dataCarrusel.map((item, index) => (
+          <div key={index} className="carousel-slide">
+            <img src={item.image} alt={item.text} />
+            <p>{item.text}</p>
+          </div>
+        ))}
+      </Slider>
+      <div className="navigation">
+        <button onClick={() => goToSlide(currentIndex - 1)}>Anterior</button>
+        <button onClick={() => goToSlide(currentIndex + 1)}>Siguiente</button>
+      </div>
+    </div>
+  );
+};
+
+export default Carrusel; */
