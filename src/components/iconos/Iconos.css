@@ -9,15 +9,16 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 5rem;
 }
 
 .iconos > div {
     width: auto;
-    height: auto;
+    height: 10rem;
     font-weight: bold;
     display: flex;
     gap: 0.5rem;
+    align-items: center;
 
 }
 

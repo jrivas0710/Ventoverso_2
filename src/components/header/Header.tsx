@@ -38,23 +38,15 @@ function Header() {
         <section>
           <ul className="categories-flex">
             <a href="#">
-              <li>Bronces</li>
+              <li><span>Bronces</span></li>
             </a>
             <a href="#">
-              <li>Maderas</li>
+              <li><span>Maderas</span></li>
             </a>
             <a href="#">
-              <li>Herramientas</li>
+              <li><span>Accesorios</span></li>
             </a>
-            <a href="#">
-              <li>Accesorios</li>
-            </a>
-            <a href="#">
-              <li>Ofertas</li>
-            </a>
-            <a href="#">
-              <li>Ayuda</li>
-            </a>
+          
           </ul>
         </section>
       </header>

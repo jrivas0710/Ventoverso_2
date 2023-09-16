@@ -13,7 +13,7 @@
 
 .texto-marcas-populares{
     position: absolute;
-    bottom:91%;
+    bottom:83%;
     right: 42%;
     margin: 0 auto
     
@@ -26,6 +26,7 @@
     width: 15rem;
     background-color: rgb(211, 210, 210);
     border: 1px solid black;
+    margin-top: 2rem
 
 }
 

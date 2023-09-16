@@ -1,3 +1,10 @@
+
+
+TODO:arreglar los a y cambiarlos por los li
+TODO:arreglar lo del padding de los a
+TODO:agregar iconos de las categorias
+
+
 html {
     box-sizing: border-box;
     margin: auto 0;
@@ -49,6 +56,7 @@ html {
      display: flex;
      justify-content: space-around;
      margin: 0;
+     
     
     }
     
@@ -57,29 +65,45 @@ html {
      justify-content: space-between;
      padding-left: 2rem;
      padding-right: 2rem;
+     
      background-color: black;
      color: whitesmoke;
-     height: 3rem;
+     height: 5rem;
      align-items: center;
      
+     
+    }
+
+    li{
+      height: 100%;
+      align-items: center;
+      margin: 0;
+      padding-top: 1.5rem;
+    }
+
+    span{
+      align-content: center
     }
   
     ul > a{
       color: whitesmoke;
-      width: 100%;
+      width: 200px;
       height: 100%;
       text-align: center;
       align-items: center;
-      padding-top: 0.6rem ;
+      
+      margin-left: 5rem;
+      margin-right: 5rem;
+      height: 5rem;
+     
       
     }
   
-    ul > a:hover{
+    /* ul > a:hover{
       background-color: rgb(74, 192, 192);;
       color: white;
-      
     }
-  
+   */
     .logo-header{
       background-color: rgb(86, 212, 212);
       padding:0.5rem;
@@ -121,6 +145,7 @@ html {
       height: 17px;
       
     }
-  
+
+   
   
   /*   ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */  

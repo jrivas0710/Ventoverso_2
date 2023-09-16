@@ -19,7 +19,7 @@ const Home = () => {
         <Header/>
         <Carrusel
          /* data = {dataCarrusel} *//>
-        <SideSheet/>
+        {/* <SideSheet/> */}
         <Iconos/>
         <Destacados 
          /* data = {dataDestacados} */
