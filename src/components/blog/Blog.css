@@ -1,0 +1,42 @@
+.vento-news {
+    display: flex;
+    
+    justify-content: space-around;
+    grid-area: section3;
+    font-weight: bold;
+    padding-top:3rem;
+    position:relative;
+    margin-top: 11rem;
+   
+    
+    }
+
+    .vento-news > div {
+        background-color: rgb(211, 210, 210);
+        height: 13rem;
+        width: 15rem;
+        justify-content: space-between;
+        border : 1px solid black
+    }
+
+  .texto-Vento-News {
+    position: absolute;
+    bottom:91%;
+    right: 45%;
+    margin: 0 auto
+    
+}
+
+.pie-blog{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.titulo-blog{
+   align-content: end;
+   background-color: white;
+   height: 50px;
+   width: 100%;
+   border-top : 1px solid black
+}
+

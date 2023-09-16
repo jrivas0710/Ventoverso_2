@@ -1,6 +1,6 @@
  import "./Carrusel.css"
 
-export function Carrusel() {
+export const Carrusel= () => {
   return (
     <section className="carrusel-grid">
       <div id="conteItemsCarrusel">

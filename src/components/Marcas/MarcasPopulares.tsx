@@ -14,8 +14,26 @@ export const MarcasPopulares = () => {
            <h2>Marcas populares</h2>
            </section>
 
-  
             <div></div>
+
+            <section className='texto-marcas-populares'>
+           <h2>Marcas populares</h2>
+           </section>
+
+            <div></div>
+
+            <section className='texto-marcas-populares'>
+           <h2>Marcas populares</h2>
+           </section>
+
+            <div></div>
+
+            <section className='texto-marcas-populares'>
+           <h2>Marcas populares</h2>
+           </section>
+
+            <div></div>
+  
           
   
   
