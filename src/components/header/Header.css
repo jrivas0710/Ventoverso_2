@@ -70,6 +70,7 @@ html {
      color: whitesmoke;
      height: 5rem;
      align-items: center;
+     margin-bottom: 2rem;
      
      
     }
@@ -121,9 +122,9 @@ html {
     .filter-button{
       position: absolute;
       top: 30.8%;
-      right: 61%;
-      height: 2.3rem;
-      width: 2.9rem;
+      right: 59.5%;
+      height: 1rem;
+      width: 2rem;
       border-radius: 3rem;
       background-color: rgb(0,0,0,0);
       border: none;

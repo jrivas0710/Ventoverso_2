@@ -1,5 +1,6 @@
 import "./Footer.css"
-//hola
+
+
 
 export const Footer = () => {
     return (

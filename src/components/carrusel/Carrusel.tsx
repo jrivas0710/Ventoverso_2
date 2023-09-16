@@ -8,13 +8,13 @@ export const Carrusel= () => {
           <div className="tarjetas-carrusel tarjeta-carrusel-1"></div>
           <div className="flechas-carrusel">
             <a href="#enlaceItem3">
-              <i>
+             {/*  <i>
                 <img
                   src="./images/flecha-izquierda.png"
                   alt="flecha-izquierda"
                   className="flecha"
                 />
-              </i>
+              </i> */}
             </a>
             <a href="#enlaceItem2">
               <i>
