@@ -89,8 +89,8 @@ export const Destacados = (props:{dataDestacados:Destacado []}) => {
                                 {item.rating}
                                 {item.estrellas}
                                 <img src="images/estrellas.png" alt="ranking" className='ranking' />
-                                <span className='nombre-producto'>{item.nombre}Nombre del producto</span>
-                                <span className='precio'>{item.precio}$99.999</span>
+                                <span className='nombre-producto'>{item.nombre}</span>
+                                <span className='precio'>{item.precio}</span>
                             </div>
                         </div>)})
                     }
