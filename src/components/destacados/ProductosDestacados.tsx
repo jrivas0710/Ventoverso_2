@@ -1,3 +1,4 @@
+import { Destacado } from '../../App'
 import './ProductosDestacados.css'
 
 
@@ -5,6 +6,7 @@ import './ProductosDestacados.css'
 
 
 
+/* 
 export const Destacados = () => {
 
     return (
@@ -60,24 +62,23 @@ export const Destacados = () => {
             </div>
         </>)
 }
+ */
 
 
 
 
 
-/* interface DestacadosProps {
-    dataProps: { image: string; text: string }[];
-  }
 
+export const Destacados = (props:{dataDestacados:Destacado []}) => {
 
-export const Destacados:React.FC<DestacadosProps> = ({dataProps}) => {
+    console.log(props)
 
     return (
         <>
 
 
          <div className='productos-destacados'>
-                {dataProps.map(item => {
+                {props.dataDestacados.map(item => {
                     return (
 
                         <div>
@@ -85,6 +86,7 @@ export const Destacados:React.FC<DestacadosProps> = ({dataProps}) => {
                             <div className='producto'><img src={item.imagenUrl} alt={item.nombre} /></div>
                             <div className='nombre-precio-ranking'>
                                 {item.rating}
+                                {item.estrellas}
                                 <img src="images/estrellas.png" alt="ranking" className='ranking' />
                                 <span className='nombre-producto'>{item.nombre}Nombre del producto</span>
                                 <span className='precio'>{item.precio}$99.999</span>
@@ -96,7 +98,7 @@ export const Destacados:React.FC<DestacadosProps> = ({dataProps}) => {
         </>)
 }
 
- */
+ 
 
 
 
