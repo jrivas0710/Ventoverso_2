@@ -5,8 +5,9 @@ import {Footer} from "../components/footer/Footer"
 import { Header } from "../components/header/Header"
 import Iconos from "../components/iconos/Iconos"
 import SideSheet from "../components/sidesheet/SideSheet"
-import {Blog} from "../components/blog/Blog"
+import {Blogs} from "../components/blog/Blog"
 import dataDestacados from '../components/destacados/dataDestacados.json'
+import dataBlog from '../components/blog/dataBlog.json'
 
 
 //la data se supone que es el json de back para Carrusel y Destacados
@@ -27,7 +28,7 @@ const Home = () => {
           dataDestacados = {dataDestacados} 
         />
         <MarcasPopulares/>
-        <Blog/>
+        <Blogs dataBlog = {dataBlog}/>
         <Footer/>
     </>
   )

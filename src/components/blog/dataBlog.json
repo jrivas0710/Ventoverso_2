@@ -1,0 +1,46 @@
+
+[{
+    "id" :"123",
+    
+    
+    "titulo":"Tarjeta Ejemplo",
+   
+    
+    "imagenUrl": "https://ejemplo.com/imagen.jpg"
+    
+    
+    },
+
+    {
+        "id" :"123",
+        
+        
+        "titulo":"Tarjeta Ejemplo",
+       
+        
+        "imagenUrl": "https://ejemplo.com/imagen.jpg"
+        
+        
+        },
+        {
+            "id" :"123",
+            
+            
+            "titulo":"Tarjeta Ejemplo",
+           
+            
+            "imagenUrl": "https://ejemplo.com/imagen.jpg"
+            
+            
+            },
+            {
+                "id" :"123",
+                
+                
+                "titulo":"Tarjeta Ejemplo",
+               
+                
+                "imagenUrl": "https://ejemplo.com/imagen.jpg"
+                
+                
+                }]

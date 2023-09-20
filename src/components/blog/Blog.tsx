@@ -1,7 +1,9 @@
 import './Blog.css'
+import { Blog } from '../../App'
 
 
-export const Blog = () => {
+
+/* export const Blogs = () => {
 
 
     return (
@@ -42,16 +44,13 @@ export const Blog = () => {
     )
 
 }
-
+ */
 //COMPONENTE BLOG Y NOTICIAS
 
 
-/* interface BlogProps{
-    dataBlog: { image: string; text: string }[];
-  }
 
 
-export const Blog:React.FC<BlogProps> = ({ dataBlog}) => {
+export const Blogs = (props: { dataBlog: Blog[] }) => {
 
 
     return (
@@ -59,16 +58,23 @@ export const Blog:React.FC<BlogProps> = ({ dataBlog}) => {
 
             <div className='vento-news'>
 
-                {dataBlog.map(item => {
+                {props.dataBlog.map(item => {
                     return (
+                        <div className='container'>
+                            <section className='texto-Vento-News'>
+                                <h2>Vento News</h2>
+                            </section>
 
-           <section className='texto-Vento-News'>
-           <h2>Vento News</h2>
-           </section>
-            <div className='pie-blog'>
-                <img src={item.imagerUrl}></img>
-                <div className='titulo-blog'>{item.titulo}</div>
-            </div>
+                            <div className='contenido-pie'>
+
+                            <div className='pie-blog'>
+                            <img src={item.imagenUrl}></img>
+                            </div>
+                                
+                            <div className='titulo-blog'>{item.titulo}</div>
+
+                            </div>
+                        </div>
 
 
                     )
@@ -79,7 +85,7 @@ export const Blog:React.FC<BlogProps> = ({ dataBlog}) => {
     )
 
 }
- */
+
 
 
 

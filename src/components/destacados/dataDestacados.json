@@ -6,6 +6,30 @@
     "nombre" : "Producto genial",
     "precio":  19900
     
+},
+{
+    "imagenUrl" : "https://ejemplo.com/imagen.jpg",
+    "estrellas" : "3",
+    "rating" : 4.5,
+    "nombre" : "Producto genial",
+    "precio":  19900
+    
+},
+{
+    "imagenUrl" : "https://ejemplo.com/imagen.jpg",
+    "estrellas" : "3",
+    "rating" : 4.5,
+    "nombre" : "Producto genial",
+    "precio":  19900
+    
+},
+{
+    "imagenUrl" : "https://ejemplo.com/imagen.jpg",
+    "estrellas" : "3",
+    "rating" : 4.5,
+    "nombre" : "Producto genial",
+    "precio":  19900
+    
 }]
 
 

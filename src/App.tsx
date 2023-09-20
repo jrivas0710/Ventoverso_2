@@ -12,6 +12,12 @@ export type Destacado= {
   precio:number
 } 
 
+export type Blog = {
+  imagenUrl : string,
+  id:string,
+  titulo:string
+}
+
 
 function App() {
   

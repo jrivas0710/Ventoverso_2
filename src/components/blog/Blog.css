@@ -7,9 +7,17 @@
     padding-top:3rem;
     position:relative;
     margin-top: 11rem;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+   
+}
+
    
     
-    }
 
     .vento-news > div {
         background-color: rgb(211, 210, 210);
@@ -27,16 +35,24 @@
     
 }
 
-.pie-blog{
+.contenido-pie{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 .titulo-blog{
-   align-content: end;
+   
    background-color: white;
-   height: 50px;
-   width: 100%;
+   height: 30%;
    border-top : 1px solid black
+  
+}
+
+.pie-blog{
+    background-color: palevioletred;
+    width: 100%;
+    height: 70%;
 }
 
