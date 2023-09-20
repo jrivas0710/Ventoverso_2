@@ -1,6 +1,6 @@
 import './App.css'
 import { Home } from './pages/Home'
-import dataDestacados from './components/destacados/dataDestacados.json'
+
 
 
 
@@ -13,11 +13,11 @@ export type Destacado= {
 } 
 
 
-function App(props:{dataDestacados:Destacado []}) {
+function App() {
   
   return (
     <>
-      <Home dataDestacados = {dataDestacados} />
+      <Home/>
     </>
   )
 }
