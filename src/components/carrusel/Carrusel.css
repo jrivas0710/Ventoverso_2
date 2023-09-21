@@ -5,13 +5,14 @@
   grid-area: carrusel;
   width: auto;
   height: 100vh;
+  position: relative;
   
 }
  
   .carousel-container {
   width: 1400px;
   padding: 20px;
-  position: relative;
+  
 }
   
 /* Estilos para las imágenes en el carrusel */
@@ -29,8 +30,7 @@
 .slick-next {
   
   position: absolute;
-  top: 100%;
-  left: 63%;
+  left: 62%;
   transform: translateY(-50%);
   font-size: 24px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -41,10 +41,9 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in;
   z-index: 2;
-  position: relative;
+  
+ 
 }
-
-
 
 .slick-prev {
   

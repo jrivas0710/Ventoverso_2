@@ -32,7 +32,7 @@ const Home = () => {
         <Header/>
         <Carrusel 
         images={images} />
-        {/* <SideSheet/> */}
+       <SideSheet/> 
         <Iconos/>
         <Destacados 
           dataDestacados = {dataDestacados} 

@@ -9,10 +9,10 @@ interface SideSheetProps {
 const SideSheet2: React.FC<SideSheetProps> = ({ isOpen, onClose, children }) => {
   const [isSideSheetOpen, setIsSideSheetOpen] = useState(isOpen);
 
-  const handleClose = () => {
+/*   const handleClose = () => {
     setIsSideSheetOpen(false);
     onClose();
-  };
+  }; */
 
 
   const [formData, setFormData] = useState({
@@ -22,7 +22,7 @@ const SideSheet2: React.FC<SideSheetProps> = ({ isOpen, onClose, children }) => 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
+    setFormData((prevData) => ({ //prevdata es el formdata de arriba desestructurado
       ...prevData,
       [name]: value,
     }));
@@ -42,7 +42,7 @@ const SideSheet2: React.FC<SideSheetProps> = ({ isOpen, onClose, children }) => 
     height: '100%',
     background: '#fff',
     boxShadow: '-2px 0px 5px rgba(0, 0, 0, 0.5)',
-    transition: 'right 100s cubic-bezier(0.19, 1, 0.22, 1)', // Animación de deslizamiento
+    transition: 'right 1s ease' // Animación de deslizamiento
   };
 
   return (
