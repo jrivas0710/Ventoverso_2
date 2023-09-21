@@ -1,0 +1,62 @@
+/* Estilos para el SideSheet */
+.side-sheet {
+    position: fixed;
+    top: 0;
+    right: -450px; /* Inicialmente, el SideSheet está fuera de la pantalla */
+    width: 420px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    
+    transition: right 0.5s ease; /* Transición de 1 segundo */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .side-sheet.open {
+    right: 0; /* Muestra el SideSheet dentro de la pantalla */
+  }
+  
+  .close-button {
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .side-sheet-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  

@@ -1,36 +1,58 @@
+import  { useState } from 'react';
+import './SideSheet.css'; // Importa los estilos CSS
 
-import { useState } from 'react';
-import SideSheet2 from './SideSheet2';
 
+interface SideSheetProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
 
-export const SideSheet  = () => {
-  const [isSideSheetOpen, setIsSideSheetOpen] = useState(false);
+export const SideSheet: React.FC<SideSheetProps> = ({ isOpen, onClose }) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const openSideSheet = () => {
-    setIsSideSheetOpen(true);
-  };
-
-  const closeSideSheet = () => {
-    setIsSideSheetOpen(false);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Aquí puedes manejar la lógica de inicio de sesión o cualquier otra acción que desees
+    // Por ejemplo, puedes enviar los datos a un servidor
+    console.log('Correo Electrónico:', email);
+    console.log('Contraseña:', password);
   };
 
   return (
-    <div className="App">
-      <button onClick={openSideSheet}>Open SideSheet</button>
-      <SideSheet2 isOpen={isSideSheetOpen} onClose={closeSideSheet}>
-
-
-
-        {/* Contenido del sidesheet */}
-
-
-
-        
-        <h2>Contenido del SideSheet</h2>
-        <p>Este es el contenido que se muestra en el sidesheet.</p>
-      </SideSheet2>
+    <div className={`side-sheet ${isOpen ? 'open' : ''}`}>
+      <div className="side-sheet-content">
+        <button className="close-button" onClick={onClose}>
+          Cerrar
+        </button>
+        <h2>Inicio de Sesión</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="email">Correo Electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">Iniciar Sesión</button>
+        </form>
+      </div>
     </div>
   );
-}
+};
 
-export default SideSheet;
