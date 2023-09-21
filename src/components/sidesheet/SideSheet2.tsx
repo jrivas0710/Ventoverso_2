@@ -1,5 +1,6 @@
 import  { useState } from 'react';
 import {SideSheet} from './Sidesheet'
+import { Header } from '../header/Header';
 
 function Sidesheet2() {
   const [isSideSheetOpen, setIsSideSheetOpen] = useState(false);
@@ -15,8 +16,8 @@ function Sidesheet2() {
   return (
     <div className="App">
       
-      <button onClick={handleOpenSideSheet}>Abrir SideSheet</button>
       <SideSheet isOpen={isSideSheetOpen} onClose={handleCloseSideSheet} />
+      <Header evento = {handleOpenSideSheet}/>
     </div>
   );
 }

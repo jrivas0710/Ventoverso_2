@@ -29,10 +29,10 @@ const Home = () => {
 
   return (
     <>
-        <Header/>
+        <Sidesheet2/>
+        {/* <Header/> */}
         <Carrusel 
         images={images} />
-        <Sidesheet2/>
         <Iconos/>
         <Destacados 
           dataDestacados = {dataDestacados} 
