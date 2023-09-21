@@ -61,6 +61,7 @@ export const Blogs = (props: { dataBlog: Blog[] }) => {
                 {props.dataBlog.map(item => {
                     return (
                         <div className='container'>
+                            <span hidden>{item.id}</span>
                             <section className='texto-Vento-News'>
                                 <h2>Vento News</h2>
                             </section>

@@ -20,9 +20,10 @@ html {
     .grid-container{
      width: 100vw;
      /* display: grid; COMENTADO PARA IMPORTAR COMPONENTE CARRUSEL EN HOME */
-     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; /* hice 5 filas porque arriba estara el header, al medio el main con 3 filas y bajo el footer con 1*/
+     grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr 1fr; /* hice 5 filas porque arriba estara el header, al medio el main con 3 filas y bajo el footer con 1*/
      grid-template-areas: /* les asigne nombres literales a cada area definida arriba */
      'header'
+     'carrusel'
      'section1'
      'iconos'
      'section2'

@@ -1,5 +1,5 @@
 import { MarcasPopulares } from "../components/Marcas/MarcasPopulares"
-import {Carrusel}  from "../components/carrusel/Carrusel"
+import Carrusel  from "../components/carrusel/Carrusel"
 import { Destacados } from "../components/destacados/ProductosDestacados"
 import {Footer} from "../components/footer/Footer"
 import { Header } from "../components/header/Header"
@@ -14,14 +14,24 @@ import dataBlog from '../components/blog/dataBlog.json'
 
 
 
+
 const Home = () => {
+
+  const images = [
+    'https://via.placeholder.com/400x300?text=Imagen+1',
+    ' https://via.placeholder.com/400x300?text=Imagen+2',
+    'https://via.placeholder.com/400x300?text=Imagen+3',
+    'https://via.placeholder.com/400x300?text=Imagen+4',
+    // Agrega más URLs de imágenes según sea necesario
+  ];
+
     
 
   return (
     <>
         <Header/>
-        <Carrusel
-         /* data = {dataCarrusel} *//>
+        <Carrusel 
+        images={images} />
         {/* <SideSheet/> */}
         <Iconos/>
         <Destacados 
