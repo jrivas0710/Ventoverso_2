@@ -7,6 +7,7 @@ import Iconos from "../components/iconos/Iconos"
 import {Blogs} from "../components/blog/Blog"
 import dataDestacados from '../components/destacados/dataDestacados.json'
 import dataBlog from '../components/blog/dataBlog.json'
+import Sidesheet2 from "../components/sidesheet/Sidesheet2"
 
 
 //la data se supone que es el json de back para Carrusel y Destacados
@@ -31,7 +32,7 @@ const Home = () => {
         <Header/>
         <Carrusel 
         images={images} />
-       
+        <Sidesheet2/>
         <Iconos/>
         <Destacados 
           dataDestacados = {dataDestacados} 
