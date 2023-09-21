@@ -1,4 +1,15 @@
 /* Estilos para el contenedor del carrusel */
+html {
+  box-sizing: border-box;
+  margin: auto 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+}
 
 .container{
   background-color: pink;
@@ -6,18 +17,36 @@
   width: auto;
   height: 100vh;
   position: relative;
-  
+  overflow: hidden
 }
+  
+  
  
   .carousel-container {
-  width: 1400px;
+  width: 100vw;
   padding: 20px;
   
-}
   
+}
+
+/* .carousel-slide{
+  width: 100px;
+  height: 300px;
+}
+   */
+
+   .carousel-slide {
+    width: 200px; /* Ancho deseado para las tarjetas de imagen */
+    height: 100%; /* Misma altura que el contenedor */
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen */
+    justify-content: center;
+  }
+
 /* Estilos para las imágenes en el carrusel */
 .carousel-slide img {
-  width: 90%;
+  width: auto;
+  height: auto;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);

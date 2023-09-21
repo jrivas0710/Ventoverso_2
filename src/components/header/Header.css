@@ -1,4 +1,5 @@
-TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los a TODO:agregar iconos de las categorias html {
+TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los a TODO:agregar iconos de las categorias 
+html {
   box-sizing: border-box;
   margin: auto 0;
 }
@@ -154,11 +155,11 @@ button[type="submit"] {
   height: 17px;
 }
 
-.like,
+/*  .like,
 .carrito {
   padding-top: 10px;
-}
-
+} */
+ 
 
 
 /*   ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
