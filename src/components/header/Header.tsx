@@ -1,7 +1,7 @@
 
 import "./Header.css"
 
-function Header({evento}:any) {
+function Header({ evento }: any) {
   return (
     <div className="grid-container">
       <header className="header-grid">
@@ -19,23 +19,25 @@ function Header({evento}:any) {
           </div>
 
           <div className="icons">
-            <a href="#">
+
+            <div> <a href="#">
               <img src="/images/like.png" alt="like" className="like" />
-            </a>
+            </a></div>
 
 
-            <button type="submit" onClick={evento}> <img src="/images/user.png" alt="user" className="user"/> </button>
-              
-          
+            <div><button type="submit" onClick={evento} > <img src="/images/user.png" alt="user" className="user" /></button>
+            </div>
 
-            
-            <a href="#">
+
+
+            <div><a href="#">
               <img
                 src="/images/carrito.png"
                 alt="carrito"
                 className="carrito"
               />
-            </a>
+            </a></div>
+            
           </div>
         </section>
 
@@ -50,11 +52,11 @@ function Header({evento}:any) {
             <a href="#">
               <li><span>Accesorios</span></li>
             </a>
-          
+
           </ul>
         </section>
       </header>
-    =
+      =
     </div>
   );
 }

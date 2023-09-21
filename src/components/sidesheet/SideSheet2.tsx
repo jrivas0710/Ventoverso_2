@@ -4,7 +4,7 @@ import { Header } from '../header/Header';
 
 function Sidesheet2() {
   const [isSideSheetOpen, setIsSideSheetOpen] = useState(false);
-//holaaa!! 
+
   const handleOpenSideSheet = () => {
     setIsSideSheetOpen(true);
   };

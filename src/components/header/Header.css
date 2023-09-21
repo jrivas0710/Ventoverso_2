@@ -1,153 +1,164 @@
+TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los a TODO:agregar iconos de las categorias html {
+  box-sizing: border-box;
+  margin: auto 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+}
+
+/* este es mi contenedor grid que es como a nivel del body, contendra todos los componentes del body */
+.grid-container {
+  width: 100vw;
+  /* display: grid; COMENTADO PARA IMPORTAR COMPONENTE CARRUSEL EN HOME */
+  grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr 1fr;
+  /* hice 5 filas porque arriba estara el header, al medio el main con 3 filas y bajo el footer con 1*/
+  grid-template-areas:
+    /* les asigne nombres literales a cada area definida arriba */
+    'header'
+    'carrusel'
+    'section1'
+    'iconos'
+    'section2'
+    'section3'
+    'blogs'
+    'footer';
+
+  padding-bottom: 30px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* HEADER / CATEGORIAS / ICONOS  */
+
+/* este es mi header, le asigne una grid area dentro de mi contenedor grid */
+.header-grid {
+  grid-area: header;
+  width: 100%;
+
+}
+
+.header-flex {
+  background-color: rgb(211, 210, 210);
+  height: 6rem;
+  align-items: center;
+  position: relative;
+
+}
+
+.header-flex,
+.categories-flex {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
 
 
-TODO:arreglar los a y cambiarlos por los li
-TODO:arreglar lo del padding de los a
-TODO:agregar iconos de las categorias
+}
+
+.categories-flex {
+  list-style: none;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  background-color: black;
+  color: whitesmoke;
+  height: 5rem;
+  align-items: center;
+  margin-bottom: 2rem;
 
 
-html {
-    box-sizing: border-box;
-    margin: auto 0;
-   }
-   *,
-   *::before,
-   *::after {
-    box-sizing: inherit;
-    
-   }
-  
-  /* este es mi contenedor grid que es como a nivel del body, contendra todos los componentes del body */
-    .grid-container{
-     width: 100vw;
-     /* display: grid; COMENTADO PARA IMPORTAR COMPONENTE CARRUSEL EN HOME */
-     grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr 1fr; /* hice 5 filas porque arriba estara el header, al medio el main con 3 filas y bajo el footer con 1*/
-     grid-template-areas: /* les asigne nombres literales a cada area definida arriba */
-     'header'
-     'carrusel'
-     'section1'
-     'iconos'
-     'section2'
-     'section3'
-     'blogs'
-     'footer';
-    
-     padding-bottom: 30px;
-    }
-  
-  /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-  
-   /* HEADER / CATEGORIAS / ICONOS  */
-  
-  /* este es mi header, le asigne una grid area dentro de mi contenedor grid */
-    .header-grid{
-     grid-area: header; 
-     width: 100%;
-     
-    }
-  
-    .header-flex{
-      background-color: rgb(211, 210, 210);
-      height: 6rem;
-      align-items: center;
-      position: relative;
-     
-    }
-     
-    .header-flex, .categories-flex{
-     display: flex;
-     justify-content: space-around;
-     margin: 0;
-     
-    
-    }
-    
-    .categories-flex{
-     list-style: none;
-     justify-content: space-between;
-     padding-left: 2rem;
-     padding-right: 2rem;
-     
-     background-color: black;
-     color: whitesmoke;
-     height: 5rem;
-     align-items: center;
-     margin-bottom: 2rem;
-     
-     
-    }
+}
 
-    li{
-      height: 100%;
-      align-items: center;
-      margin: 0;
-      padding-top: 1.5rem;
-    }
+li {
+  height: 100%;
+  align-items: center;
+  margin: 0;
+  padding-top: 1.5rem;
+}
 
-    span{
-      align-content: center
-    }
-  
-    ul > a{
-      color: whitesmoke;
-      width: 200px;
-      height: 100%;
-      text-align: center;
-      align-items: center;
-      
-      margin-left: 5rem;
-      margin-right: 5rem;
-      height: 5rem;
-     
-      
-    }
-  
-    /* ul > a:hover{
+span {
+  align-content: center
+}
+
+ul>a {
+  color: whitesmoke;
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  height: 5rem;
+}
+
+
+
+
+
+
+/* ul > a:hover{
       background-color: rgb(74, 192, 192);;
       color: white;
     }
    */
-    .logo-header{
-      background-color: rgb(86, 212, 212);
-      padding:0.5rem;
-      border-radius: 1rem;
-    }
-  
-    .filter{
-      border-radius: 2rem;
-      height: 2.3rem;
-      width: 23rem;
-      border: none;
-      text-align: center;
-     }
-  
-    .filter-button{
-      position: absolute;
-      top: 30.8%;
-      right: 59.5%;
-      height: 1rem;
-      width: 2rem;
-      border-radius: 3rem;
-      background-color: rgb(0,0,0,0);
-      border: none;
-      }
-   
-    .filter-icon {
-      height: 1rem;
-      width: 1rem;
-      }
-  
-    .icons{
-      display: flex;
-      justify-content: space-between;
-      width: 10rem;
-    }
-  
-    .like, .user, .carrito{
-      width: 17px;
-      height: 17px;
-      
-    }
+.logo-header {
+  background-color: rgb(86, 212, 212);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
 
-   
-  
-  /*   ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */  
+.filter {
+  border-radius: 2rem;
+  height: 2.3rem;
+  width: 23rem;
+  border: none;
+  text-align: center;
+}
+
+.filter-button {
+  position: absolute;
+  top: 30.8%;
+  right: 59.5%;
+  height: 1rem;
+  width: 2rem;
+  border-radius: 3rem;
+  background-color: rgb(0, 0, 0, 0);
+  border: none;
+}
+
+.filter-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+}
+
+button[type="submit"] {
+  background-color: transparent;
+
+}
+
+
+.like,
+.user,
+.carrito {
+  width: 17px;
+  height: 17px;
+}
+
+.like,
+.carrito {
+  padding-top: 10px;
+}
+
+
+
+/*   ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
