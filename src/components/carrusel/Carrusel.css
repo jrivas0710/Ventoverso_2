@@ -58,11 +58,9 @@ html {
 .slick-next {
   
   position: absolute;
-  left: 65%;
+  left: 64.5%;
+  top: 45%;
   transform: translateY(-50%);
-  font-size: 24px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
   padding: 10px 15px;
   border: none;
   border-radius: 50%;
@@ -74,13 +72,10 @@ html {
 }
 
 .slick-prev {
-  
   position: absolute;
-  left: 33%;
+  left: 32%;
+  top: 45%;
   transform: translateY(-50%);
-  font-size: 24px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
   padding: 10px 15px;
   border: none;
   border-radius: 50%;
@@ -92,7 +87,23 @@ html {
 
 .slick-prev:hover,
 .slick-next:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  
+}
+
+.carousel-container:hover .slick-prev:before,
+.carousel-container:hover .slick-next:before {
+  opacity: 1; /* Muestra las flechas al hacer hover en la tarjeta */
+}
+
+
+
+.slick-prev:before,
+.slick-next:before{
+  font-size: 55px; 
+  opacity: 0; 
+  color: black;
+  transition: opacity 0.2s ease-in; 
+ 
 }
 
 
@@ -100,9 +111,9 @@ html {
   width: 203vw;
   height: auto;
   background-color: skyblue;
+}
   
  
   
-}
 
 
