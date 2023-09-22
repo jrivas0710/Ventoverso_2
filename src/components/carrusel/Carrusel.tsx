@@ -27,7 +27,11 @@ const Carrusel: React.FC<CarouselProps> = ({ images }) => {
   };
 
   return (
+
+    
+
     <div className='container'>
+      
 
     <div className="carousel-container">
       <Slider {...settings}>
@@ -35,11 +39,16 @@ const Carrusel: React.FC<CarouselProps> = ({ images }) => {
           <div key={index} className="carousel-slide">
             <img src={imageUrl} alt={`Slide ${index + 1}`} />
           </div>
+          
+          
         ))}
       </Slider>
     </div>
 
     </div>
+
+   
+
   );
 };
 

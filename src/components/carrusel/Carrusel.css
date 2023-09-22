@@ -2,64 +2,63 @@
 html {
   box-sizing: border-box;
   margin: auto 0;
+  
+ 
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-
 }
 
-.container{
+
+.container {
   background-color: pink;
   grid-area: carrusel;
-  width: auto;
+  width: 100vw;
   height: 100vh;
   position: relative;
-  overflow: hidden
+  overflow: hidden; /* Oculta el contenido que se extiende más allá del contenedor */
 }
+
   
-  
- 
-  .carousel-container {
-  width: 100vw;
+.carousel-container {
+  width: 100vw; /* Ancho deseado del carrusel */
   padding: 20px;
-  
+  display: flex;
+  justify-content: center;
+ }
+
+.prueba{
+  margin-left: 20px;
   
 }
-
-/* .carousel-slide{
-  width: 100px;
-  height: 300px;
-}
-   */
-
    .carousel-slide {
-    width: 200px; /* Ancho deseado para las tarjetas de imagen */
+    width: 800px; /* Ancho deseado para las tarjetas de imagen */
     height: 100%; /* Misma altura que el contenedor */
-    display: flex;
-    align-items: center; /* Centra verticalmente la imagen */
-    justify-content: center;
+   
+    
   }
 
 /* Estilos para las imágenes en el carrusel */
 .carousel-slide img {
-  width: auto;
-  height: auto;
+  width: 900px;
+  height: 50vh;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
  
   
-}
 
 /* Estilos para los botones de navegación */
 
 .slick-next {
   
   position: absolute;
-  left: 62%;
+  left: 65%;
   transform: translateY(-50%);
   font-size: 24px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -77,7 +76,7 @@ html {
 .slick-prev {
   
   position: absolute;
-  left: 32%;
+  left: 33%;
   transform: translateY(-50%);
   font-size: 24px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -95,4 +94,15 @@ html {
 .slick-next:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
+
+
+.slick-initialized, .slick-slider, .slick-track, .slick-slide, .slick-list{
+  width: 203vw;
+  height: auto;
+  background-color: skyblue;
+  
+ 
+  
+}
+
 
