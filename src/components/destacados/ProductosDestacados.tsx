@@ -1,4 +1,4 @@
-import { Destacado } from '../../App'
+import { Destacado } from './InterfaceDestacados'
 import './ProductosDestacados.css'
 
 
@@ -86,7 +86,6 @@ export const Destacados = (props:{dataDestacados:Destacado []}) => {
                             <h2 className='texto-productos-destacados'>Productos Destacados</h2>
                             <div className='producto'><img src={item.imagenUrl} alt={item.nombre} /></div>
                             <div className='nombre-precio-ranking'>
-                                {item.rating}
                                 {item.estrellas}
                                 <img src="images/estrellas.png" alt="ranking" className='ranking' />
                                 <span className='nombre-producto'>{item.nombre}</span>

@@ -1,5 +1,5 @@
 import './Blog.css'
-import { Blog } from '../../App'
+import { Blog } from './InterfaceBlog'
 
 
 
@@ -58,24 +58,27 @@ export const Blogs = (props: { dataBlog: Blog[] }) => {
 
             <div className='vento-news'>
 
+                <section className='texto-Vento-News'>
+                    <h2>Vento News</h2>
+                </section>
+
                 {props.dataBlog.map(item => {
                     return (
-                        <div className='container'>
-                            <span hidden>{item.id}</span>
-                            <section className='texto-Vento-News'>
-                                <h2>Vento News</h2>
-                            </section>
+                        <div className='container' id={item.id}>
+
+
 
                             <div className='contenido-pie'>
 
-                            <div className='pie-blog'>
-                            <img src={item.imagenUrl}></img>
-                            </div>
-                                
-                            <div className='titulo-blog'>{item.titulo}</div>
+                                <div className='pie-blog'>
+                                    <a href={item.linkDetalle}></a><img src={item.imagenUrl}></img>
+                                </div>
+
+                                <div className='titulo-blog'>{item.titulo}</div>
 
                             </div>
                         </div>
+
 
 
                     )
