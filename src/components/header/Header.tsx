@@ -25,7 +25,7 @@ function Header({ evento }: any) {
             </a></div>
 
 
-            <div><button type="submit" onClick={evento} > <img src="/images/user.png" alt="user" className="user" /></button>
+            <div><button type="submit" onClick={evento} className="botonUser"> <img src="/images/user.png" alt="user" className="user" /></button>
             </div>
 
 
@@ -56,7 +56,7 @@ function Header({ evento }: any) {
           </ul>
         </section>
       </header>
-      =
+      
     </div>
   );
 }

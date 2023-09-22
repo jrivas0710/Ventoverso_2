@@ -25,7 +25,7 @@ export const SideSheet: React.FC<SideSheetProps> = ({ isOpen, onClose }) => {
         <button className="close-button" onClick={onClose}>
           Cerrar
         </button>
-        <h2>Inicio de Sesión</h2>
+        <span>Bienvenid@ a Ventoverso</span>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Correo Electrónico</label>
@@ -34,6 +34,7 @@ export const SideSheet: React.FC<SideSheetProps> = ({ isOpen, onClose }) => {
               id="email"
               name="email"
               value={email}
+              placeholder='Dirección e-mail'
               onChange={(e) => setEmail(e.target.value)}
               required
             />
@@ -45,11 +46,12 @@ export const SideSheet: React.FC<SideSheetProps> = ({ isOpen, onClose }) => {
               id="password"
               name="password"
               value={password}
+              placeholder='Contraseña'
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
-          <button type="submit">Iniciar Sesión</button>
+          <button type="submit" className='botonLogin'>Iniciar Sesión</button>
         </form>
       </div>
     </div>

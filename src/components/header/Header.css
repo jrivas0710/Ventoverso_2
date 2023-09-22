@@ -157,7 +157,7 @@ ul>a {
   padding-top: 10px;
 } */
 
-button[type="submit"]{
+.botonUser{
   background-color: rgb(211, 210, 210);
  
 }
