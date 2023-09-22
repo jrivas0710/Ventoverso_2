@@ -1,14 +1,18 @@
-import React from 'react';
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './Carrusel.css'; // Asegúrate de tener un archivo CSS para estilos personalizados
+import './Carrusel.css';
+import { Carrusel } from './InterfaceCarrusel'; //este es el typo carrusel
 
-interface CarouselProps {
+
+/* interface CarouselProps {
   images: string[];
-}
+} */
 
-const Carrusel: React.FC<CarouselProps> = ({ images }) => {
+const Carrusel= (props:{dataCarrusel: Carrusel[]}) => {
+  console.log(props)
+
   const settings = {
     centerMode: true,
     infinite: true,
@@ -35,9 +39,11 @@ const Carrusel: React.FC<CarouselProps> = ({ images }) => {
 
     <div className="carousel-container">
       <Slider {...settings}>
-        {images.map((imageUrl, index) => (
-          <div key={index} className="carousel-slide">
-            <img src={imageUrl} alt={`Slide ${index + 1}`} />
+        {props.dataCarrusel.map((item) => (
+          <div key={item.id} className="carousel-slide">
+            <a href={item.linkDetalle}><img src={item.imagenUrl} alt={item.titulo} /></a>
+            <h2 hidden>{item.titulo}</h2>
+            <div hidden><p>{item.descripcion}</p></div>
           </div>
           
           

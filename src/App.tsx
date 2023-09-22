@@ -1,9 +1,6 @@
 import './App.css'
 import { Home } from './pages/Home'
 
-
-
-
 export type Destacado= {
   imagenUrl : string,
   estrellas : string, //es la url de la imagen 

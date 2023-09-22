@@ -1,0 +1,39 @@
+
+[
+    {
+      "id": "carousel-id-1",
+      "titulo": "Nueva Promoción de Verano",
+      "descripcion": "Disfruta de nuestros descuentos de verano en toda la tienda.",
+      "imagenUrl": "https://via.placeholder.com/400x300?text=Imagen+1",
+      "linkDetalle": "https://ejemplo.com/promocion-verano"
+    },
+    {
+      "id": "carousel-id-2",
+      "titulo": "Lanzamiento Exclusivo: Producto X",
+      "descripcion": "Conoce el nuevo producto X, exclusivo en nuestra tienda.",
+      "imagenUrl": "https://via.placeholder.com/400x300?text=Imagen+2",
+      "linkDetalle": "https://ejemplo.com/producto-x"
+    },
+    {
+      "id": "carousel-id-3",
+      "titulo": "¡Participa en nuestro Gran Concurso de Invierno!",
+      "descripcion": "Compra cualquier producto y entra en el sorteo de un fabuloso premio. No te pierdas esta oportunidad.",
+      "imagenUrl": "https://via.placeholder.com/400x300?text=Imagen+3",
+      "linkDetalle": "https://ejemplo.com/concurso-invierno"
+    },
+    
+  {
+    "id": "carousel-id-1",
+    "titulo": "Participa y gana: Concurso XYZ",
+    "descripcion": "Participa en nuestro concurso XYZ y gana premios increíbles.",
+    "imagenUrl": "https://via.placeholder.com/400x300?text=Imagen+4",
+    "linkDetalle": "https://ejemplo.com/concurso-xyz"
+  }
+
+  ]
+
+  
+  
+ 
+ 
+  
