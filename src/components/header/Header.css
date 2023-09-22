@@ -140,12 +140,9 @@ ul>a {
   display: flex;
   justify-content: space-between;
   width: 10rem;
+  
 }
 
-button[type="submit"] {
-  background-color: transparent;
-
-}
 
 
 .like,
@@ -159,6 +156,18 @@ button[type="submit"] {
 .carrito {
   padding-top: 10px;
 } */
+
+button[type="submit"]{
+  background-color: rgb(211, 210, 210);
+ 
+}
+
+.like,
+.carrito{
+  margin-top: 9px;
+}
+
+
  
 
 
