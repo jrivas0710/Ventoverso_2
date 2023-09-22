@@ -15,7 +15,7 @@
   flex-direction: column;
   padding: 20px;
   z-index: 2;
-  font-family: 'Open Sans', Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  
 }
 
 form{
@@ -23,8 +23,8 @@ form{
   flex-direction: column;
 }
 
-span{
-  font-size: 24px;
+.loginSpan{
+  font-size: 30px;
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -67,6 +67,7 @@ input {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.5px;
+  position: relative;
 }
 
 .botonLogin {
@@ -85,6 +86,33 @@ input {
   height: 50px;
   align-self: center;
   margin-top: 20px;
- 
+ }
 
+
+ .botonPassword{
+  position: absolute;
+  left: 90%;
+  bottom: 40%;
+  height: 20px;
+  width: 30px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  
+ }
+
+
+ .ojo{
+ align-items: center;
+ position: absolute;
+ bottom: -30%;
+ right: -3%;
+
+ }
+
+.botonPassword:hover path{
+  fill: #828282;
+  transition: 0.3s ease;
 }
+
