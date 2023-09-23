@@ -21,6 +21,7 @@ html {
   grid-template-areas:
     /* les asigne nombres literales a cada area definida arriba */
     'header'
+    'encabezado' TODO esto es una prueba
     'carrusel'
     'section1'
     'iconos'

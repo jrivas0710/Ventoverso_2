@@ -1,0 +1,51 @@
+html {
+    box-sizing: border-box;
+    margin: auto 0;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+
+}
+
+.encabezadoProducto{
+  height: 50px;
+  background-color: rgb(19, 31, 31);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+span, h1{
+    font-size: 26px;
+}
+
+img{
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.estrellas-marca{
+    display: flex;
+    width: 140px;
+    background-color: pink;
+    flex-direction: column;
+    align-items: center;
+}
+
+.estrellas-marca > div {
+    padding: 0;
+    margin: 0;
+}
+
+.logoMarca{
+    height: 30px;
+    width: 140px;
+    border: 1px solid black;
+    text-align: center;
+}
