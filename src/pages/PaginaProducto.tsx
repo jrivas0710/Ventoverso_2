@@ -5,6 +5,7 @@ import './PaginaProducto.css'
 import { Header } from "../components/header/Header"
 import { ImagenesProducto } from "../components/imagenesProducto/ImagenesProducto"
 import { DetalleProducto } from "../components/detalleProducto/DetalleProducto"
+import { ProductosRelacionados } from "../components/productosRelacionados/ProductosRelacionados"
 
 
 
@@ -19,6 +20,7 @@ export const PaginaProducto= () => {
     <EncabezadoProducto/>
     <ImagenesProducto/>
     <DetalleProducto/>
+    <ProductosRelacionados/>
     
     
     
