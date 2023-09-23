@@ -85,10 +85,6 @@ html {
 }
 
 
-.slick-prev:hover,
-.slick-next:hover {
-  
-}
 
 .carousel-container:hover .slick-prev:before,
 .carousel-container:hover .slick-next:before {

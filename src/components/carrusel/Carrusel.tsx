@@ -1,3 +1,4 @@
+import {useState, useEffect, useRef } from 'react'
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -6,11 +7,24 @@ import './Carrusel.css';
 import { Carrusel } from './InterfaceCarrusel'; //este es el typo carrusel
 
 
-/* interface CarouselProps {
-  images: string[];
-} */
 
 const Carrusel= (props:{dataCarrusel: Carrusel[]}) => {
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef<Slider | null>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (sliderRef.current) {
+        sliderRef.current.slickNext();
+      }
+    }, 12000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   console.log(props)
 
   const settings = {
@@ -20,6 +34,7 @@ const Carrusel= (props:{dataCarrusel: Carrusel[]}) => {
     slidesToShow: 3,
     speed: 500,
     focusOnSelect: true,
+    initialSlide: currentSlide,
     responsive: [
       {
         breakpoint: 768,
@@ -38,7 +53,7 @@ const Carrusel= (props:{dataCarrusel: Carrusel[]}) => {
       
 
     <div className="carousel-container">
-      <Slider {...settings}>
+      <Slider ref={(slider) => (sliderRef.current = slider)} {...settings}>
         {props.dataCarrusel.map((item) => (
           <div key={item.id} className="carousel-slide">
             <a href={item.linkDetalle}><img src={item.imagenUrl} alt={item.titulo} /></a>
