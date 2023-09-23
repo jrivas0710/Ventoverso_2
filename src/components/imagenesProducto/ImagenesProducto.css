@@ -1,0 +1,45 @@
+html {
+    box-sizing: border-box;
+    margin: auto 0;
+
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.imagenesProducto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    
+}
+
+.imagenPrincipal{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(211, 210, 210);
+    border: 1px solid black;
+    margin-left: 17px;
+    
+
+}
+
+.imagenesSecundarias{
+    display: flex;
+    margin-top: 2rem;
+    
+}
+
+.imagenesSecundarias > div{
+    
+    margin-right: 1.3rem;
+    width: 90px;
+    height: 90px;
+    border: 1px solid black;
+    align-items: center;
+    background-color: rgb(211, 210, 210);
+}

@@ -3,6 +3,7 @@ import { Footer } from "../components/footer/Footer"
 import Sidesheet2 from "../components/sidesheet/SideSheet2"
 import './PaginaProducto.css'
 import { Header } from "../components/header/Header"
+import { ImagenesProducto } from "../components/imagenesProducto/ImagenesProducto"
 
 
 
@@ -15,6 +16,7 @@ export const PaginaProducto= () => {
     <>
     <Header/>
     <EncabezadoProducto/>
+    <ImagenesProducto/>
     
     
     

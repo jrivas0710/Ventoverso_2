@@ -11,15 +11,20 @@ html {
 
 }
 
+.container{
+    margin-left: 3rem;
+}
+
 .encabezadoProducto{
   height: 50px;
-  background-color: rgb(19, 31, 31);
   display: flex;
   gap: 10px;
   align-items: center;
+  
+ 
 }
 
-span, h1{
+.spanEncabezado, .h1Encabezado{
     font-size: 26px;
 }
 
@@ -47,5 +52,4 @@ img{
     height: 30px;
     width: 140px;
     border: 1px solid black;
-    text-align: center;
 }
