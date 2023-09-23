@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <>
         <Header/>
-        <Carrusel
+        <Carrusel           
          /* data = {dataCarrusel} *//>
         {/* <SideSheet/> */}
         <Iconos/>
