@@ -1,16 +1,26 @@
 
-
-
+html {
+    box-sizing: border-box;
+    margin: auto 0;
+    
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  
+  }
 .iconos {
     grid-area: iconos;
     background-color: rgb(86, 212, 212);
     height: auto;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
     padding: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
     display: flex;
 }
 

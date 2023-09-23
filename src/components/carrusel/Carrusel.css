@@ -14,12 +14,16 @@ html {
 
 
 .container {
-  background-color: pink;
   grid-area: carrusel;
   width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden; /* Oculta el contenido que se extiende más allá del contenedor */
+}
+
+.container::-webkit-scrollbar {
+  width: 0;
+  background: transparent; /* Esto oculta la barra de desplazamiento en navegadores WebKit */
 }
 
   
@@ -58,7 +62,7 @@ html {
 .slick-next {
   
   position: absolute;
-  left: 64.5%;
+  left: 64.2%;
   top: 45%;
   transform: translateY(-50%);
   padding: 10px 15px;
@@ -106,7 +110,6 @@ html {
 .slick-initialized, .slick-slider, .slick-track, .slick-slide, .slick-list{
   width: 203vw;
   height: auto;
-  background-color: skyblue;
 }
   
  

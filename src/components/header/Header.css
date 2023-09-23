@@ -2,7 +2,7 @@ TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los 
 html {
   box-sizing: border-box;
   margin: auto 0;
-  font-size: 16px;
+  
 }
 
 *,
@@ -28,8 +28,7 @@ html {
     'section3'
     'blogs'
     'footer';
-
-  padding-bottom: 30px;
+padding-bottom: 20px;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -40,7 +39,6 @@ html {
 .header-grid {
   grid-area: header;
   width: 100%;
-
 }
 
 .header-flex {
@@ -70,7 +68,7 @@ html {
   color: whitesmoke;
   height: 5rem;
   align-items: center;
-  margin-bottom: 2rem;
+ 
 
 
 }

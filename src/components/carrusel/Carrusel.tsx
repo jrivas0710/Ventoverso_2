@@ -19,11 +19,13 @@ const Carrusel= (props:{dataCarrusel: Carrusel[]}) => {
         sliderRef.current.slickNext();
       }
     }, 12000);
+    
 
     return () => {
       clearInterval(interval);
     };
   }, []);
+
 
   console.log(props)
 
@@ -52,8 +54,8 @@ const Carrusel= (props:{dataCarrusel: Carrusel[]}) => {
     <div className='container'>
       
 
-    <div className="carousel-container">
-      <Slider ref={(slider) => (sliderRef.current = slider)} {...settings}>
+    <div className="carousel-container" >
+      <Slider ref={(slider) => (sliderRef.current = slider)} {...settings} >
         {props.dataCarrusel.map((item) => (
           <div key={item.id} className="carousel-slide">
             <a href={item.linkDetalle}><img src={item.imagenUrl} alt={item.titulo} /></a>
