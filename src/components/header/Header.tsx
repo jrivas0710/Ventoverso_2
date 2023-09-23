@@ -1,7 +1,7 @@
-import { Carrusel } from "../carrusel/Carrusel";
+
 import "./Header.css"
 
-function Header() {
+function Header({ evento }: any) {
   return (
     <div className="grid-container">
       <header className="header-grid">
@@ -19,19 +19,25 @@ function Header() {
           </div>
 
           <div className="icons">
-            <a href="#">
+
+            <div> <a href="#">
               <img src="/images/like.png" alt="like" className="like" />
-            </a>
-            <a href="#">
-              <img src="/images/user.png" alt="user" className="user" />
-            </a>
-            <a href="#">
+            </a></div>
+
+
+            <div><button type="submit" onClick={evento} className="botonUser"> <img src="/images/user.png" alt="user" className="user" /></button>
+            </div>
+
+
+
+            <div><a href="#">
               <img
                 src="/images/carrito.png"
                 alt="carrito"
                 className="carrito"
               />
-            </a>
+            </a></div>
+            
           </div>
         </section>
 
@@ -46,14 +52,11 @@ function Header() {
             <a href="#">
               <li><span>Accesorios</span></li>
             </a>
-          
+
           </ul>
         </section>
       </header>
-      {/*<Carrusel />
-       <Destacados />
-      <SeccionPopulares />
-      <Iconos /> */}
+      
     </div>
   );
 }

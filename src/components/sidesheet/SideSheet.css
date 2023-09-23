@@ -1,0 +1,91 @@
+/* Estilos para el SideSheet */
+.side-sheet {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  /* Inicialmente, el SideSheet está fuera de la pantalla */
+  width: 450px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+
+  transition: right 0.5s ease;
+  /* Transición de 1 segundo */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 2;
+  
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.loginSpan{
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+.side-sheet.open {
+  right: 0;
+  /* Muestra el SideSheet dentro de la pantalla */
+}
+
+.close-button {
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.side-sheet-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.botonLogin {
+
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  width: 180px;
+  height: 50px;
+  align-self: center;
+  margin-top: 20px;
+ }
+
+

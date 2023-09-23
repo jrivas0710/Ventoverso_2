@@ -1,46 +1,27 @@
-
-[{
-    "id" :"123",
-    
-    
-    "titulo":"Tarjeta Ejemplo",
-   
-    
-    "imagenUrl": "https://ejemplo.com/imagen.jpg"
-    
-    
-    },
-
+[
     {
-        "id" :"123",
-        
-        
-        "titulo":"Tarjeta Ejemplo",
-       
-        
-        "imagenUrl": "https://ejemplo.com/imagen.jpg"
-        
-        
-        },
-        {
-            "id" :"123",
-            
-            
-            "titulo":"Tarjeta Ejemplo",
-           
-            
-            "imagenUrl": "https://ejemplo.com/imagen.jpg"
-            
-            
-            },
-            {
-                "id" :"123",
-                
-                
-                "titulo":"Tarjeta Ejemplo",
-               
-                
-                "imagenUrl": "https://ejemplo.com/imagen.jpg"
-                
-                
-                }]
+        "id": "d4a7c4fd-4153-48e4-8bbc-48b3700f52c8",
+        "titulo": "Tarjeta 1",
+        "imagenUrl": "https://ejemplo.com/imagen1.jpg",
+        "linkDetalle": "https://ejemplo.com/promocion-verano"
+    },
+    {
+        "id": "a294396c-8694-49b3-8159-f73c6dc78326",
+        "titulo": "Tarjeta 2",
+        "imagenUrl": "https://ejemplo.com/imagen2.jpg",
+        "linkDetalle": "https://ejemplo.com/promocion-verano"
+    },
+    {
+        "id": "0286b716-e486-4a19-b864-723546e4b474",
+        "titulo": "Tarjeta 3",
+        "imagenUrl": "https://ejemplo.com/imagen3.jpg",
+        "linkDetalle": "https://ejemplo.com/promocion-verano"
+    },
+    {
+        "id": "6220ad31-1cf0-4cfb-a23d-ae0cb71e8140",
+        "titulo": "Tarjeta 4",
+        "imagenUrl": "https://ejemplo.com/imagen4.jpg",
+        "linkDetalle": "https://ejemplo.com/promocion-verano"
+    }
+   
+]

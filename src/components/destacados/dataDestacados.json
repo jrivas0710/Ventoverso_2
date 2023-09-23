@@ -1,36 +1,39 @@
-
-[{
-    "imagenUrl" : "https://ejemplo.com/imagen.jpg",
-    "estrellas" : "3",
-    "rating" : 4.5,
-    "nombre" : "Producto genial",
-    "precio":  19900
-    
-},
-{
-    "imagenUrl" : "https://ejemplo.com/imagen.jpg",
-    "estrellas" : "3",
-    "rating" : 4.5,
-    "nombre" : "Producto genial",
-    "precio":  19900
-    
-},
-{
-    "imagenUrl" : "https://ejemplo.com/imagen.jpg",
-    "estrellas" : "3",
-    "rating" : 4.5,
-    "nombre" : "Producto genial",
-    "precio":  19900
-    
-},
-{
-    "imagenUrl" : "https://ejemplo.com/imagen.jpg",
-    "estrellas" : "3",
-    "rating" : 4.5,
-    "nombre" : "Producto genial",
-    "precio":  19900
-    
-}]
+[
+    {
+      "id": "id-destacado-home-1",
+      "imagenUrl": "https://ejemplo.com/imagen1.jpg",
+      "estrellas": 5,
+      "nombre": "Producto genial 1",
+      "precio": 990,
+      "linkDetalle": "https://ejemplo.com/promocion-verano"
+    },
+    {
+      "id": "id-destacado-home-2",
+      "imagenUrl": "https://ejemplo.com/imagen2.jpg",
+      "estrellas": 4,
+      "nombre": "Producto genial 2",
+      "precio": 8700,
+      "linkDetalle": "https://ejemplo.com/promocion-verano"
+    },
+    {
+      "id": "id-destacado-home-3",
+      "imagenUrl": "https://ejemplo.com/imagen3.jpg",
+      "estrellas": 3,
+      "nombre": "Producto genial 3",
+      "precio": 79000,
+      "linkDetalle": "https://ejemplo.com/promocion-verano"
+    },
+    {
+      "id": "id-destacado-home-4",
+      "imagenUrl": "https://ejemplo.com/imagen4.jpg",
+      "estrellas": 5,
+      "nombre": "Producto genial 4",
+      "precio": 69900,
+      "linkDetalle": "https://ejemplo.com/promocion-verano"
+    }
+  
+  ]
+  
 
 
 

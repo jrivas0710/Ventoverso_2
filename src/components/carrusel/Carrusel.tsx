@@ -1,131 +1,78 @@
- import "./Carrusel.css"
+import {useState, useEffect, useRef } from 'react'
 
-export const Carrusel= () => {
-  return (
-    <section className="carrusel-grid">
-      <div id="conteItemsCarrusel">
-        <div className="carrusel-item " id="enlaceItem1">
-          <div className="tarjetas-carrusel tarjeta-carrusel-1"></div>
-          <div className="flechas-carrusel">
-            <a href="#enlaceItem3">
-             {/*  <i>
-                <img
-                  src="./images/flecha-izquierda.png"
-                  alt="flecha-izquierda"
-                  className="flecha"
-                />
-              </i> */}
-            </a>
-            <a href="#enlaceItem2">
-              <i>
-                <img
-                  src="./images/flecha-derecha.png"
-                  alt="flecha-derecha"
-                  className="flecha"
-                />
-              </i>
-            </a>
-          </div>
-        </div>
-        <div className="carrusel-item" id="enlaceItem2">
-          <div className="tarjetas-carrusel tarjeta-carrusel-3"></div>
-          <div className="flechas-carrusel">
-            <a href="#enlaceItem2">
-              <i>
-                <img
-                  src="./images/flecha-izquierda.png"
-                  alt="flecha-izquierda"
-                  className="flecha"
-                />
-              </i>
-            </a>
-            <a href="#enlaceItem3">
-              <i>
-                <img
-                  src="./images/flecha-derecha.png"
-                  alt="flecha-derecha"
-                  className="flecha"
-                />
-              </i>
-            </a>
-          </div>
-        </div>
-        <div className="carrusel-item " id="enlaceItem3">
-          <div className="tarjetas-carrusel tarjeta-carrusel-3"></div>
-          <div className="flechas-carrusel">
-            <a href="#enlaceItem3">
-              <i>
-                <img
-                  src="./images/flecha-izquierda.png"
-                  alt="flecha-izquierda"
-                  className="flecha"
-                />
-              </i>
-            </a>
-            <a href="#enlaceItem1">
-              <i>
-                <img
-                  src="./images/flecha-derecha.png"
-                  alt="flecha-derecha"
-                  className="flecha"
-                />
-              </i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
- 
-
- 
-
-
-//AQUI EMPIEZA EL COMPONENTE CARRUSEL. 
-
-/* 
-import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import './Carrusel.css';
+import { Carrusel } from './InterfaceCarrusel'; //este es el typo carrusel
 
-interface CarouselProps {
-  dataCarrusel: { image: string; text: string }[];
-}
 
-const Carrusel: React.FC<CarouselProps> = ({ dataCarrusel }) => {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+const Carrusel= (props:{dataCarrusel: Carrusel[]}) => {
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef<Slider | null>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (sliderRef.current) {
+        sliderRef.current.slickNext();
+      }
+    }, 12000);
+    
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+
+  console.log(props)
 
   const settings = {
-    dots: false,
+    centerMode: true,
     infinite: true,
+    centerPadding: '0',
+    slidesToShow: 3,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    beforeChange: (current: number, next: number) => setCurrentIndex(next),
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
+    focusOnSelect: true,
+    initialSlide: currentSlide,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="carousel">
-      <Slider {...settings} slickGoTo={currentIndex}> 
-        {dataCarrusel.map((item, index) => (
-          <div key={index} className="carousel-slide">
-            <img src={item.image} alt={item.text} />
-            <p>{item.text}</p>
+
+    
+
+    <div className='container'>
+      
+
+    <div className="carousel-container" >
+      <Slider ref={(slider) => (sliderRef.current = slider)} {...settings} >
+        {props.dataCarrusel.map((item) => (
+          <div key={item.id} className="carousel-slide">
+            <a href={item.linkDetalle}><img src={item.imagenUrl} alt={item.titulo} /></a>
+            <h2 hidden>{item.titulo}</h2>
+            <div hidden><p>{item.descripcion}</p></div>
           </div>
+          
+          
         ))}
       </Slider>
-      <div className="navigation">
-        <button onClick={() => goToSlide(currentIndex - 1)}>Anterior</button>
-        <button onClick={() => goToSlide(currentIndex + 1)}>Siguiente</button>
-      </div>
     </div>
+
+    </div>
+
+   
+
   );
 };
 
-export default Carrusel; */
+export default Carrusel;
