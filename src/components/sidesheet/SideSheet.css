@@ -89,30 +89,3 @@ input {
  }
 
 
- .botonPassword{
-  position: absolute;
-  left: 90%;
-  bottom: 40%;
-  height: 20px;
-  width: 30px;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  
- }
-
-
- .ojo{
- align-items: center;
- position: absolute;
- bottom: -30%;
- right: -3%;
-
- }
-
-.botonPassword:hover path{
-  fill: #828282;
-  transition: 0.3s ease;
-}
-
