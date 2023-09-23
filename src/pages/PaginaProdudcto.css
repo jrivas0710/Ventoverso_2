@@ -1,0 +1,37 @@
+
+
+html {
+    box-sizing: border-box;
+    margin: auto 0;
+    
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  
+  }
+  
+  /* este es mi contenedor grid que es como a nivel del body, contendra todos los componentes del body */
+  .grid-container {
+    width: 100vw;
+    /* display: grid; COMENTADO PARA IMPORTAR COMPONENTE CARRUSEL EN HOME */
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: ;
+    /* hice 5 filas porque arriba estara el header, al medio el main con 3 filas y bajo el footer con 1*/
+    grid-template-areas:
+      /* les asigne nombres literales a cada area definida arriba */
+      'header'
+      'encabezado'
+      'imagenes'
+      'caracteristicas'
+      'productos relacionados'
+      'calificacion clientes'
+      'comentarios clientes'
+      'productos similares'
+      'footer';
+      padding-bottom: 20px;
+      }
+
+     
