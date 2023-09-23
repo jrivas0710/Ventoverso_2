@@ -1,6 +1,6 @@
 import { Footer } from "../components/footer/Footer"
 import Sidesheet2 from "../components/sidesheet/SideSheet2"
-import './PaginaProdudcto.css'
+import './PaginaProducto.css'
 
 
 
