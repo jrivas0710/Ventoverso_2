@@ -43,3 +43,10 @@ html {
     align-items: center;
     background-color: rgb(211, 210, 210);
 }
+
+
+.containerCarroImagenes{
+    display: flex;
+    gap: 100px;
+}
+
