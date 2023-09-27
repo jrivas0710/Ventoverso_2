@@ -16,7 +16,7 @@ export const PaginaProducto= () => {
 
   return (
     <>
-    <Header/>
+    <Sidesheet2/>
     <EncabezadoProducto/>
     <ImagenesProducto/>
     <DetalleProducto/>
