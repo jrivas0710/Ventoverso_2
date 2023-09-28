@@ -6,7 +6,7 @@ import './AgregarCarro.css'
 export const AgregarCarro = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const estadoDiv = isOpen ? true: false
+    const estadoDiv = isOpen ? true : false
 
     const openClose = () => {
         setIsOpen(!isOpen)
@@ -34,16 +34,16 @@ export const AgregarCarro = () => {
                             keyboard_control_key
                         </span></div>
                         </button>
-                        
-            <div className='desplegable' hidden = {estadoDiv}>
-                <ul>
-                    <li>2 unidades</li>
-                    <li>3 unidades</li>
-                    <li>4 unidades</li>
-                    <li>5 unidades</li>
-                    <li>6 unidades</li>
-                </ul>
-            </div>
+
+                        <div className='desplegable' hidden={estadoDiv}>
+                            <ul>
+                                <li>2 unidades</li>
+                                <li>3 unidades</li>
+                                <li>4 unidades</li>
+                                <li>5 unidades</li>
+                                <li>6 unidades</li>
+                            </ul>
+                        </div>
 
                     </div>
                     <div className='botonComprar-like'>
@@ -70,10 +70,44 @@ export const AgregarCarro = () => {
 
 
 
-            <div className='devolGarantPuntos'>
-                <div><span>Devolución</span></div>
-                <div><span>Garantía</span></div>
-                <div><span>Puntos</span></div>
+            <div className='devolGarantiaPuntos'>
+                <div className='iconoYdevolucion'>
+                    <div className='devolucionIconoDiv'>
+                        <span className="material-symbols-outlined">
+                            undo
+                        </span>
+                    </div>
+                    <div>
+                        <span>Devolución</span>
+                    </div>
+                </div>
+
+
+                <div className='iconoYgarantia'>
+                    <div className='garantiaIconoDiv'>
+                        <span className="material-symbols-outlined">
+                            workspace_premium
+                        </span>
+                    </div>
+
+                    <div>
+                        <span>Garantía
+                        </span>
+                    </div>
+                </div>
+
+                <div className='iconoYPuntos'>
+                    <div className='puntosIconoDiv'>
+                        <span className="material-symbols-outlined">
+                            trophy
+                        </span>
+                    </div>
+                    <div>
+                        <span>Puntos</span>
+                    </div>
+
+                </div>
+
 
             </div>
 
