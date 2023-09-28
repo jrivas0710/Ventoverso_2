@@ -47,6 +47,7 @@ export const SideSheet: React.FC<SideSheetProps> = ({ isOpen, onClose }) => {
               placeholder='Dirección e-mail'
               onChange={(e) => setEmail(e.target.value)}
               required
+              className='inputSideSheet'
             />
           </div>
           <div className="form-group">

@@ -148,8 +148,8 @@ ul>a {
 .like,
 .user,
 .carrito {
-  width: 17px;
-  height: 17px;
+  width: 32px;
+  height: 32px;
 }
 
 /*  .like,
@@ -159,6 +159,7 @@ ul>a {
 
 .botonUser{
   background-color: rgb(211, 210, 210);
+  border: none;
  
 }
 

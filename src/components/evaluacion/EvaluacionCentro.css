@@ -49,13 +49,14 @@ html {
     gap: 20px;
 }
 
-h2{
+.tituloEvaluacion{
     text-align: center;
+    margin-left: 100px;
 }
 
 .tituloEvaluacionCentro{
   position: absolute;
-  bottom: 14%;
+  bottom: 26%;
   right: 35%;
 }
 

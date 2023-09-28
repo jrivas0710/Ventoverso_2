@@ -24,6 +24,7 @@ export const PaginaProducto= () => {
     <DetalleProducto/>
     <ProductosRelacionados/>
     <EvaluacionPrincipal/>
+    <Footer/>
     
     
     
