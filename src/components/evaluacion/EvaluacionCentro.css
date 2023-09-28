@@ -56,9 +56,28 @@ h2{
 .tituloEvaluacionCentro{
   position: absolute;
   bottom: 14%;
-  right: 37%;
-  
+  right: 35%;
 }
+
+.evaluarBoton{
+    position: absolute;
+    background-color: #e6e6e6;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    font-size: 19px;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    width: 190px;
+    height: 50px;
+    text-align: center;
+    align-self: flex-end;
+    left: 146%;
+    }
+
+  
 
 
 

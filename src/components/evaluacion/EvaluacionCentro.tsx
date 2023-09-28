@@ -20,7 +20,9 @@ export const EvaluacionCentro = () => {
                         </div>
                         <div><b><span>5/5</span></b></div>
                         <div><b><span>3 comentarios</span></b></div>
-                    </div></div>
+                        <div><button className="evaluarBoton">Evaluar</button></div>
+                    </div>
+                    </div>
 
 
                 <div className="criteriosRanking">
