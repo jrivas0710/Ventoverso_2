@@ -140,16 +140,19 @@ ul>a {
   display: flex;
   justify-content: space-between;
   width: 10rem;
+  gap: 2rem;
+  align-items: center;
   
 }
 
 
 
-.like,
-.user,
-.carrito {
-  width: 32px;
-  height: 32px;
+.corazon,
+.agenda,
+.carro {
+  width: 40px;
+  height: 40px;
+  color: black;
 }
 
 /*  .like,
@@ -160,13 +163,12 @@ ul>a {
 .botonUser{
   background-color: rgb(211, 210, 210);
   border: none;
+  margin: 0;
+  padding: 0;
+  width: 30px;
  
 }
 
-.like,
-.carrito{
-  margin-top: 10px;
-}
 
 
  

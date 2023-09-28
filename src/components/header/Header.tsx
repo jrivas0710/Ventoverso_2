@@ -20,24 +20,38 @@ function Header({ evento }: any) {
 
           <div className="icons">
 
-            <div> <a href="#">
-              <img src="/images/like.png" alt="like" className="like" />
-            </a></div>
+            <div>
+              <button type="submit" onClick={evento} className="botonUser"><span className="material-symbols-outlined">
+                account_circle
+              </span>
+              </button>
+            </div>
 
-
-            <div><button type="submit" onClick={evento} className="botonUser"> <img src="/images/user.png" alt="user" className="user" /></button>
+            <div>
+              <a href="#">
+                <span className="material-symbols-outlined agenda">
+                  calendar_month
+                </span>
+              </a>
             </div>
 
 
+            <div>
+              <a href="#">
+                <span className="material-symbols-outlined corazon">
+                  favorite
+                </span>
+              </a>
+            </div>
 
-            <div><a href="#">
-              <img
-                src="/images/carrito.png"
-                alt="carrito"
-                className="carrito"
-              />
-            </a></div>
-            
+            <div>
+              <a href="#">
+                <span className="material-symbols-outlined carro">
+                  shopping_cart
+                </span>
+              </a>
+            </div>
+
           </div>
         </section>
 
@@ -56,7 +70,7 @@ function Header({ evento }: any) {
           </ul>
         </section>
       </header>
-      
+
     </div>
   );
 }
