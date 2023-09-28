@@ -7,6 +7,7 @@ import { ImagenesProducto } from "../components/imagenesProducto/ImagenesProduct
 import { DetalleProducto } from "../components/detalleProducto/DetalleProducto"
 import { ProductosRelacionados } from "../components/productosRelacionados/ProductosRelacionados"
 import { EvaluacionPrincipal } from "../components/evaluacion/EvaluacionPrincipal"
+import { ProductosSimilares } from "../components/productosSimilares/ProductosSimilares"
 
 
 
@@ -24,6 +25,7 @@ export const PaginaProducto= () => {
     <DetalleProducto/>
     <ProductosRelacionados/>
     <EvaluacionPrincipal/>
+    <ProductosSimilares/>
     <Footer/>
     
     
