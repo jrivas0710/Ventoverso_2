@@ -1,0 +1,36 @@
+html {
+    box-sizing: border-box;
+    margin: auto 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+.numerEstrellaTexto {
+    display: flex;
+    line-height: 3;
+    gap: 1rem;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    height: 55px;
+    
+
+
+}
+
+.estrella {
+    width: 32px;
+    height: 32px;
+    
+}
+
+.estrellaDiv{
+    padding-top: 7px;
+}
+

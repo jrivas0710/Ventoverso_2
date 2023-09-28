@@ -6,6 +6,8 @@ import { Header } from "../components/header/Header"
 import { ImagenesProducto } from "../components/imagenesProducto/ImagenesProducto"
 import { DetalleProducto } from "../components/detalleProducto/DetalleProducto"
 import { ProductosRelacionados } from "../components/productosRelacionados/ProductosRelacionados"
+import { EvaluacionPrincipal } from "../components/evaluacion/EvaluacionPrincipal"
+
 
 
 
@@ -21,6 +23,7 @@ export const PaginaProducto= () => {
     <ImagenesProducto/>
     <DetalleProducto/>
     <ProductosRelacionados/>
+    <EvaluacionPrincipal/>
     
     
     

@@ -1,0 +1,65 @@
+html {
+    box-sizing: border-box;
+    margin: auto 0;
+    position: relative;
+}
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+
+.containerEvaluacionCentro{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+   
+    
+}
+
+.estrellasCantidadComentarios{
+    display: flex;
+    gap: 25px;
+    font-size: 24px;
+    justify-content: start;
+}
+
+.criteriosRanking{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.lineas{
+    display: flex;
+    width: 800px;
+    gap: 3px;
+}
+
+.lineas > div {
+    height: 10px;
+    width: 180px;
+    background-color: grey;
+    
+}
+
+.estrellas{
+    display: flex;
+    gap: 20px;
+}
+
+h2{
+    text-align: center;
+}
+
+.tituloEvaluacionCentro{
+  position: absolute;
+  bottom: 14%;
+  right: 37%;
+  
+}
+
+
+
+
