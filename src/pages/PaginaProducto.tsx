@@ -8,6 +8,8 @@ import { DetalleProducto } from "../components/detalleProducto/DetalleProducto"
 import { ProductosRelacionados } from "../components/productosRelacionados/ProductosRelacionados"
 import { EvaluacionPrincipal } from "../components/evaluacion/EvaluacionPrincipal"
 import { ProductosSimilares } from "../components/productosSimilares/ProductosSimilares"
+import { Comentario } from "../components/comentarios/Comentarios"
+import { Migas } from "../components/migas/Migas"
 
 
 
@@ -20,12 +22,16 @@ export const PaginaProducto= () => {
   return (
     <>
     <Sidesheet2/>
+    <div className="containerPaginaProducto">
+    <Migas/>
     <EncabezadoProducto/>
     <ImagenesProducto/>
     <DetalleProducto/>
     <ProductosRelacionados/>
     <EvaluacionPrincipal/>
+    <Comentario/>
     <ProductosSimilares/>
+    </div>
     <Footer/>
     
     

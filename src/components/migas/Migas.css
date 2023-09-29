@@ -1,0 +1,28 @@
+
+
+.containerMigas{
+    display: flex;
+    gap: 20px;
+}
+
+.migaNormal {
+    width: auto;
+    padding: 4px 20px;
+    height: 30px;
+    border-radius: 2rem;
+    background-color: #d8d8d8;
+    font-size: 13px;
+    text-align: center;
+
+}
+
+.migaOscura{
+    background-color: black;
+    color: white;
+    width: auto;
+    padding: 4px 20px;
+    height: 30px;
+    border-radius: 2rem;
+    font-size: 13px;
+    text-align: center;
+}

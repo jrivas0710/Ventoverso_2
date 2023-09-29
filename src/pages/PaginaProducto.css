@@ -12,7 +12,11 @@ html {
     box-sizing: inherit;
   
   }
+
+  .containerPaginaProducto{
+    margin-left: 15px;
+  }
   
-  /* este es mi contenedor grid que es como a nivel del body, contendra todos los componentes del body */
+  
 
      

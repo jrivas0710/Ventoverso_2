@@ -29,19 +29,6 @@ export const EvaluacionCentro = () => {
 
                     <div className="ranking">
                         <div>
-                            <b><span>Uso</span></b>
-                        </div>
-                        <div className="lineas">
-                            <div className="primeraLinea"></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div className="ultimaLinea"></div>
-                        </div>
-                    </div>
-
-                    <div className="ranking">
-                        <div>
                             <b><span>Características</span></b>
                         </div>
                         <div className="lineas">
@@ -54,7 +41,7 @@ export const EvaluacionCentro = () => {
                     </div>
                     <div className="ranking">
                         <div>
-                            <b><span>Fabricación</span></b>
+                            <b><span>Sonido</span></b>
                         </div>
                         <div className="lineas">
                             <div className="primeraLinea"></div>
@@ -66,7 +53,7 @@ export const EvaluacionCentro = () => {
                     </div>
                     <div className="ranking">
                         <div>
-                            <b><span>Sonido</span></b>
+                            <b><span>Fabricación</span></b>
                         </div>
                         <div className="lineas">
                             <div className="primeraLinea"></div>

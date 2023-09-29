@@ -11,8 +11,9 @@ html {
 
 }
 
-.container{
-    margin-left: 3rem;
+.containerEncabezado{
+    margin-left: 4rem;
+    margin-top: 60px;
 }
 
 .encabezadoProducto{
@@ -24,9 +25,6 @@ html {
  
 }
 
-.spanEncabezado, .h1Encabezado{
-    font-size: 26px;
-}
 
 img{
     width: 4rem;
@@ -35,21 +33,44 @@ img{
     padding: 0;
 }
 
+.encabezadoProducto{
+    margin-bottom: 20px;
+}
+
+.estrellasEncabezadoProducto{
+    display: flex;
+    gap: 20px;
+}
+
 .estrellas-marca{
     display: flex;
-    width: 140px;
-    background-color: pink;
+    width: 300px;
     flex-direction: column;
-    align-items: center;
+    
+}
+
+.estrellaE{
+    width: 25px;
+    height: 25px;
 }
 
 .estrellas-marca > div {
     padding: 0;
     margin: 0;
+    justify-content: start;
 }
 
 .logoMarca{
-    height: 30px;
-    width: 140px;
+    height: 50px;
+    width: 200px;
     border: 1px solid black;
+    font-size: 25px;
+    text-align: center;
 }
+
+.h1Encabezado, .spanEncabezado{
+    font-size: 40px;
+}
+
+
+    
