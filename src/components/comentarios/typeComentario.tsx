@@ -2,9 +2,15 @@
 
 
 export type Comnetario = {
-    id:string,
-    titulo:string,
-    descripcion:string,
-    imagenUrl:string,
-    linkDetalle:string
+    productoId : string,
+    cliente: string,
+    fotoClienteUrl: string,
+    estrellas:number,
+    texto:string,
+    
+    calificaciones:{
+        caracteriticas:number,
+        sonido:number,
+        fabricacion:number
+    }
 }
