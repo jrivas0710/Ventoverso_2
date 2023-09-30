@@ -1,16 +1,26 @@
 
 
 
-export type Comnetario = {
+export type ComentarioTipo = {
     productoId : string,
     cliente: string,
     fotoClienteUrl: string,
+    nombreCliente:string,
     estrellas:number,
-    texto:string,
-    
+    titulo:string,
+    comentario:string
+
     calificaciones:{
-        caracteriticas:number,
+        caracteristicas:number,
         sonido:number,
         fabricacion:number
+    },
+    reacciones:{
+        MeGusta:number,
+        NoMeGusta:number,
+        Denunciar:number
     }
 }
+
+
+ 

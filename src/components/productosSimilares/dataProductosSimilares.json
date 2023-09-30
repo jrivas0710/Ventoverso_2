@@ -1,0 +1,43 @@
+[
+    {
+      "id": "id-similares-clarinete-1",
+      "imagenUrl": "https://ejemplo.com/imagen-clarinete-buffet.jpg",
+      "estrellas": 5,
+      "nombre": "Clarinete Buffet Crampon R13",
+      "precio": 250000,
+      "linkDetalle": "https://ejemplo.com/producto"
+    },
+    {
+      "id": "id-similares-clarinete-2",
+      "imagenUrl": "https://ejemplo.com/imagen-clarinete-yamaha.jpg",
+      "estrellas": 4,
+      "nombre": "Clarinete Yamaha YCL-650",
+      "precio": 200000,
+      "linkDetalle": "https://ejemplo.com/producto"
+    },
+    {
+      "id": "id-similares-clarinete-3",
+      "imagenUrl": "https://ejemplo.com/imagen-clarinete-selmer.jpg",
+      "estrellas": 4,
+      "nombre": "Clarinete Selmer Paris",
+      "precio": 240000,
+      "linkDetalle": "https://ejemplo.com/producto"
+    },
+    {
+      "id": "id-similares-clarinete-4",
+      "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+      "estrellas": 5,
+      "nombre": "Clarinete Backun Alpha",
+      "precio": 210000,
+      "linkDetalle": "https://ejemplo.com/producto"
+    },
+    {
+      "id": "id-similares-clarinete-5",
+      "imagenUrl": "https://ejemplo.com/imagen-clarinete-leblanc.jpg",
+      "estrellas": 4,
+      "nombre": "Clarinete Leblanc Serenade",
+      "precio": 220000,
+      "linkDetalle": "https://ejemplo.com/producto"
+    }
+  ]
+  
