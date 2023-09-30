@@ -48,7 +48,7 @@ html {
 /* Estilos para las imágenes en el carrusel */
 .carousel-slide img {
   width: 900px;
-  height: 50vh;
+  height: 65vh;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
