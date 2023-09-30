@@ -1,6 +1,6 @@
 
 
-export type ProductosReacionadosTipo = {
+export type ProductosRelacionadosTipo = {
 
 
     id :string,

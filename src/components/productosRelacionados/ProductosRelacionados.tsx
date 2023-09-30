@@ -1,9 +1,9 @@
 import './ProductosRelacionados.css'
-import { ProductosReacionadosTipo } from './typeProductosRelacionados'
+import { ProductosRelacionadosTipo } from './typeProductosRelacionados'
 
 
 
-export const ProductosRelacionados = (props:{dataProductosRelacionados:ProductosReacionadosTipo[]}) => {
+export const ProductosRelacionados = (props:{dataProductosRelacionados:ProductosRelacionadosTipo[]}) => {
 
     
 

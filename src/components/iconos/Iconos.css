@@ -13,7 +13,6 @@ html {
   }
 .iconos {
     grid-area: iconos;
-    background-color: rgb(86, 212, 212);
     height: auto;
     margin-bottom: 3rem;
     padding: 0;
@@ -31,6 +30,7 @@ html {
     
     gap: 0.5rem;
     align-items: center;
+    text-align: center;
 
 }
 
