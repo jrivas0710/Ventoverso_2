@@ -8,9 +8,9 @@ import { ProductoSibtipo } from '../productoSib/typeProducto'
 
 
 
-export const ImagenesProducto:React.FC<ProductoSibtipo> = ({imagenes, nombre, precio}) => {
+export const ImagenesProducto= (props:{dataProductoSib:ProductoSibtipo[]}) => {
 
-    let ima = imagenes?.map(ima => {
+    let ima = props.dataProductoSib.map(ima => {
         return(
             ima.toString()
         )
@@ -18,40 +18,53 @@ export const ImagenesProducto:React.FC<ProductoSibtipo> = ({imagenes, nombre, pr
 
     return (
         <>
-        
 
-        <div className='containerCarroImagenes'>
+        {props.dataProductoSib.map(item => {
+            return (
+
+                <div className='containerCarroImagenes'>
                <div className='imagenesProducto'>
                 <div className='imagenPrincipal'>
-                    <img src={ima?.toString()} alt={nombre}/> 
+                    <img src={ima?.toString()} alt={item.nombre}/> 
                 </div>
                 <div className='imagenesSecundarias'>
                     
                     <div>
                         
-                        <img src={ima?.toString()} alt={nombre} /> 
+                        <img src={ima?.toString()} alt={item.nombre} /> 
+                    </div>
+
+                    
+                    <div>
+                        <img src={ima?.toString()} alt={item.nombre}/> 
                     </div>
                     <div>
-                        <img src={ima?.toString()} alt={nombre}/> 
+                        <img src={ima?.toString()} alt={item.nombre}/> 
                     </div>
                     <div>
-                        <img src={ima?.toString()} alt={nombre}/> 
+                        <img src={ima?.toString()} alt={item.nombre}/> 
                     </div>
                     <div>
-                        <img src={ima?.toString()} alt={nombre}/> 
+                        <img src={ima?.toString()} alt={item.nombre}/> 
                     </div>
-                    <div>
-                        <img src={ima?.toString()} alt={nombre}/> 
-                    </div>
+                    
+                    
+                   
                 </div>
                     
             </div>
 
             <div>
-                <AgregarCarro precio = {precio}/>
+                <AgregarCarro precio = {item.precio}/>
             </div>
         </div>
 
+                
+            )
+        })}
+        
+
+        
          
 
 
