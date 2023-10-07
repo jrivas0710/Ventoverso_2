@@ -1,18 +1,15 @@
 
 
 .productos-destacados{
-    grid-area: section2;
     display: flex;
-    width: 80vw;
+    width: 75vw;
     height: 1000px;
     position: relative;
-    padding-top: 3rem;
-    margin-bottom: 4rem;
     flex-wrap: wrap;
     flex-direction: end;
-    padding-left: 300px;
     border-top: 1px solid black;
-    margin-top: 200px;
+    float: right;
+    
     
 }
    
@@ -21,8 +18,10 @@
     background-color: #bdbdbd;
     height: 13rem;
     width: 15rem;
-    margin-top: 2rem;
+    margin-bottom: 40px;
     margin-top: 100px;
+  
+    
     
 }
 
@@ -30,34 +29,38 @@
     background-color: rgb(211, 210, 210);
     height: 12rem;
     width: 14rem;
-    
-    
+
+
 }
-
-
-.ranking{
     
-    width: 4rem;
-    height: 4rem;
-    margin: 0;
-    padding: 0;
+    
+
+.estrellasClarineteDestacado{
+    width: 50px;
+    height: 50px;
 }
 
 .nombre-producto{
- 
     text-align: start;
-
 }
-.precio{
+
+
+.precio, .nombre, .spanEstrellasClarinete {
     font-size: 20px;
     font-weight: bold;
     
+}
+
+.spanEstrellasClarinete{
+    height: 20px;
 }
 
 .nombre-precio-ranking{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    width: 14rem;
+    height: 5rem;
 }
 
 .texto-productos-destacados{

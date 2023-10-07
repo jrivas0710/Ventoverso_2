@@ -2,13 +2,15 @@ import { DestacadosClarinete } from "../components/destacadosClarinete/Destacado
 import dataDestacadoClarinete from "../components/destacadosClarinete/dataDestacadoClarinete.json"
 import { Footer } from "../components/footer/Footer"
 import { Header } from "../components/header/Header"
+import Sidesheet2 from "../components/sidesheet/SideSheet2"
+
 
 
 export const DestacadoClarinetes = () => {
 
  return(
     <>
-    <Header/>
+    <Sidesheet2/>
     <DestacadosClarinete dataDestacadoClarinete={dataDestacadoClarinete}/>
     <Footer/>
     </>
