@@ -1,9 +1,9 @@
 import './ProductosRelacionados.css'
-import { ProductosRelacionadosTipo } from './typeProductosRelacionados'
+import { RelacionadosSimDest } from '../../interfaces/RelacionadosSimDest'
 
 
 
-export const ProductosRelacionados = (props:{dataProductosRelacionados:ProductosRelacionadosTipo[]}) => {
+export const ProductosRelacionados = (props:{dataProductosRelacionados:RelacionadosSimDest[]}) => {
 
     
 

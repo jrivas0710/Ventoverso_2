@@ -1,8 +1,10 @@
 import './App.css'
 import { Home } from './pages/Home'
 import {PaginaProducto} from './pages/PaginaProducto'
-import { DestacadosClarinete } from './components/destacadosClarinete/DestacadosClarinete'
+import { DestacadoClarinetes } from './pages/DestacadosClarinete'
 import dataDesctacadoClarinete from './components/destacadosClarinete/dataDestacadoClarinete.json'
+import { PageProducto } from './pages/PageProducto'
+
 
 
 
@@ -12,7 +14,8 @@ function App() {
     <>
       {/* <Home/>    */}
      {/* <PaginaProducto/>  */}
-     <DestacadosClarinete dataDestacadoClarinete={dataDesctacadoClarinete}/>
+     {/* <DestacadoClarinetes/> */}
+     <PageProducto/>
     </>
   )
 }

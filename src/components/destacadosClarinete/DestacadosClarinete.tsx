@@ -1,5 +1,6 @@
 import './DestacadosClarinete.css'
-import { Interfaz_destacado } from './Interfaz_Destacado'
+import { RelacionadosSimDest } from '../../interfaces/RelacionadosSimDest'
+import { Filter } from '../filtro/Filter'
 
 
 
@@ -17,46 +18,57 @@ import { Interfaz_destacado } from './Interfaz_Destacado'
     descripcion:  "string"
   } 
  */
-export const DestacadosClarinete = (props: { dataDestacadoClarinete: Interfaz_destacado[] }) => {
+export const DestacadosClarinete = (props: { dataDestacadoClarinete: RelacionadosSimDest[] }) => {
 
     return (
         <>
 
+            <div className='headerProductoDestacado'>
+                <h2>
+                    Clarinete Sib
+                </h2>
+            </div>
 
-            <div className='productos-destacados'>
-
-                {props.dataDestacadoClarinete.map(item => {
-                    return (
+            <div className='filterDestacados'>
 
 
-                        <div>
-                            <h2 className='texto-productos-destacados'>ClarineteSib</h2>
 
-                            < div className='producto' id={item.id}>
-                                <a href={item.linkDetalle}><img className='imagenDestacaoClarinete' src={item.imagenUrl} alt={item.nombre}/></a>
+                <Filter />
+
+                <div className='productos-destacados'>
+
+                    {props.dataDestacadoClarinete.map(item => {
+                        return (
+
+
+                            <div>
+
+
+                                < div className='producto' id={item.id}>
+                                    <a href={item.linkDetalle}><img className='imagenDestacaoClarinete' src={item.imagenUrl} alt={item.nombre} /></a>
+                                </div>
+
+                                < div className='nombre-precio-ranking'>
+
+                                    <span className='spanEstrellasClarinete'>
+                                        <img className='estrellasClarineteDestacado' src="./public/images/estrellas.png" alt="" />
+                                        {/* {item.estrellas} */}
+                                    </span>
+
+                                    <span className='nombre-producto' > {item.nombre} </span>
+                                    <span className='precio' > {item.precio}</span>
+
+                                </div>
+
                             </div>
 
-                            < div className='nombre-precio-ranking'>
-
-                                <span className='spanEstrellasClarinete'>
-                                    <img className='estrellasClarineteDestacado' src="./public/images/estrellas.png" alt="" />
-                                    {/* {item.estrellas} */}
-                                </span>
-
-                                <span className='nombre-producto' > {item.nombre} </span>
-                                <span className='precio' > {item.precio}</span>
-
-                            </div>
-
-                        </div>
-
-                    )
-                })}
+                        )
+                    })}
 
 
 
 
-                {/* <div>
+                    {/* <div>
          <h2 className='texto-productos-destacados'>ClarineteSib</h2>
          < div className = 'producto' > </div>
          < div className = 'nombre-precio-ranking' >
@@ -211,6 +223,7 @@ export const DestacadosClarinete = (props: { dataDestacadoClarinete: Interfaz_de
          </div>
          </div> */}
 
+                </div>
             </div>
 
 

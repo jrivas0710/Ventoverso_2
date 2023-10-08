@@ -1,6 +1,6 @@
 import './Comentarios.css'
 
-import { ComentarioTipo } from './typeComentario'
+import { Comentario } from '../../interfaces/Comentarios'
 
 /* export type ComentarioTipo = {
     productoId : string,
@@ -24,7 +24,7 @@ import { ComentarioTipo } from './typeComentario'
 }
  */
 
-const Comentario = (props:{dataComentario: ComentarioTipo[] }) => {
+const Comentario = (props:{dataComentario: Comentario[] }) => {
 
     console.log(props)
 

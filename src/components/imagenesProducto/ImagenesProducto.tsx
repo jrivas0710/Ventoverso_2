@@ -1,6 +1,6 @@
 import { AgregarCarro } from '../agregarCarro/AgregarCarro'
 import './ImagenesProducto.css'
-import { ProductoSibtipo } from '../productoSib/typeProducto'
+import { ProductoPrincipal } from '../../interfaces/ProductoPincipal'
 
 
 
@@ -8,7 +8,7 @@ import { ProductoSibtipo } from '../productoSib/typeProducto'
 
 
 
-export const ImagenesProducto= (props:{dataProductoSib:ProductoSibtipo[]}) => {
+export const ImagenesProducto= (props:{dataProductoSib:ProductoPrincipal[]}) => {
 
     let ima = props.dataProductoSib.map(ima => {
         return(

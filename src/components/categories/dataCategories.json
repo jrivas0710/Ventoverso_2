@@ -1,0 +1,45 @@
+[
+    {
+      "id": "id-clarinete-1",
+      "nombre": "Clarinete Sib",
+      "imagenUrl": "https://ejemplo.com/imagen-clarinete-sib.jpg",
+      "linkDetalle": "https://ejemplo.com/concurso-xyz"
+    },
+    {
+      "id": "id-clarinete-2",
+      "nombre": "Clarinete La",
+      "imagenUrl": "https://ejemplo.com/imagen-clarinete-la.jpg",
+      "linkDetalle": "https://ejemplo.com/concurso-xyz"
+    },
+    {
+      "id": "id-clarinete-3",
+      "nombre": "Clarinete Mib",
+      "imagenUrl": "https://ejemplo.com/imagen-clarinete-mib.jpg",
+      "linkDetalle": "https://ejemplo.com/concurso-xyz"
+    },
+    {
+      "id": "id-clarinete-4",
+      "nombre": "Campanas y barriles",
+      "imagenUrl": "https://ejemplo.com/imagen-campanas-barriles.jpg",
+      "linkDetalle": "https://ejemplo.com/concurso-xyz"
+    },
+    {
+      "id": "id-clarinete-5",
+      "nombre": "Cañas clarinete",
+      "imagenUrl": "https://ejemplo.com/imagen-canas-clarinete.jpg",
+      "linkDetalle": "https://ejemplo.com/concurso-xyz"
+    },
+    {
+      "id": "id-clarinete-6",
+      "nombre": "Accesorios clarinete",
+      "imagenUrl": "https://ejemplo.com/imagen-accesorios-clarinete.jpg",
+      "linkDetalle": "https://ejemplo.com/concurso-xyz"
+    },
+    {
+      "id": "id-clarinete-7",
+      "nombre": "Ver todo Clarinetes",
+      "imagenUrl": "https://ejemplo.com/imagen-ver-todo-clarinetes.jpg",
+      "linkDetalle": "https://ejemplo.com/concurso-xyz"
+    }
+  ]
+  

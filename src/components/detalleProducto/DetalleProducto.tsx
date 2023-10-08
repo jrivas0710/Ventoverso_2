@@ -1,10 +1,10 @@
 import './DetalleProducto.css'
-import { ProductoSibtipo } from '../productoSib/typeProducto'
+import { ProductoPrincipal } from '../../interfaces/ProductoPincipal'
 
 
 
 
-export const DetalleProducto:React.FC<ProductoSibtipo> = ( {caracteristicasPrincipales, descripcion}) => {
+export const DetalleProducto:React.FC<ProductoPrincipal> = ( {caracteristicasPrincipales, descripcion}) => {
 
 
     return (

@@ -1,4 +1,6 @@
-export type Destacado= {
+
+
+export interface Destacado {
     id:string,
     imagenUrl : string,
     estrellas : number, 

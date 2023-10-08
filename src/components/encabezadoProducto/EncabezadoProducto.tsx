@@ -1,5 +1,5 @@
 import './EncabezadoProducto.css'
-import { ProductoSibtipo } from '../productoSib/typeProducto'
+import { ProductoPrincipal } from '../../interfaces/ProductoPincipal'
 
 /* 
 export type ProductoSibtipo = {
@@ -19,7 +19,7 @@ export type ProductoSibtipo = {
  */
 
 
-export const EncabezadoProducto:React.FC<ProductoSibtipo>= ({nombre, marca, modelo,estrellas}) => {
+export const EncabezadoProducto:React.FC<ProductoPrincipal>= ({nombre, marca, modelo,estrellas}) => {
 
 
   return (

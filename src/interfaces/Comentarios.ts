@@ -1,7 +1,4 @@
-
-
-
-export type ComentarioTipo = {
+export interface Comentario {
     productoId : string,
     cliente: string,
     fotoClienteUrl: string,
@@ -21,6 +18,3 @@ export type ComentarioTipo = {
         Denunciar:number
     }
 }
-
-
- 

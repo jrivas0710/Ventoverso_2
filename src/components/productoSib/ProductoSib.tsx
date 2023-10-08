@@ -1,13 +1,13 @@
 import { DetalleProducto } from "../detalleProducto/DetalleProducto"
 import { EncabezadoProducto } from "../encabezadoProducto/EncabezadoProducto"
 import { ImagenesProducto } from "../imagenesProducto/ImagenesProducto"
-import { ProductoSibtipo } from './typeProducto'
+import { ProductoPrincipal } from "../../interfaces/ProductoPincipal"
 import dataProductoSib from './dataProductoSib.json'
 
 
 
 
-export const ProductoSib = (props: { dataProductoSib: ProductoSibtipo[] }) => {
+export const ProductoSib = (props: { dataProductoSib: ProductoPrincipal[] }) => {
 
  console.log(props)
 

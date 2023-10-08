@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import './AgregarCarro.css'
-import { ProductoSibtipo } from '../productoSib/typeProducto';
+import { ProductoPrincipal } from '../../interfaces/ProductoPincipal';
 
 
 
-export const AgregarCarro:React.FC<ProductoSibtipo> = ({precio}) => {
+export const AgregarCarro:React.FC<ProductoPrincipal> = ({precio}) => {
     const [isOpen, setIsOpen] = useState(true);
 
     const estadoDiv = isOpen ? true : false

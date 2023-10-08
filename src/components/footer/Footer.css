@@ -50,9 +50,8 @@
 
 .footer {
     background-color: rgb(211, 210, 210);
-    margin-top: 2rem;
+    margin-top: 70px;
     padding-bottom: 2rem;
-    margin-top: 5rem;
     height: 330px;
     display: flex;
     flex-direction: column;
@@ -136,7 +135,6 @@
 
 .barraFooter {
     height: 80px;
-    width: 100vw;
     background-color: black;
     display: flex;
     justify-content: end;

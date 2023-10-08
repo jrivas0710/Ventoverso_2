@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Carrusel.css';
-import { Carrusel } from './InterfaceCarrusel'; //este es el typo carrusel
+import { Carrusel } from '../../interfaces/Carrusel';  //este es el typo carrusel
 
 
 

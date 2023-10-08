@@ -1,13 +1,12 @@
 
 
 .productos-destacados{
-    grid-area: section2;
     display: flex;
     width: 100%;
     justify-content: space-around;
     position: relative;
     padding-top: 3rem;
-    margin-bottom: 4rem;
+    margin-top: 60px
    
    
 }

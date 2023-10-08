@@ -1,6 +1,5 @@
 
-
-export type ProductosRelacionadosTipo = {
+export interface RelacionadosSimDest {
 
 
     id :string,

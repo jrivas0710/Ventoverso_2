@@ -1,0 +1,59 @@
+html {
+  box-sizing: border-box;
+  margin: auto 0;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+}
+
+.categoryContainer{
+  width: 100vw;
+
+}
+
+.ContainerCategoryTitle{
+  display: flex;
+  justify-content: center;
+}
+
+.categoryTitle {
+  display: inline-flex;
+  padding: 16px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.categoryTitleH1 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.opciones {
+  display: inline-flex;
+  width: 100vw;
+  Padding: 16px 0px;
+  align-items: flex-start;
+  gap: 80px;
+  justify-content: center;
+  
+}
+
+.opciones > div {
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid black;
+}

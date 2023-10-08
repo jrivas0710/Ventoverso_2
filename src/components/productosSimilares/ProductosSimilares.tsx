@@ -1,9 +1,9 @@
 import './ProductosSimilares.css'
+import {RelacionadosSimDest} from '../../interfaces/RelacionadosSimDest'
 
-import { ProductosSimilaresTipo } from './typeProductosSimilares'
 
 
-export const ProductosSimilares= (props:{dataProductosSimilares:ProductosSimilaresTipo[]}) => {
+export const ProductosSimilares= (props:{dataProductosSimilares:RelacionadosSimDest[]}) => {
 
     console.log(props)
 
