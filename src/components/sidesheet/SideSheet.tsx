@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import './SideSheet.css'; // Importa los estilos CSS
+import { Login } from '../../interfaces/Login';
 
 
-interface SideSheetProps {
-  isOpen: boolean;
-  onClose: () => void;
+/* interface SideSheetProps {
+  isOpen?: boolean;
+  onClose?: () => void;
 }
+ */
 
-export const SideSheet: React.FC<SideSheetProps> = ({ isOpen, onClose }) => {
+export const SideSheet = ({ isOpen, onClose }: Login) => {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [mostrarPassword, setMostrarPassword] = useState(false)

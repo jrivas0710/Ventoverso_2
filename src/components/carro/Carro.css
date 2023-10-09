@@ -1,0 +1,163 @@
+html {
+    box-sizing: border-box;
+    margin: auto 0;
+
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+.containerProductoCarro {
+    display: flex;
+    width: 700px;
+    padding: 16px;
+    align-items: center;
+    gap: 64px;
+    border: 1px solid #000;
+}
+
+.imagenProductoCarro {
+    width: 180px;
+    height: 180px;
+    border: 1px solid #000;
+    background: #D9D9D9;
+}
+
+.detalleProductoCarro {
+    display: flex;
+    height: 178px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.productoPrecioCantidad {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.eliminarDeseo {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.containerResumenCompra {
+    display: inline-flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    background: rgba(217, 217, 217, 0.42);
+}
+
+.resumenCompra {
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    display: flex;
+    width: 440px;
+    align-items: center;
+}
+
+.contenidoResumenCompra {
+    width: 440px;
+
+}
+
+
+
+.subtotal,
+.iva,
+.precioFinal {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+.precioPro,
+.ivaPro,
+.totalPro {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.pagarCompra>button {
+    display: flex;
+    height: 56px;
+    Padding: 15px 158px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    background: #000;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.gastosEnvio {
+    display: flex;
+    width: 384px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    gap: 15px;
+}
+
+.aplicarDcto {
+    width: 329px;
+    height: 44px;
+    background: #FFF;
+    border: none;
+    color: rgba(69, 90, 100, 0.54);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    left: 17px;
+    bottom: 10px;
+    padding-left: 15px;
+}
+
+.aplicar {
+    right: 17px;
+    top: 12px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+    background: #D9D9D9;
+}
+
+.containerFlexCarro{
+    display: flex;
+    gap: 100px;
+}
