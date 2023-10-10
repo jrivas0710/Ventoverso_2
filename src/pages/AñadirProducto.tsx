@@ -14,8 +14,6 @@ import dataProductosRelacionados from '../components/productosRelacionados/dataP
 import dataProductosSimilares from '../components/productosSimilares/dataProductosSimilares.json'
 
 
-console.log(dataProductosSimilares)
-
 
 
 

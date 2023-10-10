@@ -1,0 +1,128 @@
+html {
+    box-sizing: border-box;
+    margin: auto 0;
+
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+.containerUsuario {
+    display: flex;
+    width: 708px;
+    height: 1369px;
+    padding: 113px 54px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    flex-shrink: 0;
+    margin: 0 auto;
+    background-color: #FFF;
+}
+
+body{
+    background: #D9D9D9;
+}
+
+.crearUser {
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.inputsUser {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.inputsUser>input {
+    display: flex;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border: 1px solid #000;
+    background: #FFF;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.inputCheck {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.inputCheck>div {
+    margin-bottom: 30px;
+}
+
+.ofertasNovedades{
+    display: flex;
+    gap: 10px;
+}
+
+.btnsUser {
+    display: flex;
+    flex-direction: column;
+}
+
+.crearCuenta {
+    display: flex;
+    width: 320px;
+    height: 48px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 24px;
+    background: #D9D9D9;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.cancelar {
+    display: flex;
+    width: 320px;
+    height: 48px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    background-color:#FFF;
+}

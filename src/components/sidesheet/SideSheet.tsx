@@ -41,7 +41,7 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
         <span className='loginSpan'>Bienvenid@ a Ventoverso</span>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="email">Correo Electrónico</label>
+           {/*  <label htmlFor="email">Correo Electrónico</label> */}
             <input
               type="email"
               id="email"
@@ -50,13 +50,13 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
               placeholder='Dirección e-mail'
               onChange={(e) => setEmail(e.target.value)}
               required
-              className='inputSideSheet'
+              className='inputMail'
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Contraseña</label>
+           {/*  <label htmlFor="password">Contraseña</label> */}
             <input
-              type={mostrarPassword? 'text' : 'password'}
+              type={mostrarPassword ? 'text' : 'password'}
               id="password"
               name="password"
               value={password}
@@ -69,7 +69,17 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
 
 
           </div>
-          <button type="submit" className='botonLogin'>Iniciar Sesión</button>
+          <div className='botonEnlaces'>
+            <div>
+              <button type="submit" className='botonLogin'>Iniciar Sesión</button>
+            </div>
+            <div className='enlaces'>
+              <div className='recuperarContraseña'> <a href='#' className='enlace1'>Olvidé mi contraseña</a></div>
+              <div><a href='#' className='enlace2' >¿No tienes cuenta?</a></div>
+              <div><span className='registrate'>Regístrate</span></div>
+            </div>
+
+          </div>
         </form>
       </div>
     </div>
