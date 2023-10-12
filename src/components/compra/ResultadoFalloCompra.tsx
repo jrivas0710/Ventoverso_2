@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 import './ResultadoCompra.css'
 
 
@@ -15,7 +16,7 @@ export const ResultadoCompraFallo = () => {
                 <div><p>Vuelve al checkout para finalizar tu compra.
                     Si el problema persiste, prueba cambiando el método de pago o inténtalo más tarde.</p></div>
                 <div className='containerButtons'>
-                    <button className='comprobantePago'>{/* <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                 <Link to ={"/checkout"}>  <button className='comprobantePago'>{/* <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                         <mask id="mask0_197_12302" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
                             <rect x="0.5" width="24" height="24" fill="#D9D9D9" />
                         </mask>
@@ -25,6 +26,7 @@ export const ResultadoCompraFallo = () => {
                     </svg></span> */}
                     Volver al checkout
                     </button>
+                    </Link>
                     <button className='irInicio'>Centro de ayuda</button>
                 </div>
             </div>

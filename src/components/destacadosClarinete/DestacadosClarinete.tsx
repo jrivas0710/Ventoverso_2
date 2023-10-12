@@ -1,6 +1,7 @@
 import './DestacadosClarinete.css'
 import { RelacionadosSimDest } from '../../interfaces/RelacionadosSimDest'
 import { Filter } from '../filtro/Filter'
+import { Link } from 'react-router-dom'
 
 
 
@@ -45,7 +46,7 @@ export const DestacadosClarinete = (props: { dataDestacadoClarinete: Relacionado
 
 
                                 < div className='producto' id={item.id}>
-                                    <a href={item.linkDetalle}><img className='imagenDestacaoClarinete' src={item.imagenUrl} alt={item.nombre} /></a>
+                                    <Link to = {"/agregarProducto"} >{item.linkDetalle}<img className='imagenDestacaoClarinete' src={item.imagenUrl} alt={item.nombre} /></Link>
                                 </div>
 
                                 < div className='nombre-precio-ranking'>
@@ -55,7 +56,7 @@ export const DestacadosClarinete = (props: { dataDestacadoClarinete: Relacionado
                                         {/* {item.estrellas} */}
                                     </span>
 
-                                    <span className='nombre-producto' > {item.nombre} </span>
+                                   <Link to = {"/agregarProducto"}><span className='nombre-producto' > {item.nombre} </span></Link> 
                                     <span className='precio' > {item.precio}</span>
 
                                 </div>

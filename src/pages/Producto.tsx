@@ -6,7 +6,7 @@ import dataCategories from '../components/categories/dataCategories.json'
 import dataDestacados from '../components/destacados/dataDestacados.json'
 import dataProductosSimilares from '../components/productosSimilares/dataProductosSimilares.json'
 import dataBlog from '../components/blog/dataBlog.json'
-import './PageProducto.css'
+import './Producto.css'
 import Sidesheet2 from "../components/sidesheet/SideSheet2"
 import { Footer } from "../components/footer/Footer"
 

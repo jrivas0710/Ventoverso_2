@@ -1,6 +1,6 @@
 import { Footer } from "../components/footer/Footer"
 import Sidesheet2 from "../components/sidesheet/SideSheet2"
-import './PaginaProducto.css'
+/* import './PaginaProducto.css' */
 
 import { ProductosRelacionados } from "../components/productosRelacionados/ProductosRelacionados"
 import { EvaluacionPrincipal } from "../components/evaluacion/EvaluacionPrincipal"

@@ -1,0 +1,96 @@
+html {
+    box-sizing: border-box;
+    margin: auto 0;
+
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+.alerta {
+    display: inline-flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background: #FFF;
+    width: auto;
+    margin: 0 auto;
+    height: 300px;
+    z-index: 2;
+}
+
+.tituloAlerta {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.textoAlerta {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.divTextoAlerta {
+    display: flex;
+    width: 667px;
+    height: 115px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btnsAlerta {
+    display: flex;
+    gap: 30px;
+}
+
+.salirAlerta {
+    display: flex;
+    width: 128px;
+    height: 48px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 24px;
+    background: #000;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+}
+
+.cancelarAlerta {
+    display: flex;
+    width: 128px;
+    height: 48px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 24px;
+    background: #D9D9D9;
+    border: none;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

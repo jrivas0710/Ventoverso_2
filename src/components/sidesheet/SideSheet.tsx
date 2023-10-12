@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './SideSheet.css'; // Importa los estilos CSS
 import { Login } from '../../interfaces/Login';
+import { Link } from 'react-router-dom';
 
 
 /* interface SideSheetProps {
@@ -76,7 +77,7 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
             <div className='enlaces'>
               <div className='recuperarContraseña'> <a href='#' className='enlace1'>Olvidé mi contraseña</a></div>
               <div><a href='#' className='enlace2' >¿No tienes cuenta?</a></div>
-              <div><span className='registrate'>Regístrate</span></div>
+              <div> <Link to ={"/registro"} > <span className='registrate'>Regístrate</span></Link> </div>
             </div>
 
           </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './AgregarCarro.css'
 import { ProductoPrincipal } from '../../interfaces/ProductoPincipal';
+import { Link } from 'react-router-dom';
 
 
 
@@ -48,7 +49,7 @@ export const AgregarCarro:React.FC<ProductoPrincipal> = ({precio}) => {
 
                     </div>
                     <div className='botonComprar-like'>
-                        <div><button className='botonComprar'>Comprar</button></div>
+                        <div> <Link to = {"/productoCarro"}> <button className='botonComprar'>Comprar</button></Link> </div>
                         <div className='divLike'><img src="/images/like.png" alt="argegar-producto-deseado" className='like' /></div>
                     </div>
 

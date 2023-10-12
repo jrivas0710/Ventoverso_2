@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './ResultadoCompra.css'
 
 
@@ -21,7 +22,7 @@ export const ResultadoCompra = () => {
                         </g>
                     </svg></span>Decargar comprobante de pago
                     </button>
-                    <button className='irInicio'>Ir al inicio</button>
+                   <Link to ={"/"}> <button className='irInicio'>Ir al inicio</button></Link>
                 </div>
             </div>
         </>
