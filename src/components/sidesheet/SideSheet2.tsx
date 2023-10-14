@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import {SideSheet} from './Sidesheet'
+import {SideSheet} from './SideSheet'
 import { Header } from '../header/Header';
 
 function Sidesheet2() {

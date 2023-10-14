@@ -33,7 +33,7 @@ export const PageProducto = () => {
                 </div>
 
                 <PlantillaCategoria dataProducto={dataCategories} />
-                <Destacados dataDestacados={dataDestacados} />
+                <ProductosSimilares dataProductosSimilares={dataProductosSimilares}/>
                 <Blogs dataBlog={dataBlog} />
             </div>
         <Footer/>

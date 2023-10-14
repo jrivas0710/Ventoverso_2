@@ -8,6 +8,7 @@ import dataDestacados from '../components/destacados/dataDestacados.json'
 import dataBlog from '../components/blog/dataBlog.json'
 import Sidesheet2 from "../components/sidesheet/SideSheet2"
 import dataCarrusel from '../components/carrusel/dataCarrusel.json'
+import { ProductosSimilares } from "../components/productosSimilares/ProductosSimilares"
 
 
 //la data se supone que es el json de back para Carrusel y Destacados
@@ -16,14 +17,15 @@ const Home = () => {
 
   return (
     <>
-      <Sidesheet2 />
+     <Sidesheet2 /> 
       <Carrusel dataCarrusel={dataCarrusel}/>
       <Iconos />
-      <Destacados
-        dataDestacados={dataDestacados} />
+      <ProductosSimilares dataProductosSimilares={dataDestacados}/>
+      {/* <Destacados
+        dataDestacados={dataDestacados} /> */}
       <MarcasPopulares/>
       <Blogs dataBlog={dataBlog} />
-      <Footer />
+      <Footer /> 
     </>
   )
 }

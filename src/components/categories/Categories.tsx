@@ -16,7 +16,7 @@ export const PlantillaCategoria = (props: { dataProducto: Category[] }) => {
 
                             <div className='categories'>
                                 <div key={item.id} className='imagesCategories'>
-                                <Link to = {"/d_clarinete"}>{item.linkDetalle}><img src={item.imagenUrl} alt={item.nombre} /></Link>
+                                <Link to = {"/d_clarinete"}>{item.linkDetalle}<img src={item.imagenUrl} alt={item.nombre} /></Link>
                                 </div>
                                 <div className='namesCategories'>
                                     <a href="">

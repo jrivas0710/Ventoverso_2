@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import "./Header.css"
 
 function Header({ evento }: any) {
@@ -62,7 +63,7 @@ function Header({ evento }: any) {
               <li><span>Bronces</span></li>
             </a>
             <a href="#">
-              <li><span>Maderas</span></li>
+              <Link to = {"/productoCategoria"}><li><span>Maderas</span></li></Link> 
             </a>
             <a href="#">
               <li><span>Accesorios</span></li>
