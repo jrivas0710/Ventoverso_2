@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <>
-     <Sidesheet2 /> 
+     
       <Carrusel dataCarrusel={dataCarrusel}/>
       <Iconos />
       <ProductosSimilares dataProductosSimilares={dataDestacados}/>
@@ -25,7 +25,7 @@ const Home = () => {
         dataDestacados={dataDestacados} /> */}
       <MarcasPopulares/>
       <Blogs dataBlog={dataBlog} />
-      <Footer /> 
+      
     </>
   )
 }

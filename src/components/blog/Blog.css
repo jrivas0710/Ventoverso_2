@@ -1,3 +1,10 @@
+
+.containerVentoNews{
+    text-align: center;
+    margin-top: 60px;
+}
+
+
 .vento-news {
     display: flex;
     
@@ -5,7 +12,7 @@
     font-weight: bold;
     padding-top:3rem;
     position:relative;
-    margin-top: 300px;
+    margin-top: 10px;
 }
 
 .container {
@@ -25,12 +32,7 @@
         border : 1px solid black
     }
 
-  .texto-Vento-News {
-    position: absolute;
-    bottom: 100%;
-    right: 45%;
-    
-}
+
 
 .contenido-pie{
     display: flex;

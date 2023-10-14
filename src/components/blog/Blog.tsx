@@ -7,12 +7,15 @@ export const Blogs = (props: { dataBlog: Blog[] }) => {
 
     return (
         <>
+        
+        <div className='containerVentoNews'>
+            <section className='texto-Vento-News'>
+                    <h2>Blog Vento News</h2>
+                </section>
 
             <div className='vento-news'>
 
-                <section className='texto-Vento-News'>
-                    <h2>Blog Vento News</h2>
-                </section>
+            
 
                 {props.dataBlog.map(item => {
                     return (
@@ -36,6 +39,7 @@ export const Blogs = (props: { dataBlog: Blog[] }) => {
                     )
                 })}
 
+            </div>
             </div>
         </>
     )

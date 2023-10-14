@@ -6,30 +6,32 @@ export const MarcasPopulares = () => {
 
     return (
       <>
-        
+          <div className='containerMarcasPopulares'>
+
+          <div><h2>Marcas Populares</h2></div>
+         
        
           <div className='seccion-populares'>
             
            <section className='texto-marcas-populares'>
-           <h2>Marcas populares</h2>
            </section>
 
             <div></div>
 
             <section className='texto-marcas-populares'>
-           <h2>Marcas populares</h2>
+          
            </section>
 
             <div></div>
 
             <section className='texto-marcas-populares'>
-           <h2>Marcas populares</h2>
+           
            </section>
 
             <div></div>
 
             <section className='texto-marcas-populares'>
-           <h2>Marcas populares</h2>
+        
            </section>
 
             <div></div>
@@ -40,7 +42,7 @@ export const MarcasPopulares = () => {
           </div>
   
     
-  
+          </div>
       </>
     )
   

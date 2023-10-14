@@ -1,6 +1,9 @@
 
 
+.containerProductosSimilares{
 
+text-align:center;
+}
 
 .productosSimilares{
    
@@ -10,11 +13,13 @@
     position: relative;
     padding-top: 3rem;
     margin-bottom: 4rem;
-    position: relative;
-    margin-top: 4rem;
+ 
+
    
    
 }
+
+
 
 .productos-similares > div {
     
@@ -61,8 +66,8 @@
     position: absolute;
     bottom: 96%;
     right: 40%;
-    margin: 0 auto
+    margin-bottom: 30px;
+
 }
- 
-    
+
     

@@ -1,4 +1,9 @@
 
+.containerMarcasPopulares{
+    text-align: center;
+}
+
+
 
 .seccion-populares{
     display: flex;
@@ -6,19 +11,18 @@
     justify-content: space-around;
     grid-area: section3;
     font-weight: bold;
-    padding-top:3rem;
-    position:relative;
-    margin-top: 12rem;
+  
+    margin-top: 10px;
     }
 
-.texto-marcas-populares{
+/* .texto-marcas-populares{
     position: absolute;
     bottom:83%;
     right: 42%;
     margin: 0 auto
     
 }
-
+ */
 
 .seccion-populares > div {
     

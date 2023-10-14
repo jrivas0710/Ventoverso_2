@@ -77,7 +77,7 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
             <div className='enlaces'>
               <div className='recuperarContraseña'> <a href='#' className='enlace1'>Olvidé mi contraseña</a></div>
               <div><a href='#' className='enlace2' >¿No tienes cuenta?</a></div>
-              <div> <Link to ={"/registro"} > <span className='registrate'>Regístrate</span></Link> </div>
+              <div> <button className = "cierreRegistro"  onClick={onClose}><Link to ={"/registro"}><span className='registrate'>Regístrate</span></Link></button> </div>
             </div>
 
           </div>

@@ -4,7 +4,7 @@ export const Filter = () => {
 
     return (
         <>
-
+    <div className='containerFilter'>
             <div className="filter">
                 
                 <div>
@@ -27,6 +27,7 @@ export const Filter = () => {
                 </div>
                
               
+            </div>
             </div>
 
 

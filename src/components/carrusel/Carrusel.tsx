@@ -18,7 +18,7 @@ const Carrusel= (props:{dataCarrusel: Carrusel[]}) => {
       if (sliderRef.current) {
         sliderRef.current.slickNext();
       }
-    }, 30000);
+    }, 500000);
     
 
     return () => {

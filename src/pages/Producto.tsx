@@ -15,7 +15,7 @@ import { Footer } from "../components/footer/Footer"
 export const PageProducto = () => {
     return (
         <>
-        <Sidesheet2/>
+       
             <div className="categoryContainer">
 
                 <div className="ContainerCategoryTitle">
@@ -36,7 +36,7 @@ export const PageProducto = () => {
                 <ProductosSimilares dataProductosSimilares={dataProductosSimilares}/>
                 <Blogs dataBlog={dataBlog} />
             </div>
-        <Footer/>
+       
 
         </>
     )

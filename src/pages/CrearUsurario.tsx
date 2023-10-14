@@ -7,9 +7,9 @@ import { CrearUsuario } from "../components/usuario/CrearUsuario"
 export const CrearUser = () => {
     return(
         <>
-        <Sidesheet2/>
+        
         <CrearUsuario/>
-        <Footer/>
+        
         </>
     )
 

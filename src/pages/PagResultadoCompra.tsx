@@ -8,10 +8,10 @@ import Sidesheet2 from "../components/sidesheet/SideSheet2"
 export const PagResultadoCompra = () => {
     return(
         <>
-        <Sidesheet2/>
+        
         <ResultadoCompra/>
         <ResultadoCompraFallo/>
-        <Footer/>
+       
         </>
     )
 }

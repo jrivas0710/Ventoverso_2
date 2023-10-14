@@ -7,7 +7,7 @@ function Header({ evento }: any) {
     <div className="grid-container">
       <header className="header-grid">
         <section className="header-flex">
-          <div className="logo-header">Logo Ventoverso</div>
+         <Link to={"/"}><div className="logo-header">Logo Ventoverso</div></Link> 
           <div>
             <input type="text" className="filter" placeholder="Buscar" />
             <button className="filter-button ">
@@ -60,13 +60,13 @@ function Header({ evento }: any) {
         <section>
           <ul className="categories-flex">
             <a href="#">
-              <li><span>Bronces</span></li>
+              <li><span className="menu">Bronces</span></li>
             </a>
             <a href="#">
-              <Link to = {"/productoCategoria"}><li><span>Maderas</span></li></Link> 
+              <Link to = {"/productoCategoria"}><li><span className="menu">Maderas</span></li></Link> 
             </a>
             <a href="#">
-              <li><span>Accesorios</span></li>
+              <li><span className="menu">Accesorios</span></li>
             </a>
 
           </ul>

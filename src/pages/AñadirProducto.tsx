@@ -21,7 +21,7 @@ export const PaginaProducto= () => {
 
   return (
     <>
-    <Sidesheet2/>
+    
 
     <div className="containerPaginaProducto">
     <Migas/>
@@ -32,7 +32,7 @@ export const PaginaProducto= () => {
     <ProductosSimilares dataProductosSimilares={dataProductosSimilares}/>
     </div>
 
-    <Footer/>
+
     
     
     

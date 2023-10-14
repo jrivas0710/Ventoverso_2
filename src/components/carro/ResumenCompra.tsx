@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 
 
-
-
-
 export const ResumenCompra = () => {
+
+
+
     return (
         <>
             <div className="containerResumenCompra">
@@ -28,7 +28,7 @@ export const ResumenCompra = () => {
                     </div>
                 </div>
 
-                <div className="pagarCompra"><Link to = {"/checkout"}> <button>Ir a pagar</button></Link>  </div>
+                <div className="pagarCompra"><Link to = {"/checkout"}> <button className="btnPagar">Ir a pagar</button></Link>  </div>
 
                 <div className="gastosEnvio">
                     <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
@@ -41,7 +41,7 @@ export const ResumenCompra = () => {
                 </div>
                 <div >
                     <input type="text" className="aplicarDcto" placeholder="Cupón de descuento"/>
-                    <button className="aplicar">Aplicar</button>
+                    <button className="btnAplicarCompra">Aplicar</button>
                 </div>
             </div>
         </>

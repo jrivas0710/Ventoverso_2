@@ -1,6 +1,4 @@
-TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los a TODO:agregar iconos de las categorias 
-
-html {
+TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los a TODO:agregar iconos de las categorias html {
   box-sizing: border-box;
   margin: auto 0;
 
@@ -53,6 +51,12 @@ html {
   display: flex;
   justify-content: end;
   gap: 150px;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 
 
 
@@ -77,18 +81,26 @@ html {
   align-items: center;
 }
 
- li {
+li {
   height: 100%;
   align-items: center;
   margin: 0;
   padding-top: 13px;
-} 
-
-span {
-  align-content: center
 }
 
-ul > a {
+.menu {
+  align-content: center;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+ul>a {
   color: whitesmoke;
   width: 320px;
   height: 100%;
@@ -129,7 +141,7 @@ align-self: stretch; */
   padding-bottom: 15px;
   padding-top: 17px;
   color: #000;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -137,15 +149,15 @@ align-self: stretch; */
   align-self: center;
   outline: none;
 
- 
+
 
 
 }
 
 .filter-button {
   position: absolute;
-  top: 33%;
-  right: 64%;
+  top: 35%;
+  right: 63%;
   height: 45px;
   width: 45px;
   border-radius: 30px;
@@ -160,7 +172,7 @@ align-self: stretch; */
   Padding: 0px 48px;
   align-items: flex-start;
   gap: 32px;
-  }
+}
 
 
 

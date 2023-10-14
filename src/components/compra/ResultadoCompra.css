@@ -53,6 +53,7 @@ html {
 .comprobantePago {
     display: flex;
     height: 48px;
+    width: 203px;
     padding: 8px 16px 8px 12px;
     justify-content: center;
     align-items: center;

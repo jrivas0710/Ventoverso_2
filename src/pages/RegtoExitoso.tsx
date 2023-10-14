@@ -6,9 +6,9 @@ import { RegistroExitoso } from "../components/usuario/RegistoExitoso"
 export const RegtoExitoso= () => {
     return(
         <>
-        <Sidesheet2/>
+        
         <RegistroExitoso/>
-        <Footer/>
+        
     
         </>
     )

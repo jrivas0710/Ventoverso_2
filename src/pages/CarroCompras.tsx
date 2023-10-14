@@ -13,13 +13,13 @@ export const CarroCompras = () => {
 
     return (
         <>
-            <Sidesheet2/>
+            
             <CantidadCarro/>
             <div className="containerFlexCarro">
             <ProductoCarro />
             <ResumenCompra />
             </div>
-            <Footer/>
+           
         </>
     )
 
