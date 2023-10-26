@@ -13,6 +13,7 @@ html {
 
 .categoryContainer{
   width: 100vw;
+  z-index: 0;
 
 }
 

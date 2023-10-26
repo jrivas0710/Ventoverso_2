@@ -57,10 +57,61 @@ TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los 
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
 
 
+
+.desplegableMaderas>ul>li {
+
+  display: flex;
+  width: 320px;
+  height: 48px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #000;
+  color: #000;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: rgb(211, 210, 210);
 
 }
+
+.opcionClarinetes {
+
+  display: flex;
+  width: 320px;
+  height: 48px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #000;
+  color: #000;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: rgb(211, 210, 210);
+}
+
+
+
+.desplegableMaderas {
+  z-index: 1;
+  position: absolute;
+
+}
+
+
+
 
 .categories-flex {
   display: flex;
@@ -72,8 +123,7 @@ TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los 
 
 .categories-flex {
   list-style: none;
-  justify-content: space-between;
-  Padding: 0px 48px;
+
 
   background-color: black;
   color: whitesmoke;
@@ -86,18 +136,23 @@ li {
   align-items: center;
   margin: 0;
   padding-top: 13px;
+  width: 320px;
+
 }
 
 .menu {
   align-content: center;
   color: #FFF;
-  font-family: Poppins;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   font-family: 'Poppins', sans-serif;
-
+  border: none;
+  background-color: rgba(255, 228, 196, 0);
+  width: 320px;
+  height: 48px;
+  padding-bottom: 20px;
 }
 
 ul>a {

@@ -18,7 +18,7 @@ import { ResultadoCompra } from './components/compra/ResultadoCompraExitosa'
 import { ResultadoCompraFallo } from './components/compra/ResultadoFalloCompra'
 import { Destacados } from './components/destacados/ProductosDestacados'
 import { DestacadosClarinete } from './components/destacadosClarinete/DestacadosClarinete'
-import { Checkout2 } from './components/checkout/Checkout'
+
 
 
 

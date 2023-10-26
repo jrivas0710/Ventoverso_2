@@ -10,7 +10,7 @@ export const ProductosSimilares = (props: { dataProductosSimilares: Relacionados
     return (
         <>
             <div className='containerProductosSimilares'>
-                <div className='divTextoSimilares'> <h2 >Productos Similares</h2></div>
+                <div className='divTextoSimilares'> <h2 >Productos</h2></div>
                 <div className='productosSimilares'>
 
 

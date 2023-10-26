@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './Checkout2.css'
 
-export const Checkout= () => {
+export const Checkout = () => {
     return (
         <>
 
