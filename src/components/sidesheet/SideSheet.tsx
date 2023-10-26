@@ -2,6 +2,9 @@ import { useState } from 'react';
 import './SideSheet.css'; // Importa los estilos CSS
 import { Login } from '../../interfaces/Login';
 import { Link } from 'react-router-dom';
+import { Box, TextField } from '@mui/material';
+import React from 'react';
+import { useNotification } from '../../context/notification.context';
 
 
 /* interface SideSheetProps {
@@ -12,17 +15,44 @@ import { Link } from 'react-router-dom';
 
 export const SideSheet = ({ isOpen, onClose }: Login) => {
 
+//esto es para usar la alerta de error
+const {getError, getSucces} = useNotification(); //esto es un customHook
+const handleclick = () => {
+  getSucces('login exitoso')
+} 
+
+
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [contraseña, setContraseña] = useState('');
+
   const [mostrarPassword, setMostrarPassword] = useState(false)
+
+  const [loginData, setLoginData] = React.useState({
+    email: "",
+    contraseña: "",
+  })
+
+
+  const dataLogin = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setLoginData({ ...loginData, [e.target.name]: e.target.value })
+  }
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí puedes manejar la lógica de inicio de sesión o cualquier otra acción que desees
-    // Por ejemplo, puedes enviar los datos a un servidor
-    console.log('Correo Electrónico:', email);
-    console.log('Contraseña:', password);
+    console.log(loginData)
+
+
+    //logica del profesor: 
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    const email = formData.get('email') as string;
+    const contraseña = formData.get('userName') as string;
+    //fin logica del profesor    
+
   };
+
 
 
   const passwordVisivility = () => {
@@ -40,29 +70,29 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
           </svg>
         </button>
         <span className='loginSpan'>Bienvenid@ a Ventoverso</span>
-        <form onSubmit={handleSubmit}>
+
+        <Box component="form" onSubmit={handleSubmit}>
+
           <div className="form-group">
-           {/*  <label htmlFor="email">Correo Electrónico</label> */}
-            <input
+            {/*  <label htmlFor="email">Correo Electrónico</label> */}
+            <TextField
               type="email"
               id="email"
               name="email"
-              value={email}
-              placeholder='Dirección e-mail'
-              onChange={(e) => setEmail(e.target.value)}
+              label='Dirección e-mail'
+              onChange={dataLogin}
               required
               className='inputMail'
             />
           </div>
           <div className="form-group">
-           {/*  <label htmlFor="password">Contraseña</label> */}
-            <input
+            {/*  <label htmlFor="password">Contraseña</label> */}
+            <TextField
               type={mostrarPassword ? 'text' : 'password'}
               id="password"
-              name="password"
-              value={password}
-              placeholder='Contraseña'
-              onChange={(e) => setPassword(e.target.value)}
+              name="contraseña"
+              label='Contraseña'
+              onChange={dataLogin}
               required
               className='inputPassword'
             />
@@ -72,16 +102,16 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
           </div>
           <div className='botonEnlaces'>
             <div>
-              <button type="submit" className='botonLogin'>Iniciar Sesión</button>
+              <button type="submit" className='botonLogin' onClick={handleclick}  >Iniciar Sesión</button>
             </div>
             <div className='enlaces'>
               <div className='recuperarContraseña'> <a href='#' className='enlace1'>Olvidé mi contraseña</a></div>
               <div><a href='#' className='enlace2' >¿No tienes cuenta?</a></div>
-              <div> <button className = "cierreRegistro"  onClick={onClose}><Link to ={"/registro"}><span className='registrate'>Regístrate</span></Link></button> </div>
+              <div> <button className="cierreRegistro" onClick={onClose}><Link to={"/registro"}><span className='registrate'>Regístrate</span></Link></button> </div>
             </div>
 
           </div>
-        </form>
+        </Box>
       </div>
     </div>
   );

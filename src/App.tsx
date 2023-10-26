@@ -18,6 +18,7 @@ import { ResultadoCompra } from './components/compra/ResultadoCompraExitosa'
 import { ResultadoCompraFallo } from './components/compra/ResultadoFalloCompra'
 import { Destacados } from './components/destacados/ProductosDestacados'
 import { DestacadosClarinete } from './components/destacadosClarinete/DestacadosClarinete'
+import { NotificationProvider } from './context/notification.context'
 
 
 
@@ -28,37 +29,41 @@ function App() {
   return (
     <>
       <div>
-
-        <BrowserRouter>
-          <Sidesheet2 />
-
-          <Routes>
+        <NotificationProvider>
 
 
+          <BrowserRouter>
+            <Sidesheet2 />
 
-            <Route path="/" element={<Home />}> </Route>
-            <Route path="/productoCategoria" element={<PageProducto />} ></Route>
-            <Route path="/d_clarinete" element={<DestacadoClarinetes />}> </Route>
-            <Route path="/agregarProducto" element={<PaginaProducto />}> </Route>
-            <Route path="/productoCarro" element={<CarroCompras />}> </Route>
-            <Route path="/checkout" element={<Checkout />}></Route>
-            <Route path="/algoSalioMal" element={<ResultadoCompraFallo />}></Route>
-            <Route path="/compraExitosa" element={<ResultadoCompra />}></Route>
-            <Route path="/registro" element={<CrearUser />}></Route>
-            <Route path="/registroExitoso" element={<RegtoExitoso />}></Route>
+            <Routes>
 
 
 
+              <Route path="/" element={<Home />}> </Route>
+              <Route path="/productoCategoria" element={<PageProducto />} ></Route>
+              <Route path="/d_clarinete" element={<DestacadoClarinetes />}> </Route>
+              <Route path="/agregarProducto" element={<PaginaProducto />}> </Route>
+              <Route path="/productoCarro" element={<CarroCompras />}> </Route>
+              <Route path="/checkout" element={<Checkout />}></Route>
+              <Route path="/algoSalioMal" element={<ResultadoCompraFallo />}></Route>
+              <Route path="/compraExitosa" element={<ResultadoCompra />}></Route>
+              <Route path="/registro" element={<CrearUser />}></Route>
+              <Route path="/registroExitoso" element={<RegtoExitoso />}></Route>
 
-          </Routes>
+            </Routes>
 
-          <Footer />
-        
-        </BrowserRouter>
+            <Footer />
+          </BrowserRouter>
+        </NotificationProvider>
       </div>
 
 
-    
+
+
+
+
+
+
 
 
       {/* <Home/>  */}

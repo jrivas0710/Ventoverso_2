@@ -2,8 +2,8 @@
 
 export interface Login  {
     email?: string,
-    password?: string,
+    contraseña?: string,
     permanecerConectado?: boolean,
     isOpen?: boolean,
-  onClose?: () => void
+    onClose?: () => void
 }
