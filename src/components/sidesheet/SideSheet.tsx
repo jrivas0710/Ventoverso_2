@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { Box, TextField } from '@mui/material';
 import React from 'react';
 import { useNotification } from '../../context/notification.context';
+import { LoginValidate } from '../utils/validateForm';
+import { useFormik } from 'formik';
 
 
 /* interface SideSheetProps {
@@ -14,51 +16,75 @@ import { useNotification } from '../../context/notification.context';
  */
 
 export const SideSheet = ({ isOpen, onClose }: Login) => {
+  const { getSucces } = useNotification(); //esto es un customHook
 
-//esto es para usar la alerta de error
-const {getError, getSucces} = useNotification(); //esto es un customHook
-const handleclick = () => {
-  getSucces('login exitoso')
-} 
+  /* //esto es para usar la alerta de error
+  
+  const handleclick = () => {
+    getSucces('login exitoso')
+  } 
+  
+  
+    const [email, setEmail] = useState('');
+    const [contraseña, setContraseña] = useState('');
+  
+    const [mostrarPassword, setMostrarPassword] = useState(false)
+  
+    const [loginData, setLoginData] = React.useState({
+      email: "",
+      contraseña: "",
+    })
+  
+  
+    const dataLogin = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setLoginData({ ...loginData, [e.target.name]: e.target.value })
+    }
+  
+  
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+      console.log(loginData)
+  
+      LoginValidate.validate(loginData).then(()=> {
+        getSucces(JSON.stringify(loginData))
+  
+      }).catch((error) => {
+        getError(error.message);
+      })
+  
+  
+      //logica del profesor: 
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+  
+      const email = formData.get('email') as string;
+      const contraseña = formData.get('userName') as string;
+      //fin logica del profesor    
+  
+    };
+  
+  
+  
+    const passwordVisivility = () => {
+      setMostrarPassword(!mostrarPassword)
+    }
+   */
 
-
-  const [email, setEmail] = useState('');
-  const [contraseña, setContraseña] = useState('');
-
-  const [mostrarPassword, setMostrarPassword] = useState(false)
-
-  const [loginData, setLoginData] = React.useState({
-    email: "",
-    contraseña: "",
-  })
-
-
-  const dataLogin = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setLoginData({ ...loginData, [e.target.name]: e.target.value })
+  type LoginType = {
+    email: string,
+    password: string,
   }
 
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(loginData)
-
-
-    //logica del profesor: 
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-
-    const email = formData.get('email') as string;
-    const contraseña = formData.get('userName') as string;
-    //fin logica del profesor    
-
-  };
-
-
-
-  const passwordVisivility = () => {
-    setMostrarPassword(!mostrarPassword)
-  }
-
+  const formik = useFormik<LoginType>({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: LoginValidate,
+    onSubmit: (values: LoginType) => {
+      getSucces(JSON.stringify(values));
+    },
+  });
 
 
   return (
@@ -71,7 +97,7 @@ const handleclick = () => {
         </button>
         <span className='loginSpan'>Bienvenid@ a Ventoverso</span>
 
-        <Box component="form" onSubmit={handleSubmit}>
+        <Box component="form" onSubmit={formik.handleSubmit}>
 
           <div className="form-group">
             {/*  <label htmlFor="email">Correo Electrónico</label> */}
@@ -80,21 +106,27 @@ const handleclick = () => {
               id="email"
               name="email"
               label='Dirección e-mail'
-              onChange={dataLogin}
-              required
-              className='inputMail'
+              className='inputMail'   
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              error={formik.touched.email && Boolean(formik.errors.email)}
+              helperText={formik.touched.email && formik.errors.email}
             />
           </div>
           <div className="form-group">
             {/*  <label htmlFor="password">Contraseña</label> */}
             <TextField
-              type={mostrarPassword ? 'text' : 'password'}
+              type="password"
               id="password"
-              name="contraseña"
-              label='Contraseña'
-              onChange={dataLogin}
-              required
+              name="password"
               className='inputPassword'
+              label='Contraseña'
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              error={formik.touched.password && Boolean(formik.errors.password)}
+              helperText={formik.touched.password && formik.errors.password}
             />
 
 
@@ -102,12 +134,12 @@ const handleclick = () => {
           </div>
           <div className='botonEnlaces'>
             <div>
-              <button type="submit" className='botonLogin' onClick={handleclick}  >Iniciar Sesión</button>
+              <button type="submit" className='botonLogin'>Iniciar Sesión</button>
             </div>
             <div className='enlaces'>
               <div className='recuperarContraseña'> <a href='#' className='enlace1'>Olvidé mi contraseña</a></div>
               <div><a href='#' className='enlace2' >¿No tienes cuenta?</a></div>
-              <div> <button className="cierreRegistro" onClick={onClose}><Link to={"/registro"}><span className='registrate'>Regístrate</span></Link></button> </div>
+              <div> <button className="cierreRegistro"onClick={onClose}><Link to={"/registro"}><span className='registrate'>Regístrate</span></Link></button> </div>
             </div>
 
           </div>

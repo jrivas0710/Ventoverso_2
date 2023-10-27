@@ -47,7 +47,7 @@ html {
     width: 80%;
 }
 
-.inputsUser>input {
+.inputTextfiel {
     display: flex;
     padding: 12px 16px;
     align-items: center;
