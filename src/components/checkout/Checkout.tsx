@@ -20,7 +20,6 @@ export const Checkout = () => {
         apellido: string,
         rut: string,
         email: string,
-        password: string,
         calleNumero: string,
         ciudad: string,
         comuna: string,
@@ -37,7 +36,6 @@ export const Checkout = () => {
             apellido: "",
             rut: '',
             email: "",
-            password: "",
             calleNumero: "",
             ciudad: "",
             comuna: "",
@@ -64,6 +62,7 @@ export const Checkout = () => {
 
                         <div className="nombre">
                             <TextField type="text" placeholder="Nombre "
+                                
                                 name='name'
                                 value={formik.values.name}
                                 onChange={formik.handleChange}
@@ -72,6 +71,7 @@ export const Checkout = () => {
                                 helperText={formik.touched.name && formik.errors.name}
                             />
                             <TextField type="text" placeholder="Apellido"
+                               
                                 name='apellido'
                                 value={formik.values.apellido}
                                 onChange={formik.handleChange}
@@ -79,14 +79,18 @@ export const Checkout = () => {
                                 error={formik.touched.apellido && Boolean(formik.errors.apellido)}
                                 helperText={formik.touched.apellido && formik.errors.apellido}
                             />
-                            <TextField type="number" placeholder="Rut "
-                                value={formik.values.email}
+                            <TextField type="text" placeholder="Rut "
+                                
+                                name='rut'
+                                value={formik.values.rut}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                error={formik.touched.email && Boolean(formik.errors.email)}
-                                helperText={formik.touched.email && formik.errors.email}
+                                error={formik.touched.rut && Boolean(formik.errors.rut)}
+                                helperText={formik.touched.rut && formik.errors.rut}
                             />
                             <TextField type="e-mail" placeholder="Dirección email "
+                                
+                                name='email'
                                 value={formik.values.email}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
@@ -100,32 +104,39 @@ export const Checkout = () => {
                         <div className="direccion">
                             <div><span className='direccionSpan'>Dirección</span></div>
                             <TextField type="text" placeholder="Calle y número "
-                                value={formik.values.email}
+                             
+                                name='calleNumero'
+                                value={formik.values.calleNumero}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                error={formik.touched.email && Boolean(formik.errors.email)}
-                                helperText={formik.touched.email && formik.errors.email}
+                                error={formik.touched.calleNumero && Boolean(formik.errors.calleNumero)}
+                                helperText={formik.touched.calleNumero && formik.errors.calleNumero}
                             />
                             <TextField type="text" placeholder="Información adicional (Número depto/Block)"
-                                value={formik.values.email}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                error={formik.touched.email && Boolean(formik.errors.email)}
-                                helperText={formik.touched.email && formik.errors.email}
+                               
+                            /*  value={formik.values.email}
+                           onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            error={formik.touched.email && Boolean(formik.errors.email)}
+                            helperText={formik.touched.email && formik.errors.email} */
                             />
-                            <TextField type="number" placeholder="Ciudad"
-                                value={formik.values.email}
+                            <TextField type="text" placeholder="Ciudad"
+                                
+                                name='ciudad'
+                                value={formik.values.ciudad}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                error={formik.touched.email && Boolean(formik.errors.email)}
-                                helperText={formik.touched.email && formik.errors.email}
+                                error={formik.touched.ciudad && Boolean(formik.errors.ciudad)}
+                                helperText={formik.touched.ciudad && formik.errors.ciudad}
                             />
                             <TextField type="e-mail" placeholder="Comuna"
-                                value={formik.values.email}
+                               
+                                name='comuna'
+                                value={formik.values.comuna}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                error={formik.touched.email && Boolean(formik.errors.email)}
-                                helperText={formik.touched.email && formik.errors.email}
+                                error={formik.touched.comuna && Boolean(formik.errors.comuna)}
+                                helperText={formik.touched.comuna && formik.errors.comuna}
                             />
 
                         </div>
@@ -134,11 +145,13 @@ export const Checkout = () => {
                             <div><span className='telefono'>Teléfono de contacto</span></div>
                             <div><span>Su teléfono de contacto es importante para coordinar la entrega de tu producto.</span></div>
                             <TextField type="text" placeholder="+56 9 9999 9999"
-                                value={formik.values.email}
+                               
+                                name='telefono'
+                                value={formik.values.telefono}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                error={formik.touched.email && Boolean(formik.errors.email)}
-                                helperText={formik.touched.email && formik.errors.email}
+                                error={formik.touched.telefono && Boolean(formik.errors.telefono)}
+                                helperText={formik.touched.telefono && formik.errors.telefono}
                             />
 
                         </div>

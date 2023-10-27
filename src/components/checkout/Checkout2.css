@@ -58,14 +58,14 @@ html {
     margin-top: 15px;
 }
 
-.contacto>input {
+.contacto > input {
     display: flex;
     width: 654px;
     padding: 10px 16px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
+     margin-top: 30px; 
 }
 
 .datos,
