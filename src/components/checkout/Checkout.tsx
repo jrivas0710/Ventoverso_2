@@ -4,6 +4,9 @@ import { CheckoutValidate } from '../utils/CheckoutValidate';
 import { useNotification } from '../../context/notification.context';
 import { useFormik } from 'formik';
 import { Box, TextField } from '@mui/material';
+import { CheckBox } from '@mui/icons-material';
+import { validateRut } from "@fdograph/rut-utilities";
+import { useState } from 'react';
 
 
 
@@ -13,6 +16,8 @@ import { Box, TextField } from '@mui/material';
 
 export const Checkout = () => {
     const { getSucces } = useNotification();
+
+    const [disabledButton, setDisabledButton] = useState(false)
 
 
     type CheckoutType = {
@@ -45,6 +50,9 @@ export const Checkout = () => {
         validationSchema: CheckoutValidate,
         onSubmit: (values: CheckoutType) => {
             getSucces(JSON.stringify(values));
+           
+            console.log(values)
+            formik.resetForm();
         },
     });
 
@@ -53,7 +61,7 @@ export const Checkout = () => {
 
     return (
         <>
-            <Box>
+            <Box component="form" onSubmit={formik.handleSubmit}>
                 <div className="checkoutContainer">
                     <div className="izquierda">
 
@@ -62,6 +70,7 @@ export const Checkout = () => {
 
                         <div className="nombre">
                             <TextField type="text" placeholder="Nombre "
+                              style={{marginBottom:"30px"}}
                                 
                                 name='name'
                                 value={formik.values.name}
@@ -71,6 +80,7 @@ export const Checkout = () => {
                                 helperText={formik.touched.name && formik.errors.name}
                             />
                             <TextField type="text" placeholder="Apellido"
+                            style={{marginBottom:"30px"}}
                                
                                 name='apellido'
                                 value={formik.values.apellido}
@@ -80,7 +90,7 @@ export const Checkout = () => {
                                 helperText={formik.touched.apellido && formik.errors.apellido}
                             />
                             <TextField type="text" placeholder="Rut "
-                                
+                                style={{marginBottom:"30px"}}
                                 name='rut'
                                 value={formik.values.rut}
                                 onChange={formik.handleChange}
@@ -88,7 +98,12 @@ export const Checkout = () => {
                                 error={formik.touched.rut && Boolean(formik.errors.rut)}
                                 helperText={formik.touched.rut && formik.errors.rut}
                             />
+                             {!validateRut(formik.values.rut) &&  (formik.values.rut.length > 0 ) && <small
+                              style={{color:"#D32F2F", fontSize:"13px", display:"flex", flexDirection:"column",
+                               paddingLeft:"14px", fontWeight:"normal"}} >Ingrese un rut válido</small>  }
+
                             <TextField type="e-mail" placeholder="Dirección email "
+                            style={{marginBottom:"30px"}}
                                 
                                 name='email'
                                 value={formik.values.email}
@@ -104,6 +119,7 @@ export const Checkout = () => {
                         <div className="direccion">
                             <div><span className='direccionSpan'>Dirección</span></div>
                             <TextField type="text" placeholder="Calle y número "
+                            style={{marginBottom:"30px"}}
                              
                                 name='calleNumero'
                                 value={formik.values.calleNumero}
@@ -113,6 +129,7 @@ export const Checkout = () => {
                                 helperText={formik.touched.calleNumero && formik.errors.calleNumero}
                             />
                             <TextField type="text" placeholder="Información adicional (Número depto/Block)"
+                            style={{marginBottom:"30px"}}
                                
                             /*  value={formik.values.email}
                            onChange={formik.handleChange}
@@ -121,6 +138,7 @@ export const Checkout = () => {
                             helperText={formik.touched.email && formik.errors.email} */
                             />
                             <TextField type="text" placeholder="Ciudad"
+                            style={{marginBottom:"30px"}}
                                 
                                 name='ciudad'
                                 value={formik.values.ciudad}
@@ -130,6 +148,7 @@ export const Checkout = () => {
                                 helperText={formik.touched.ciudad && formik.errors.ciudad}
                             />
                             <TextField type="e-mail" placeholder="Comuna"
+                            style={{marginBottom:"30px"}}
                                
                                 name='comuna'
                                 value={formik.values.comuna}
@@ -148,20 +167,23 @@ export const Checkout = () => {
                                
                                 name='telefono'
                                 value={formik.values.telefono}
+                               
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                                 error={formik.touched.telefono && Boolean(formik.errors.telefono)}
                                 helperText={formik.touched.telefono && formik.errors.telefono}
                             />
+                           
 
                         </div>
 
 
                         <div className="metodoPago">
                             <div><span className='pago'>Método de pago</span></div>
-                            <div><input type="checkbox" /><span>Transbank/WebPay</span></div>
-                            <div><input type="checkbox" /><span>PayPal</span></div>
-                            <div><input type="checkbox" /><span>Transferencia bancaria</span></div>
+
+                            <div><CheckBox/><span>Transbank/WebPay</span></div>
+                            <div><CheckBox/><span>PayPal</span></div>
+                            <div><CheckBox/><span>Transferencia bancaria</span></div>
                         </div>
 
                     </div>
@@ -174,7 +196,7 @@ export const Checkout = () => {
                             <div><span>Seleccione un servicio de paquetería</span></div>
 
                             <div className='correoChile'>
-                                <div className='inputCheckbox'><input type="checkbox" /></div>
+                                <div className='inputCheckbox'><CheckBox/></div>
                                 <div>
                                     <div><span>Correos Chile</span></div>
                                     <div><span>2-5 días habiles</span></div>
@@ -183,7 +205,7 @@ export const Checkout = () => {
                             </div>
 
                             <div className='chilexpress'>
-                                <div className='inputCheckbox'><input type="checkbox" /></div>
+                                <div className='inputCheckbox'><CheckBox/></div>
                                 <div>
                                     <div><span>Chilexpress</span></div>
                                     <div><span>2-5 días habiles</span></div>
@@ -192,7 +214,7 @@ export const Checkout = () => {
                             </div>
 
                             <div className='retiroTienda'>
-                                <div className='inputCheckbox'><input type="checkbox" /></div>
+                                <div className='inputCheckbox'><CheckBox/></div>
                                 <div>
                                     <div><span>Retiro en Tienda</span></div>
                                     <div><span>2-5 días habiles</span></div>
@@ -233,9 +255,9 @@ export const Checkout = () => {
                                 </div>
 
                                 <div className='textareaBoton'>
-                                    <input className="tarea" type="textarea" />
-                                    <Link to={"/compraExitosa"}><button className='terminarCompra'>Exito</button></Link>
-                                    <Link to={"/algoSalioMal"}>  <button className='terminarCompra'>Error</button></Link>
+                                    <input className="tarea" type="textarea"/>
+                                <button type='submit' className='terminarCompra' disabled = {!validateRut(formik.values.rut) && true } >Comprar Ahora</button>
+                                
                                 </div>
 
 

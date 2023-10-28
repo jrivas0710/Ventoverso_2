@@ -2,10 +2,11 @@ import { useState } from 'react'
 import './Usuario.css'
 import { Alerta } from './Alerta'
 import { Link } from 'react-router-dom'
-import { Box, TextField } from '@mui/material'
+import { Box, Checkbox, FormControlLabel, TextField } from '@mui/material'
 import { useNotification } from '../../context/notification.context'
 import { useFormik } from 'formik'
 import { LoginValidate } from '../utils/validateForm'
+
 import { CreateCountValidate } from '../utils/CreateCountValidate'
 
 
@@ -13,34 +14,42 @@ export const CrearUsuario = () => {
 
     const [alert, setAlert] = useState(false)
     const { getSucces } = useNotification();
+    
 
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-
-    }
 
     type LoginType = {
         name: string,
         apellido: string
         email: string,
         password: string,
+        info:boolean,
+        terminosCondiciones:boolean
     }
 
+   
+    
     const formik = useFormik<LoginType>({
+        
         initialValues: {
             name: "",
             apellido: "",
             email: "",
             password: "",
+            info:false,
+            terminosCondiciones:false,
         },
         validationSchema: CreateCountValidate,
         onSubmit: (values: LoginType) => {
             getSucces(JSON.stringify(values));
+            formik.resetForm();
+            console.log(values);
+            history.push("/registroExitoso")
         },
     });
 
-
+    const {errors, touched} = formik
+    
 
 
     return (
@@ -49,11 +58,14 @@ export const CrearUsuario = () => {
 
 
                 <span className='crearUser'>Crea una cuenta</span>
-                <Box component="form">
+                <Box component="form" onSubmit={formik.handleSubmit} display="flex"
+                    justifyContent="center"
+                    alignItems="center" >
 
                     <div className='inputsUser'>
-                        <TextField
+                        <TextField 
                             type="e-mail"
+                            label="Email"
                             name='email'
                             placeholder='Dirección de e-mail'
                             margin="normal"
@@ -65,6 +77,7 @@ export const CrearUsuario = () => {
                         />
                         <TextField
                             type="text"
+                            label="Nombre"
                             name='name'
                             placeholder='Nombre'
                             margin="normal"
@@ -76,6 +89,7 @@ export const CrearUsuario = () => {
                         />
                         <TextField
                             type="text"
+                            label="Apellido"
                             name='apellido'
                             placeholder='Apellido'
                             margin="normal"
@@ -87,6 +101,7 @@ export const CrearUsuario = () => {
                         />
                         <TextField
                             type="password"
+                            label= "Contraseña"
                             name='password'
                             placeholder='Contraseña'
                             margin="normal"
@@ -99,18 +114,40 @@ export const CrearUsuario = () => {
 
                         <div className='inputCheck'>
                             <div className='ofertasNovedades'>
-                                <input type="checkbox"/>
-                                 <div><label htmlFor="">Quiero recibir ofertas y novedades de Ventoverso.</label></div></div>
+                            <Checkbox
+                                
+                                name='info'
+                                checked={formik.values.info}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                error={formik.touched.info && Boolean(formik.errors.info)}
+                                helperText={formik.touched.info && formik.errors.info}
+                                
+                                />
+
+                                <div><label htmlFor="">Quiero recibir ofertas y novedades de Ventoverso.</label></div></div>
                             <div>
-                                <input type="checkbox"/>
-                                 <label htmlFor="">Acepto términos y condiciones </label></div>
+                                <Checkbox
+                                name='terminosCondiciones'
+                                checked={formik.values.terminosCondiciones}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                error= {formik.touched.terminosCondiciones && Boolean(errors.terminosCondiciones)}
+                                helperText={formik.touched.terminosCondiciones && formik.errors.terminosCondiciones}
+                                />
+                                
+                                <label htmlFor="">Acepto términos y condiciones  {errors.terminosCondiciones && touched.terminosCondiciones && <small style={{color:"red", fontSize:"13px", display:"flex", flexDirection:"column", paddingLeft:"14px"}} >{errors.terminosCondiciones}</small> }</label>
+                                </div>
+                               
+                               
+                                
 
                         </div>
 
 
                     </div>
                     <div className='btnsUser'>
-                         {/* <Link to={"/registroExitoso"}> */} <button type='submit' className='crearCuenta'>Crear cuenta</button>{/*  </Link> */} 
+                        {/* <Link to={"/registroExitoso"}> */} <button type='submit' className='crearCuenta'>Crear cuenta</button>{/*  </Link> */}
                         <button onClick={() => setAlert(true)} className='cancelar'>Cancelar</button>
                         {alert ? <Alerta /> : null}
 

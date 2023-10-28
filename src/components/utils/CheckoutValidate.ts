@@ -1,8 +1,10 @@
 import * as yup from "yup";
+import { validateRut } from "@fdograph/rut-utilities";
 
 
 
-//intentar importar libreria rut aqui
+
+
 
 
 export const CheckoutValidate = yup.object().shape({
@@ -13,13 +15,14 @@ export const CheckoutValidate = yup.object().shape({
     calleNumero: yup.string().trim().required("Este campo es requerido").max(50,"El máximo debe ser de 30 caracteres"),
     ciudad: yup.string().trim().required("Este campo es requerido").max(50,"El máximo debe ser de 50 caracteres"),
     comuna: yup.string().trim().required("Este campo es requerido").max(50,"El máximo debe ser de 50 caracteres"),
-    telefono: yup.string().trim().required("Este campo es requerido").max(20,"El máximo debe ser de 20 caracteres"),
-
+    telefono: yup.string().trim().required("Este campo es requerido").min(8, "el minimo no puede ser inferior a ocho dígitos")
+    .max(20,"El máximo no puede superar los 20 dígitos"),
   })
 
-
-
+  
     
+  
+ 
      
 
 /*   `rut_cliente` varchar(10) PRIMARY KEY,

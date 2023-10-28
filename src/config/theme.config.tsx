@@ -11,8 +11,10 @@ enum themePalette {
  //Alert styles
  ERROR_MAIN = "#f44336",
  BG_ERROR_MAIN = "rgba(244,67,54,0.1)",
- SUCCES_MAIN = "#66bb6a",
- BG_SUCCES_MAIN = "rgba(102,187,106,0.1)"
+ SUCCES_MAIN = "#FFFFFF",
+ BG_SUCCES_MAIN = "rgba(102,187,106)",
+ COLOR_SUCCES = "#FFFFFF",
+ 
 }
 
 const theme = createTheme({
@@ -41,6 +43,8 @@ const theme = createTheme({
             standardSuccess:{
                 border: `1px solid ${themePalette.SUCCES_MAIN}`,
                 background: themePalette.BG_SUCCES_MAIN,
+                color: themePalette.COLOR_SUCCES,
+                
             }
         }
      }  

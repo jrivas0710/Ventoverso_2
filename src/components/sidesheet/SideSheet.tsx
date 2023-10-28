@@ -83,6 +83,8 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
     validationSchema: LoginValidate,
     onSubmit: (values: LoginType) => {
       getSucces(JSON.stringify(values));
+      formik.resetForm();
+      console.log(values)
     },
   });
 
@@ -102,7 +104,7 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
           <div className="form-group">
             {/*  <label htmlFor="email">Correo Electrónico</label> */}
             <TextField
-              type="email"
+             
               id="email"
               name="email"
               label='Dirección e-mail'
@@ -135,6 +137,7 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
           <div className='botonEnlaces'>
             <div>
               <button type="submit" className='botonLogin'>Iniciar Sesión</button>
+              
             </div>
             <div className='enlaces'>
               <div className='recuperarContraseña'> <a href='#' className='enlace1'>Olvidé mi contraseña</a></div>

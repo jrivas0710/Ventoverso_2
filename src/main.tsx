@@ -5,6 +5,12 @@ import './index.css'
 import { ThemeConfig } from './config/theme.config.tsx'
 
 
+declare module 'yup' {
+  interface StringSchema<TType, TContext, TDefault, TFlags> {
+    append(appendStr: string): this;
+  }
+}
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeConfig>
