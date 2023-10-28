@@ -44,7 +44,7 @@ export const CrearUsuario = () => {
             getSucces(JSON.stringify(values));
             formik.resetForm();
             console.log(values);
-            history.push("/registroExitoso")
+           
         },
     });
 

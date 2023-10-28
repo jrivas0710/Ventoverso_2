@@ -3,10 +3,6 @@ import { validateRut } from "@fdograph/rut-utilities";
 
 
 
-
-
-
-
 export const CheckoutValidate = yup.object().shape({
     name: yup.string().trim().required("Este campo es requerido").max(20,"El máximo debe ser de 20 caracteres"),
     email: yup.string().trim().required("Este campo es requerido").max(30,"El máximo debe ser de 30 caracteres"),/* .min(4, "El mínimo debe ser de cuatro caracteres").max(20,"El máximo debe ser de 20 caracteres") */
@@ -17,6 +13,11 @@ export const CheckoutValidate = yup.object().shape({
     comuna: yup.string().trim().required("Este campo es requerido").max(50,"El máximo debe ser de 50 caracteres"),
     telefono: yup.string().trim().required("Este campo es requerido").min(8, "el minimo no puede ser inferior a ocho dígitos")
     .max(20,"El máximo no puede superar los 20 dígitos"),
+    pagos: yup.string().required("Debes seleccionar el método de pago"),
+    envios:yup.string().required("Debes seleccionar la forma de envío"),
+    comentariosOpcional: yup.string(),
+    infoAdicional: yup.string(),
+
   })
 
   

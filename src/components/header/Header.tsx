@@ -1,7 +1,8 @@
 
 import { Link } from "react-router-dom";
 import "./Header.css"
-import { useState } from "react";
+import { useState} from "react";
+
 
 function Header({ evento }: any) {
 
@@ -81,11 +82,11 @@ function Header({ evento }: any) {
                 {cerrado && (
                   <div className="desplegableMaderas">
                     <ul className="listaDesplegableMaderas">
-                      <Link to={"/productoCategoria"}><li className="opcionClarinetes"><button onClick={toggleDropdown}>Clarinetes</button></li></Link>
-                      <Link to={"/productoCategoria"}><li className="opcionClarinetes"><button onClick={toggleDropdown}>Fagotes</button></li></Link>
-                      <Link to={"/productoCategoria"}><li className="opcionClarinetes"><button onClick={toggleDropdown}>Flautas dulces</button></li></Link>
-                      <Link to={"/productoCategoria"}><li className="opcionClarinetes"><button onClick={toggleDropdown}>Flautas traversas</button></li></Link>
-                      <Link to={"/productoCategoria"}><li className="opcionClarinetes"><button onClick={toggleDropdown}>Oboes</button></li></Link>
+                     <li className="opcionClarinetes" onClick={toggleDropdown}> <Link to={"/productoCategoria"}>Clarinetes</Link></li>
+                      <li className="opcionClarinetes" onClick={toggleDropdown}><Link to={"/productoCategoria"}>Fagotes</Link></li>
+                    <li className="opcionClarinetes" onClick={toggleDropdown}>  <Link to={"/productoCategoria"}>Flautas dulces</Link></li>
+                     <li className="opcionClarinetes" onClick={toggleDropdown}> <Link to={"/productoCategoria"}>Flautas traversas</Link></li>
+                      <li className="opcionClarinetes" onClick={toggleDropdown}><Link to={"/productoCategoria"}>Oboes</Link></li>
                     </ul>
                   </div>
                 )}

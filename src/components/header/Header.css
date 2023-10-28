@@ -60,34 +60,13 @@ TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los 
 }
 
 
-
-.desplegableMaderas>ul>li {
-
-  display: flex;
-  width: 320px;
-  height: 48px;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid #000;
-  color: #000;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  background-color: rgb(211, 210, 210);
-
-}
-
 .opcionClarinetes {
 
   display: flex;
   width: 320px;
-  height: 48px;
-  padding: 10px;
+  flex-grow: 3;
+  height: 50px;
+  padding: 30px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -99,6 +78,7 @@ TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los 
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin: 0;
   background-color: rgb(211, 210, 210);
 }
 
@@ -107,6 +87,10 @@ TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los 
 .desplegableMaderas {
   z-index: 1;
   position: absolute;
+  background-color: rgb(211, 210, 210);
+  margin: 0;
+  padding: 0;
+  height: auto;
 
 }
 

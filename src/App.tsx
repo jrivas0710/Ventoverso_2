@@ -19,6 +19,7 @@ import { ResultadoCompraFallo } from './components/compra/ResultadoFalloCompra'
 import { Destacados } from './components/destacados/ProductosDestacados'
 import { DestacadosClarinete } from './components/destacadosClarinete/DestacadosClarinete'
 import { NotificationProvider } from './context/notification.context'
+import { CentrodeAyuda } from './pages/CentrodeAyuda'
 
 
 
@@ -49,6 +50,7 @@ function App() {
               <Route path="/compraExitosa" element={<ResultadoCompra />}></Route>
               <Route path="/registro" element={<CrearUser />}></Route>
               <Route path="/registroExitoso" element={<RegtoExitoso />}></Route>
+              <Route path="/centroAyuda" element={<CentrodeAyuda />}></Route>
 
             </Routes>
 
