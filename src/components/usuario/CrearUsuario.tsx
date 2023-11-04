@@ -120,8 +120,8 @@ export const CrearUsuario = () => {
                                 checked={formik.values.info}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                error={formik.touched.info && Boolean(formik.errors.info)}
-                                helperText={formik.touched.info && formik.errors.info}
+                               /*  error={formik.touched.info && Boolean(formik.errors.info)}
+                                helperText={formik.touched.info && formik.errors.info} */
                                 
                                 />
 
@@ -132,8 +132,8 @@ export const CrearUsuario = () => {
                                 checked={formik.values.terminosCondiciones}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                                error= {formik.touched.terminosCondiciones && Boolean(errors.terminosCondiciones)}
-                                helperText={formik.touched.terminosCondiciones && formik.errors.terminosCondiciones}
+                              /*   error= {formik.touched.terminosCondiciones && Boolean(errors.terminosCondiciones)}
+                                helperText={formik.touched.terminosCondiciones && formik.errors.terminosCondiciones} */
                                 />
                                 
                                 <label htmlFor="">Acepto términos y condiciones  {errors.terminosCondiciones && touched.terminosCondiciones && <small style={{color:"red", fontSize:"13px", display:"flex", flexDirection:"column", paddingLeft:"14px"}} >{errors.terminosCondiciones}</small> }</label>

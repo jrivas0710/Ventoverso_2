@@ -1,5 +1,4 @@
 import * as yup from "yup";
-import { validateRut } from "@fdograph/rut-utilities";
 
 
 

@@ -14,7 +14,7 @@ function Sidesheet2() {
   };
 
   return (
-    <div className="App">
+    <div className="App overlay" >
       
       <SideSheet isOpen={isSideSheetOpen} onClose={handleCloseSideSheet} />
       <Header evento = {handleOpenSideSheet}/>

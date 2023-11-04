@@ -1,3 +1,7 @@
+
+
+
+
 /* Estilos para el SideSheet */
 .side-sheet {
   position: fixed;
@@ -17,6 +21,8 @@
   z-index: 2;
 
 }
+
+
 
 form {
   display: flex;
@@ -60,6 +66,7 @@ form {
 }
 
 
+
 .inputMail,
 .inputPassword {
   width: 100%;
@@ -72,6 +79,7 @@ form {
   letter-spacing: 0.5px;
   position: relative;
 }
+
 
 .botonLogin {
 

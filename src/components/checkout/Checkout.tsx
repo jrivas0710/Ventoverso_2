@@ -4,9 +4,8 @@ import { CheckoutValidate } from '../utils/CheckoutValidate';
 import { useNotification } from '../../context/notification.context';
 import { useFormik } from 'formik';
 import { Box, FormControl, FormControlLabel, FormGroup, FormLabel, Radio, RadioGroup, TextField, TextareaAutosize } from '@mui/material';
-import { CheckBox } from '@mui/icons-material';
 import { validateRut } from "@fdograph/rut-utilities";
-import { useState } from 'react';
+
 
 
 
