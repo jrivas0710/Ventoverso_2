@@ -44,11 +44,11 @@ function Header({ evento }: any) {
             </div>
 
             <div>
-              <a href="#">
+              <Link to= {"/Agenda"}>
                 <span className="material-symbols-outlined agenda">
                   calendar_month
                 </span>
-              </a>
+              </Link>
             </div>
 
 

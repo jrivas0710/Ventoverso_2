@@ -20,6 +20,8 @@ import { Destacados } from './components/destacados/ProductosDestacados'
 import { DestacadosClarinete } from './components/destacadosClarinete/DestacadosClarinete'
 import { NotificationProvider } from './context/notification.context'
 import { CentrodeAyuda } from './pages/CentrodeAyuda'
+import { Agenda } from './components/Agenda/Agenda'
+
 
 
 
@@ -41,6 +43,7 @@ function App() {
 
 
               <Route path="/" element={<Home />}> </Route>
+              <Route path="/agenda" element={<Agenda/>} ></Route>
               <Route path="/productoCategoria" element={<PageProducto />} ></Route>
               <Route path="/d_clarinete" element={<DestacadoClarinetes />}> </Route>
               <Route path="/agregarProducto" element={<PaginaProducto />}> </Route>
