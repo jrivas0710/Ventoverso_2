@@ -6,8 +6,10 @@ import { ProductosSimilares } from "../components/productosSimilares/ProductosSi
 
 
 export const DestacadoClarinetes = () => {
+  
 
- return(
+
+return(
     <>
   
    <DestacadosClarinete dataDestacadoClarinete={dataDestacadoClarinete}/> 

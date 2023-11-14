@@ -12,6 +12,9 @@ export const ProductoSib = (props: { dataProductoSib: ProductoPrincipal[] }) => 
  console.log(props)
 
 
+ 
+
+
 
     return (
         <>

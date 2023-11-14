@@ -1,3 +1,5 @@
+
+
 export interface ProductoPrincipal {
     id?: string, 
     nombre?:string,
@@ -10,3 +12,4 @@ export interface ProductoPrincipal {
     descripcion?:string
 
 }
+

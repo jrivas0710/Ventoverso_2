@@ -19,6 +19,11 @@ import dataProductosSimilares from '../components/productosSimilares/dataProduct
 
 export const PaginaProducto= () => {
 
+
+  
+
+
+
   return (
     <>
     

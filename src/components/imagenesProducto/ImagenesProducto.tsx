@@ -10,31 +10,45 @@ import { ProductoPrincipal } from '../../interfaces/ProductoPincipal'
 
 export const ImagenesProducto= (props:{dataProductoSib:ProductoPrincipal[]}) => {
 
-    let ima = props.dataProductoSib.map(ima => {
-        return(
-            ima.toString()
-        )
-    })
+    
+
+    let productoPrincipal = props.dataProductoSib.map(item => item)
+    console.log(productoPrincipal);
+
+    let imagenes = productoPrincipal.map(item => item.imagenes) //este es el array de imagenes
+    console.log(imagenes)
 
     return (
         <>
 
-        {props.dataProductoSib.map(item => {
+        {imagenes.map(item => {
             return (
 
                 <div className='containerCarroImagenes'>
-               <div className='imagenesProducto'>
+                <div className='imagenesProducto'>
                 <div className='imagenPrincipal'>
-                    <img src={ima?.toString()} alt={item.nombre}/> 
+                    <img src={item?.toString()} alt={"imagen del producto"}/> 
                 </div>
                 <div className='imagenesSecundarias'>
                     
-                    <div>
                         
-                        <img src={ima?.toString()} alt={item.nombre} /> 
+                    <div>
+                        <img src={item?.toString()} alt={"imagen del producto"} /> 
+                    </div>
+                    <div>
+                        <img src={item?.toString()} alt={"imagen del producto"} /> 
+                    </div>
+                    <div>
+                        <img src={item?.toString()} alt={"imagen del producto"} /> 
+                    </div>
+                    <div>
+                        <img src={item?.toString()} alt={"imagen del producto"} /> 
+                    </div>
+                    <div>
+                        <img src={item?.toString()} alt={"imagen del producto"} /> 
                     </div>
 
-                    
+                    {/* 
                     <div>
                         <img src={ima?.toString()} alt={item.nombre}/> 
                     </div>
@@ -47,7 +61,7 @@ export const ImagenesProducto= (props:{dataProductoSib:ProductoPrincipal[]}) => 
                     <div>
                         <img src={ima?.toString()} alt={item.nombre}/> 
                     </div>
-                    
+                     */}
                     
                    
                 </div>
@@ -55,7 +69,12 @@ export const ImagenesProducto= (props:{dataProductoSib:ProductoPrincipal[]}) => 
             </div>
 
             <div>
-                <AgregarCarro precio = {item.precio}/>
+                {props.dataProductoSib.map(item => {
+                    return(
+
+                        <AgregarCarro precio = {item.precio}/>
+                    )
+                })}
             </div>
         </div>
 
