@@ -1,8 +1,29 @@
+import { useEffect, useState } from 'react'
 import './Blog.css'
 import { Blog } from './InterfaceBlog'
 
 
-export const Blogs = (props: { dataBlog: Blog[] }) => {
+export const Blogs = () => {
+    const[blog, setBlog] = useState<Blog[]>();
+
+
+    useEffect(()=>{
+
+        fetch(` http://localhost:3000/blog`, { // de aqui se traen y se muestran en el home, quien define cuantos se muestran en el home ?
+            method: "GET"
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json() as Promise<Blog[]>
+            }
+        })
+        .then(data =>{
+            setBlog(data);
+        })
+        .catch(error => console.log(error.message("la peticion no pudo procesarse")))
+    })
+    
+    
 
 
     return (
@@ -17,16 +38,14 @@ export const Blogs = (props: { dataBlog: Blog[] }) => {
 
             
 
-                {props.dataBlog.map(item => {
+                { blog && blog.map(item => {
                     return (
                         <div className='container' id={item.id}>
-
-
 
                             <div className='contenido-pie'>
 
                                 <div className='pie-blog'>
-                                    <a href={item.linkDetalle}></a><img src={item.imagenUrl}></img>
+                                    <a href="#"></a><img src={item.titulo}></img>
                                 </div>
 
                                 <div className='titulo-blog'>{item.titulo}</div>
@@ -45,6 +64,8 @@ export const Blogs = (props: { dataBlog: Blog[] }) => {
     )
 
 }
+
+
 
 
 

@@ -1,7 +1,7 @@
 import './DestacadosClarinete.css'
-import { RelacionadosSimDest } from '../../interfaces/RelacionadosSimDest'
 import { Filter } from '../filtro/Filter'
 import { Link } from 'react-router-dom'
+import { Destacado } from '../../interfaces/Destacados'
 
 
 
@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom'
     descripcion:  "string"
   } 
  */
-export const DestacadosClarinete = (props: { dataDestacadoClarinete: RelacionadosSimDest[] }) => {
+export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
 
     return (
         <>
@@ -34,11 +34,11 @@ export const DestacadosClarinete = (props: { dataDestacadoClarinete: Relacionado
 
 
 
-                <Filter />
+                <Filter/>
 
                 <div className='productos-destacados'>
 
-                    {props.dataDestacadoClarinete.map(item => {
+                    {props.producto.map(item => {
                         return (
 
 
@@ -46,14 +46,15 @@ export const DestacadosClarinete = (props: { dataDestacadoClarinete: Relacionado
 
 
                                 < div className='producto' id={item.id}>
-                                    <Link to = {"/agregarProducto"} >{item.linkDetalle}<img className='imagenDestacaoClarinete' src={item.imagenUrl} alt={item.nombre} /></Link>
+                                    <Link to = {"/agregarProducto"}><img className='imagenDestacaoClarinete' src={item.imagen} alt={item.nombre} /></Link>
                                 </div>
 
                                 < div className='nombre-precio-ranking'>
 
                                     <span className='spanEstrellasClarinete'>
                                         <img className='estrellasClarineteDestacado' src="./public/images/estrellas.png" alt="" />
-                                        {/* {item.estrellas} */}
+                                        <span hidden>{item.estrellas}</span>
+                                         
                                     </span>
 
                                    <Link to = {"/agregarProducto"}><span className='nombre-producto' > {item.nombre} </span></Link> 
@@ -69,160 +70,7 @@ export const DestacadosClarinete = (props: { dataDestacadoClarinete: Relacionado
 
 
 
-                    {/* <div>
-         <h2 className='texto-productos-destacados'>ClarineteSib</h2>
-         < div className = 'producto' > </div>
-         < div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         < span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-         <div>
-         <h2 className='texto-productos-destacados'>ClarineteSib</h2>
-         <div className = 'producto'> </div>
-         <div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         < span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-
-         <div >
-         <h2 className='texto-productos-destacados'>ClarineteSib</h2>
-         <div className = 'producto' > </div>
-         <div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         <span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-         </div>
-         <div className= 'productos-destacados' >
-        
-         <div>
-        
-         <div className = 'producto' > </div>
-         <div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         <span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-
-         <div>
-         
-         <div className = 'producto'> </div>
-         <div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         < span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-
-         < div >
-         
-         < div className = 'producto' > </div>
-         < div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         <span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-
-         < div >
-    
-         < div className = 'producto' > </div>
-         < div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         < span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-         </div>
-         <div className= 'productos-destacados' >
-                                                                                 
-         <div>
-        
-         < div className = 'producto' > </div>
-         < div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         < span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-                                                                     
-         < div >
-                                                                                                    
-         < div className = 'producto' > </div>
-         < div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         < span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-                                                                     
-         < div >
-                                                                                                                             
-         < div className = 'producto' > </div>
-         < div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         < span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-                                                                     
-         <div>
-                                                                                                                                                     
-         < div className = 'producto' > </div>
-         < div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking'/>
-         <span className='nombre-producto' > Nombre del producto </span>
-         <span className = 'precio' > $99.999 </span>
-         </div>
-         </div>                                                                                                                                                                          
-         </div>
-         <div className= 'productos-destacados'>
-
-         <div> 
-        
-         <div className = 'producto'> </div>
-         <div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         <span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-                                                                     
-         <div>
-                                                                                                    
-         <div className = 'producto' > </div>
-         <div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         < span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-                                                                     
-         < div >
-                                                                                                                             
-         <div className = 'producto' > </div>
-         < div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         <span className = 'precio' > $99.999 </span>
-         </div>
-         </div>
-                                                                     
-         < div >
-                                                                                                                                                     
-         < div className = 'producto' > </div>
-         < div className = 'nombre-precio-ranking' >
-         <img src="public/estrellas.png" alt = "ranking" className = 'ranking' />
-         <span className='nombre-producto' > Nombre del producto </span>
-         < span className = 'precio' > $99.999 </span>
-         </div>
-         </div> */}
+          
 
                 </div>
             </div>

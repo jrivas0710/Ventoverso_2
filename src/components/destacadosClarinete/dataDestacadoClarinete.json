@@ -1,131 +1,131 @@
 [
   {
     "id": "id-destacado-clarinete-1",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-buffet.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-buffet.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Buffet Crampon R13",
-    "precio": 250000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 250000
+    
   },
   {
     "id": "id-destacado-clarinete-2",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-yamaha.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-yamaha.jpg",
     "estrellas": 4,
     "nombre": "Clarinete Yamaha YCL-650",
-    "precio": 200000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 200000
+    
   },
   {
     "id": "id-destacado-clarinete-3",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-selmer.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-selmer.jpg",
     "estrellas": 4,
     "nombre": "Clarinete Selmer Paris",
-    "precio": 240000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 240000
+    
   },
   {
     "id": "id-destacado-clarinete-4",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
-    "precio": 210000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 210000
+    
   },
   {
     "id": "id-destacado-clarinete-5",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-leblanc.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-leblanc.jpg",
     "estrellas": 4,
     "nombre": "Clarinete Leblanc Serenade",
-    "precio": 220000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 220000
+    
   },
   {
     "id": "id-destacado-clarinete-4",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
-    "precio": 210000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 210000
+    
   },
   {
     "id": "id-destacado-clarinete-4",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
-    "precio": 210000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 210000
+    
   },
   {
     "id": "id-destacado-clarinete-4",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
-    "precio": 210000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 210000
+    
   },
   {
     "id": "id-destacado-clarinete-4",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
-    "precio": 210000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 210000
+    
   },
   {
     "id": "id-destacado-clarinete-4",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
-    "precio": 210000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 210000
+  
   },
   {
     "id": "id-destacado-clarinete-4",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
-    "precio": 210000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 210000
+   
   },
   {
     "id": "id-destacado-clarinete-4",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
-    "precio": 210000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 210000
+    
   },
   {
     "id": "id-destacado-clarinete-4",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
-    "precio": 210000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 210000
+    
   },
   {
     "id": "id-destacado-clarinete-4",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
-    "precio": 210000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 210000
+    
   },
   {
     "id": "id-destacado-clarinete-4",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
-    "precio": 210000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 210000
+    
   },
   {
     "id": "id-destacado-clarinete-4",
-    "imagenUrl": "https://ejemplo.com/imagen-clarinete-backun.jpg",
+    "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
-    "precio": 210000,
-    "linkDetalle": "https://ejemplo.com/producto"
+    "precio": 210000
+    
   }
 
 

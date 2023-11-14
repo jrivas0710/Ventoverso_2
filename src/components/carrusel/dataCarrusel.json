@@ -4,21 +4,21 @@
       "id": "carousel-id-1",
       "titulo": "Nueva Promoción de Verano",
       "descripcion": "Disfruta de nuestros descuentos de verano en toda la tienda.",
-      "imagenUrl": "https://via.placeholder.com/400x300?text=Imagen+1",
+      "imagenUrl": "https://s3-alpha-sig.figma.com/img/ed8f/e10b/195a16fd8261b475ba9213a56a61356f?Expires=1701043200&Signature=clR1MZxvPS~ffGQiL3GU37AoaufY8XwLkz9OUrKzmeMVbXh8gMMVE7HTAyKLBnY9mJr8-OLpOxefMQUGFXxP5cKi639cIz7NlqK41WE9z5zHbpjjorlGSbHMFfI9k4yMWKicoKv50gVYtkERMLGSemiXz-s9eu9VcWsNPDuHsRS1cY~15M80mEX4xYPvvKapn4SAMTCHYTj1pTPjVEPGNsrQw-YWkTV3OO79f534y6cz6VTtRbN~vU1TToXFSzGMb5qY3aeXt03uEIeY8IiCFsNHUjsJkBuPzgcecTC0KXCjzN21uKLCD9AwoG6UGq267s2xQgeRgf6vJgLuP2kGMg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
       "linkDetalle": "https://ejemplo.com/promocion-verano"
     },
     {
       "id": "carousel-id-2",
       "titulo": "Lanzamiento Exclusivo: Producto X",
       "descripcion": "Conoce el nuevo producto X, exclusivo en nuestra tienda.",
-      "imagenUrl": "https://via.placeholder.com/400x300?text=Imagen+2",
+      "imagenUrl": "https://s3-alpha-sig.figma.com/img/b632/e0de/1a7db70228beaaefe3d21936fa356a6e?Expires=1701043200&Signature=IZTdKLBr9AmsbXOpFPTFfhpdG6DhESirR-wtx1Cx69JJMR-tRkVCOgBQXsr1ElUhyA7jOUSqg1GLbWOsMQSGB3I7E9aRW4vIxc0EkN3r6ZBX7c5VAy4VgdoBic4YiYxOKlsvc8TRXbJeRn9L1H-APM2TMaAmUUfAlLk6JWkF7-ZTWsJABxtglUvGDyANR3ehf~RbkRyXN-wmnTedU8PR8EVCkBpk2ihLhBWRdG1C78~5GhYDOvJUTPUfQgdwQ4FnlE8Q~RnWfhPsk1p2cNGB-Gw1ALRF78wB2CUb634IA~hU6o~c9MU6dwzU3FigihDAT~n-XMSVa01LGAYcavppQw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
       "linkDetalle": "https://ejemplo.com/producto-x"
     },
     {
       "id": "carousel-id-3",
       "titulo": "¡Participa en nuestro Gran Concurso de Invierno!",
       "descripcion": "Compra cualquier producto y entra en el sorteo de un fabuloso premio. No te pierdas esta oportunidad.",
-      "imagenUrl": "https://via.placeholder.com/400x300?text=Imagen+3",
+      "imagenUrl": "https://s3-alpha-sig.figma.com/img/856e/5569/1346619a51ffe349a06b66a4597b882b?Expires=1701043200&Signature=ZSIGB2NgWToUzcxqm~PKqNL3hh019-WyjgXnCPzYItMHzIC-zsFweHTV7Pnetejds6fwjPt78u4pBfO3Ee0kmiAybx8SPNWd1u6E5eZe3ujyedmmOzcLPAiYzQcsxEELBU8e44ohW5dQQkBqpwA7430yQG~uAlHl0d2BlDPJ89CqC0yQinNpA4C0YYcamWvmfN9HCeEOMYe55h~M4uxJuqYzMcV6FeYK8XyiM9Ys9B5tOxeBRu0wn1zzmHvdHKDpzjy4rDl5HBgRuD-47cdAJGUPiY8dPTYyFLoeHe9qUR1shF9FbI688ln~jutZeiM5HuhdqANTauJXGMI~8Z5lWQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
       "linkDetalle": "https://ejemplo.com/concurso-invierno"
     },
     
@@ -26,7 +26,7 @@
     "id": "carousel-id-1",
     "titulo": "Participa y gana: Concurso XYZ",
     "descripcion": "Participa en nuestro concurso XYZ y gana premios increíbles.",
-    "imagenUrl": "https://via.placeholder.com/400x300?text=Imagen+4",
+    "imagenUrl": "https://s3-alpha-sig.figma.com/img/856e/5569/1346619a51ffe349a06b66a4597b882b?Expires=1701043200&Signature=ZSIGB2NgWToUzcxqm~PKqNL3hh019-WyjgXnCPzYItMHzIC-zsFweHTV7Pnetejds6fwjPt78u4pBfO3Ee0kmiAybx8SPNWd1u6E5eZe3ujyedmmOzcLPAiYzQcsxEELBU8e44ohW5dQQkBqpwA7430yQG~uAlHl0d2BlDPJ89CqC0yQinNpA4C0YYcamWvmfN9HCeEOMYe55h~M4uxJuqYzMcV6FeYK8XyiM9Ys9B5tOxeBRu0wn1zzmHvdHKDpzjy4rDl5HBgRuD-47cdAJGUPiY8dPTYyFLoeHe9qUR1shF9FbI688ln~jutZeiM5HuhdqANTauJXGMI~8Z5lWQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
     "linkDetalle": "https://ejemplo.com/concurso-xyz"
   }
 

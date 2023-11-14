@@ -42,7 +42,7 @@ TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los 
 }
 
 .header-flex {
-  background-color: rgb(211, 210, 210);
+  background-color:#180B26;
   height: 124px;
   width: 100vw;
   align-items: center;
@@ -108,9 +108,8 @@ TODO:arreglar los a y cambiarlos por los li TODO:arreglar lo del padding de los 
 .categories-flex {
   list-style: none;
 
-
+  color: #D9B9FF;
   background-color: black;
-  color: whitesmoke;
   height: 5rem;
   align-items: center;
 }
@@ -121,12 +120,13 @@ li {
   margin: 0;
   padding-top: 13px;
   width: 320px;
+   color: #D9B9FF;
 
 }
 
 .menu {
   align-content: center;
-  color: #FFF;
+  color: #D9B9FF;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -140,7 +140,7 @@ li {
 }
 
 ul>a {
-  color: whitesmoke;
+  color: #D9B9FF;
   width: 320px;
   height: 100%;
   padding: 16px 10px;
@@ -187,6 +187,7 @@ align-self: stretch; */
   line-height: normal;
   align-self: center;
   outline: none;
+  background-color: #FFF;
 
 
 
@@ -220,17 +221,18 @@ align-self: stretch; */
 .carro {
   width: 32px;
   height: 32px;
-  color: black;
+  color: #A8E9FE
 }
 
 
 .botonUser {
-  background-color: rgb(211, 210, 210);
+  background-color:#180B26;
   border: none;
   margin: 0;
   padding: 0;
   width: 30px;
   outline: none;
+  color: #A8E9FE;
 
 }
 

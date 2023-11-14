@@ -1,10 +1,10 @@
 
 
 export type Blog = {
-    imagenUrl : string,
+    imagen : string,
     id:string,
     titulo:string,
-    linkDetalle:string
+   
 }
 
 

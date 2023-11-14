@@ -1,6 +1,8 @@
 
 
-
+.productos-destacados{
+    display: flex;
+}
 
 .productosRelacionados{
    

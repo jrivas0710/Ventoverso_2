@@ -3,18 +3,15 @@ import { Destacados } from "../components/destacados/ProductosDestacados"
 import { PlantillaCategoria } from "../components/categories/Categories"
 import { ProductosSimilares } from "../components/productosSimilares/ProductosSimilares"
 import dataCategories from '../components/categories/dataCategories.json'
-import dataDestacados from '../components/destacados/dataDestacados.json'
 import dataProductosSimilares from '../components/productosSimilares/dataProductosSimilares.json'
 import dataBlog from '../components/blog/dataBlog.json'
 import './Producto.css'
-import Sidesheet2 from "../components/sidesheet/SideSheet2"
-import { Footer } from "../components/footer/Footer"
+
 
 
 
 export const PageProducto = () => {
-
-    
+  
 
 
 
@@ -39,7 +36,7 @@ export const PageProducto = () => {
 
                 <PlantillaCategoria dataProducto={dataCategories} />
                 <ProductosSimilares dataProductosSimilares={dataProductosSimilares}/>
-                <Blogs dataBlog={dataBlog} />
+                <Blogs/>
             </div>
        
 
