@@ -9,7 +9,7 @@ export const Blogs = () => {
 
     useEffect(()=>{
 
-        fetch(` http://localhost:3000/blog`, { // de aqui se traen y se muestran en el home, quien define cuantos se muestran en el home ?
+        fetch(` http://localhost:3000/vento-news`, { // de aqui se traen y se muestran en el home, quien define cuantos se muestran en el home ?
             method: "GET"
         })
         .then(response => {
