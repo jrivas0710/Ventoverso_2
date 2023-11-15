@@ -1,7 +1,7 @@
 
 
 export interface ProductoPrincipal {
-    id?: string, 
+    id?: number, 
     nombre?:string,
     marca?:string,
     modelo?:string,

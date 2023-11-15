@@ -24,7 +24,7 @@ const Home = () => {
 
   useEffect(()=>{
 
-      fetch(` http://localhost:3000/destacados`, {
+      fetch(`http://localhost:3000/productos-destacados/destacados`, {
           method: "GET"
       })
       .then(response => {

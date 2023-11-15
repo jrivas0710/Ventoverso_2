@@ -1,5 +1,5 @@
 export interface Comentario {
-    productoId : string,
+    productoId : number,
     cliente: string,
     fotoClienteUrl: string,
     nombreCliente:string,

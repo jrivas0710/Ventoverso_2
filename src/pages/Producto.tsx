@@ -4,7 +4,6 @@ import { PlantillaCategoria } from "../components/categories/Categories"
 import { ProductosSimilares } from "../components/productosSimilares/ProductosSimilares"
 import dataCategories from '../components/categories/dataCategories.json'
 import dataProductosSimilares from '../components/productosSimilares/dataProductosSimilares.json'
-import dataBlog from '../components/blog/dataBlog.json'
 import './Producto.css'
 
 

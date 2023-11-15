@@ -5,20 +5,6 @@ import { Destacado } from '../../interfaces/Destacados'
 
 
 
-/* export type Interfaz_destacado= {
-    id:"string", 
-    nombre: "string",
-    marca: "string",
-    modelo: "string",
-    estrellas : 4,
-    imagenes : [
-        "string" 
-    ],
-    precio: 0,
-    caracteristicasPrincipales: "string",
-    descripcion:  "string"
-  } 
- */
 export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
 
     return (
@@ -45,8 +31,8 @@ export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
                             <div>
 
 
-                                < div className='producto' id={item.id}>
-                                    <Link to = {"/agregarProducto"}><img className='imagenDestacaoClarinete' src={item.imagen} alt={item.nombre} /></Link>
+                                < div className='producto' key={item.id}>
+                                    <Link to = {"/agregarProducto"}><img className='imagenDestacaoClarinete' src={item.imagenUrl} alt={item.nombre} /></Link>
                                 </div>
 
                                 < div className='nombre-precio-ranking'>

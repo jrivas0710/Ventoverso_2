@@ -1,6 +1,6 @@
 [
   {
-    "id": "id-destacado-clarinete-1",
+    "id": 1,
     "imagen": "https://ejemplo.com/imagen-clarinete-buffet.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Buffet Crampon R13",
@@ -8,7 +8,7 @@
     
   },
   {
-    "id": "id-destacado-clarinete-2",
+    "id": 2,
     "imagen": "https://ejemplo.com/imagen-clarinete-yamaha.jpg",
     "estrellas": 4,
     "nombre": "Clarinete Yamaha YCL-650",
@@ -16,7 +16,7 @@
     
   },
   {
-    "id": "id-destacado-clarinete-3",
+    "id": 3,
     "imagen": "https://ejemplo.com/imagen-clarinete-selmer.jpg",
     "estrellas": 4,
     "nombre": "Clarinete Selmer Paris",
@@ -24,7 +24,7 @@
     
   },
   {
-    "id": "id-destacado-clarinete-4",
+    "id": 4,
     "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
@@ -32,7 +32,7 @@
     
   },
   {
-    "id": "id-destacado-clarinete-5",
+    "id": 5,
     "imagen": "https://ejemplo.com/imagen-clarinete-leblanc.jpg",
     "estrellas": 4,
     "nombre": "Clarinete Leblanc Serenade",
@@ -40,7 +40,7 @@
     
   },
   {
-    "id": "id-destacado-clarinete-4",
+    "id": 6,
     "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
@@ -48,7 +48,7 @@
     
   },
   {
-    "id": "id-destacado-clarinete-4",
+    "id": 7,
     "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
@@ -56,7 +56,7 @@
     
   },
   {
-    "id": "id-destacado-clarinete-4",
+    "id": 8,
     "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",
@@ -64,7 +64,7 @@
     
   },
   {
-    "id": "id-destacado-clarinete-4",
+    "id": 9,
     "imagen": "https://ejemplo.com/imagen-clarinete-backun.jpg",
     "estrellas": 5,
     "nombre": "Clarinete Backun Alpha",

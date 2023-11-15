@@ -1,9 +1,9 @@
 import './ProductosRelacionados.css'
-import { RelacionadosSimDest } from '../../interfaces/RelacionadosSimDest'
+import { Destacado } from '../../interfaces/Destacados'
 
 
 
-export const ProductosRelacionados = (props:{dataProductosRelacionados:RelacionadosSimDest[]}) => {
+export const ProductosRelacionados = (props:{dataProductosRelacionados:Destacado[]}) => {
 
     
 
@@ -24,7 +24,7 @@ export const ProductosRelacionados = (props:{dataProductosRelacionados:Relaciona
                             <div className='producto'><img src={item.imagenUrl} alt={item.nombre} /></div>
                             <div className='nombre-precio-ranking'>
                                 {item.estrellas}
-                                <a href={item.linkDetalle}><img src="images/estrellas.png" alt="ranking" className='ranking' /></a>
+                                <a href="#"><img src={item.imagenUrl}alt="ranking" className='ranking' /></a>
                                 <span className='nombre-producto'>{item.nombre}</span>
                                 <span className='precio'>{item.precio}</span>
                             </div>
@@ -40,60 +40,3 @@ export const ProductosRelacionados = (props:{dataProductosRelacionados:Relaciona
 }
 
 
-
-
-/*
-export const ProductosRelacionados= () => {
-
-    return (
-        <>
-
-
-            <div className='productosRelacionados'>
-
-
-
-                    <h2 className='texto-productos-relacionados'>Productos Relacionados</h2>
-
-                <div>
-                    <div className='producto'></div>
-                    <div className='nombre-precio-ranking'>
-                        <img src="images/estrellas.png" alt="ranking" className='ranking' />
-                        <span className='nombre-producto'>Nombre del producto</span>
-                        <span className='precio'>$99.999</span>
-                    </div>
-                </div>
-
-                <div>
-                    <div className='producto'></div>
-                    <div className='nombre-precio-ranking'>
-                        <img src="images/estrellas.png" alt="ranking" className='ranking' />
-                        <span className='nombre-producto'>Nombre del producto</span>
-                        <span className='precio'>$99.999</span>
-                    </div>
-                </div>
-
-                <div>
-                    <div className='producto'></div>
-                    <div className='nombre-precio-ranking'>
-                        <img src="images/estrellas.png" alt="ranking" className='ranking' />
-                        <span className='nombre-producto'>Nombre del producto</span>
-                        <span className='precio'>$99.999</span>
-                    </div>
-                </div>
-
-                <div>
-                    <div className='producto'></div>
-                    <div className='nombre-precio-ranking'>
-                        <img src="images/estrellas.png" alt="ranking" className='ranking' />
-                        <span className='nombre-producto'>Nombre del producto</span>
-                        <span className='precio'>$99.999</span>
-                    </div>
-                </div>
-
-
-            </div>
-        </>)
-}
- 
- */

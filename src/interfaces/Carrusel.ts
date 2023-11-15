@@ -1,5 +1,5 @@
 export interface Carrusel  {
-    id:string,
+    id:number,
     titulo:string,
     descripcion:string,
     imagenUrl:string,

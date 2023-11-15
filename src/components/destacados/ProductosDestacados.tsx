@@ -18,7 +18,7 @@ export const Destacados = (props: { dataDestacados: Destacado[] }) => {
 
                         <div key={item.id} >
                             
-                            <div className='producto'><img src={item.imagen} alt={item.nombre} /></div>
+                            <div className='producto'><img src={item.imagenUrl} alt={item.nombre} /></div>
                             <div className='nombre-precio-ranking'>
                                 {item.estrellas}
                                 <a href="#"><img src="images/estrellas.png" alt="ranking" className='ranking' /></a>

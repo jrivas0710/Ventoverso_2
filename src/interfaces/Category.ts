@@ -2,7 +2,7 @@
 
 
 export interface Category {
-    id: string,
+    id: number,
     nombre: string,
     imagenUrl: string,
     linkDetalle: string
