@@ -2,7 +2,7 @@
 
 export type Blog = {
     imagen : string,
-    id:string,
+    id:number,
     titulo:string,
    
 }

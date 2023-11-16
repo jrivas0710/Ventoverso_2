@@ -1,10 +1,31 @@
+import { useEffect, useState } from 'react';
 import { Destacado } from '../../interfaces/Destacados'
 import '../productosRelacionados/ProductosRelacionados.css'
 
 
 
 
-export const Destacados = (props: { dataDestacados: Destacado[] }) => {
+export const Destacados = () => {
+
+
+    const [destacado, setDestacados] = useState<Destacado[]>();
+
+
+    useEffect(() => {
+
+        fetch(`http://localhost:3000/productos-destacados/destacados`, {
+            method: "GET"
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json() as Promise<Destacado[]>
+                }
+            })
+            .then(data => {
+                setDestacados(data);
+            })
+            .catch(error => console.log(error.message("la peticion no pudo procesarse")))
+    })
 
 
     return (
@@ -12,12 +33,12 @@ export const Destacados = (props: { dataDestacados: Destacado[] }) => {
 
 
             <div className='productosRelacionados'>
-            <h2 className='texto-productos-relacionados'>Productos Destacados</h2>
-                {props.dataDestacados.map(item => {
+                <h2 className='texto-productos-relacionados'>Productos Destacados</h2>
+                { destacado && destacado.map(item => {
                     return (
 
                         <div key={item.id} >
-                            
+
                             <div className='producto'><img src={item.imagenUrl} alt={item.nombre} /></div>
                             <div className='nombre-precio-ranking'>
                                 {item.estrellas}

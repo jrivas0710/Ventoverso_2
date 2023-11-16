@@ -18,25 +18,6 @@ import { Blog } from "../components/blog/InterfaceBlog"
 
 const Home = () => {
 
-  
-  const[destacado, setDestacados] = useState<Destacado[]>();
-
-
-  useEffect(()=>{
-
-      fetch(`http://localhost:3000/productos-destacados/destacados`, {
-          method: "GET"
-      })
-      .then(response => {
-          if (response.ok) {
-              return response.json() as Promise<Destacado[]>
-          }
-      })
-      .then(data =>{
-          setDestacados(data);
-      })
-      .catch(error => console.log(error.message("la peticion no pudo procesarse")))
-  })
 
 
 
@@ -49,8 +30,7 @@ const Home = () => {
       <Carrusel dataCarrusel={dataCarrusel}/>
       <Iconos />
       {/* <ProductosSimilares dataProductosSimilares={dataDestacados}/> */}
-       { destacado &&  <Destacados
-        dataDestacados={destacado} /> }
+      <Destacados/> 
       <MarcasPopulares/>
       <Blogs />
       

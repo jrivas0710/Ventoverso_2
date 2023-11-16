@@ -31,7 +31,7 @@ export const PaginaProducto= () => {
     <div className="containerPaginaProducto">
     <Migas/>
     <ProductoSib dataProductoSib = {dataProductoSib}/>
-    <ProductosRelacionados dataProductosRelacionados ={dataProductosRelacionados}/>
+    <ProductosRelacionados /* dataProductosRelacionados ={dataProductosRelacionados} *//>
     <EvaluacionPrincipal/>
     <Comentario dataComentario = {dataComentarios}/>
     <ProductosSimilares dataProductosSimilares={dataProductosSimilares}/>

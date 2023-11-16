@@ -1,11 +1,31 @@
 import './ProductosRelacionados.css'
 import { Destacado } from '../../interfaces/Destacados'
+import { useEffect, useState } from 'react';
 
 
 
-export const ProductosRelacionados = (props:{dataProductosRelacionados:Destacado[]}) => {
+export const ProductosRelacionados = () => {
 
-    
+    const [relacionados, setRelacionados] = useState<Destacado[]>();
+
+
+    useEffect(() => {
+
+        fetch(`http://localhost:3000/productos-relacionados`, {
+            method: "GET"
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json() as Promise<Destacado[]>
+                }
+            })
+            .then(data => {
+                setRelacionados(data);
+            })
+            .catch(error => console.log(error.message("la peticion no pudo procesarse")))
+    })
+
+
 
     return (
         <>
@@ -17,19 +37,20 @@ export const ProductosRelacionados = (props:{dataProductosRelacionados:Destacado
 
 
 
-                {props.dataProductosRelacionados.map(item => {
+                { relacionados && relacionados.map(item => {
                     return (
 
                         <div key={item.id}>
                             <div className='producto'><img src={item.imagenUrl} alt={item.nombre} /></div>
                             <div className='nombre-precio-ranking'>
                                 {item.estrellas}
-                                <a href="#"><img src={item.imagenUrl}alt="ranking" className='ranking' /></a>
+                                <a href="#"><img src={item.imagenUrl} alt="ranking" className='ranking' /></a>
                                 <span className='nombre-producto'>{item.nombre}</span>
                                 <span className='precio'>{item.precio}</span>
                             </div>
-                        </div>)})
-                    }
+                        </div>)
+                })
+                }
             </div>
         </>
     )

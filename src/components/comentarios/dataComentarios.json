@@ -1,6 +1,6 @@
 [
     {
-      "productoId": "1234",
+      "productoId": 1,
       "cliente": "5678",
       "fotoClienteUrl": "https://ejemplo.com/foto-cliente-1.jpg",
       "nombreCliente": "Benjamín Rojas",
@@ -19,7 +19,7 @@
       }
     },
     {
-      "productoId": "1234",
+      "productoId": 2,
       "cliente": "9012",
       "fotoClienteUrl": "https://ejemplo.com/foto-cliente-2.jpg",
       "nombreCliente": "Ana Farías",

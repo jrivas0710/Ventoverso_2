@@ -32,7 +32,7 @@ const Comentario = (props:{dataComentario: Comentario[] }) => {
         <>
             {props.dataComentario.map((item) => {
 
-                return (<div className='containerComentarioEvaluaciones' id={item.productoId}>
+                return (<div className='containerComentarioEvaluaciones' key={item.productoId}>
                 <div className='containerComentario'>
 
                     <div className='avatarTexto'>
