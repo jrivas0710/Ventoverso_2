@@ -1,71 +1,40 @@
-import { DetalleProducto } from "../detalleProducto/DetalleProducto"
-import { EncabezadoProducto } from "../encabezadoProducto/EncabezadoProducto"
-import { ImagenesProducto } from "../imagenesProducto/ImagenesProducto"
-import { ProductoPrincipal } from "../../interfaces/ProductoPincipal"
-/* import dataProductoSib from './dataProductoSib.json' */
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import { DetalleProducto } from "../detalleProducto/DetalleProducto";
+import { EncabezadoProducto } from "../encabezadoProducto/EncabezadoProducto";
+import { ImagenesProducto } from "../imagenesProducto/ImagenesProducto";
+import { ProductoPrincipal } from "../../interfaces/ProductoPincipal";
 
-
-
-
-export const ProductoSib = (/* props: { dataProductoSib: ProductoPrincipal[] } */) => {
-
-    const [producto, setProducto] = useState<ProductoPrincipal[]>();
+export const ProductoSib = () => {
+    const [producto, setProducto] = useState<ProductoPrincipal | null>(null);
 
     useEffect(() => {
-        fetch("http://localhost:3000/producto", {
+        fetch(`http://localhost:3000/productos/3`, {
             method: "GET"
         })
-        .then((response) => {
-            if (response.ok) {
-                console.log("respuesta exitosa")
-                return response.json() as Promise<ProductoPrincipal[]>  ;
-            }else{
-                throw new Error ("no se pudo procesar la peticion")
-            }
-        })
-        .then((json) => 
-            setProducto(json)
-            )
-        .catch((error) => error.message('Hay un error'))
-        })
-        
- 
+            .then(response => response.json())
+            .then(data => {
+                setProducto(data);
+            })
+            .catch(error => console.error('Error:', error));
+    },);
 
-
+    if (!producto) {
+        return <div>Cargando producto...</div>;
+    }
 
     return (
         <>
-
-            { producto && producto.map(item => {
-                return(  <EncabezadoProducto
-                    nombre={item.nombre}
-                    id_marcas={item.id}
-                    modelo={item.modelo}
-                    estrellas= {item.estrellas}
-
-                />)
-              
-            })}
-
-            {producto &&  <ImagenesProducto producto = {producto}/> }
-               
-                
-               
-          
-
-            { producto && producto.map(item => {
-                return(  <DetalleProducto 
-                    caracteristicasPrincipales={item.caracteristicasPrincipales}
-                    descripcion={item.descripcion}
-
-                />)
-              
-            })}
-
-
-
-
+            <EncabezadoProducto
+                nombre={producto.nombre}
+                id_marcas={producto.id_marcas}
+                modelo={producto.modelo}
+                estrellas={producto.estrellas}
+            />
+            <ImagenesProducto producto={[producto]} />
+            <DetalleProducto
+                caracteristicasPrincipales={producto.caracteristicasPrincipales}
+                descripcion={producto.descripcion}
+            />
         </>
-    )
-}
+    );
+};
