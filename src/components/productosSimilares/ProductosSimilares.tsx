@@ -1,9 +1,9 @@
 import './ProductosSimilares.css'
-import { RelacionadosSimDest } from '../../interfaces/RelacionadosSimDest'
+import { Destacado } from '../../interfaces/Destacados'
 
 
 
-export const ProductosSimilares = (props: { dataProductosSimilares: RelacionadosSimDest[] }) => {
+export const ProductosSimilares = (props: { dataProductosSimilares: Destacado[] }) => {
 
 
     return (
@@ -23,7 +23,7 @@ export const ProductosSimilares = (props: { dataProductosSimilares: Relacionados
                                 <div className='producto'><img src={item.imagenUrl} alt={item.nombre} /></div>
                                 <div className='nombre-precio-ranking'>
                                     {item.estrellas}
-                                    <a href={item.linkDetalle}><img src="images/estrellas.png" alt="ranking" className='ranking' /></a>
+                                    <a href='#'><img src="images/estrellas.png" alt="ranking" className='ranking' /></a>
                                     <span className='nombre-producto'>{item.nombre}</span>
                                     <span className='precio'>{item.precio}</span>
                                 </div>

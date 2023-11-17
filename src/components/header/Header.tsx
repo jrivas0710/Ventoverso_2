@@ -82,11 +82,11 @@ function Header({ evento }: any) {
                 {cerrado && (
                   <div className="desplegableMaderas">
                     <ul className="listaDesplegableMaderas">
-                     <li className="opcionClarinetes" onClick={toggleDropdown}> <Link to={"/productoCategoria"}>Clarinetes</Link></li>
-                      <li className="opcionClarinetes" onClick={toggleDropdown}><Link to={"/productoCategoria"}>Fagotes</Link></li>
-                    <li className="opcionClarinetes" onClick={toggleDropdown}>  <Link to={"/productoCategoria"}>Flautas dulces</Link></li>
-                     <li className="opcionClarinetes" onClick={toggleDropdown}> <Link to={"/productoCategoria"}>Flautas traversas</Link></li>
-                      <li className="opcionClarinetes" onClick={toggleDropdown}><Link to={"/productoCategoria"}>Oboes</Link></li>
+                     <li className="opcionClarinetes" onClick={toggleDropdown}> <Link to={"/categoria"}>Clarinetes</Link></li>
+                      <li className="opcionClarinetes" onClick={toggleDropdown}><Link to={"/categoria"}>Fagotes</Link></li>
+                    <li className="opcionClarinetes" onClick={toggleDropdown}>  <Link to={"/categoria"}>Flautas dulces</Link></li>
+                     <li className="opcionClarinetes" onClick={toggleDropdown}> <Link to={"/categoria"}>Flautas traversas</Link></li>
+                      <li className="opcionClarinetes" onClick={toggleDropdown}><Link to={"/categoria"}>Oboes</Link></li>
                     </ul>
                   </div>
                 )}
