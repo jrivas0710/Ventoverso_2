@@ -16,14 +16,15 @@ export const ProductosRelacionados = () => {
         })
             .then(response => {
                 if (response.ok) {
+                    console.log(response)
                     return response.json() as Promise<Destacado[]>
                 }
             })
             .then(data => {
                 setRelacionados(data);
             })
-            .catch(error => console.log(error.message("la peticion no pudo procesarse")))
-    })
+            .catch(error => console.log(error))
+    },[])
 
 
 

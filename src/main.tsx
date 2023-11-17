@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { ThemeConfig } from './config/theme.config.tsx'
+import { Provider } from 'react-redux'
+import { store } from './redux/store.ts'
 
 
 declare module 'yup' {
@@ -12,10 +14,12 @@ declare module 'yup' {
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <ThemeConfig>
-    <App />
-    </ThemeConfig>
-  </React.StrictMode>,
+  //<React.StrictMode>
+    <Provider store={store}>
+      <ThemeConfig>
+        <App />
+      </ThemeConfig>
+    </Provider>
+ // </React.StrictMode>,
 
 )

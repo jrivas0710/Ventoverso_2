@@ -18,6 +18,7 @@ export const ProductoSib = () => {
             .catch(error => console.error('Error:', error));
     },);
 
+
     if (!producto) {
         return <div>Cargando producto...</div>;
     }

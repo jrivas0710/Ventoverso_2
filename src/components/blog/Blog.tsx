@@ -7,7 +7,6 @@ import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } f
 export const Blogs = () => {
     const [blog, setBlog] = useState<Blog[]>();
 
-    console.log(blog)
 
     useEffect(() => {
 
@@ -16,7 +15,7 @@ export const Blogs = () => {
         })
             .then(response => {
                 if (response.ok) {
-                    
+                    console.log(response)
                     return response.json() as Promise<Blog[]>
                 }
             })
@@ -24,8 +23,8 @@ export const Blogs = () => {
                 console.log(data)
                 setBlog(data);
             })
-            .catch(error => console.log(error.message("la peticion no pudo procesarse")))
-    }, blog)
+            .catch(error => console.log(error))
+    }, [])
 
     return (
 
@@ -36,7 +35,7 @@ export const Blogs = () => {
 
                     return (
                         
-                        <Card key={item.id} sx={{ maxWidth: 345 }}>
+                        <Card key={item.id} sx={{ maxWidth: 300 }}>
                             <CardMedia
                                 sx={{ height: 140 }}
                                 image={item.imagen}

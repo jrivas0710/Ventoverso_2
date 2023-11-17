@@ -42,10 +42,10 @@ function App() {
 
               <Route path="/" element={<Home />}> </Route>
               <Route path="/agenda" element={<Agenda/>} ></Route>
-              <Route path="/productoCategoria" element={<PageProducto />} ></Route>
+              <Route path="/categoria" element={<PageProducto />} ></Route>
               <Route path="/d_clarinete" element={<DestacadoClarinetes />}> </Route>
               <Route path="/agregarProducto" element={<PaginaProducto />}> </Route>
-              <Route path="/productoCarro" element={<CarroCompras />}> </Route>
+              <Route path="/carro" element={<CarroCompras />}> </Route>
               <Route path="/checkout" element={<Checkout />}></Route>
               <Route path="/algoSalioMal" element={<ResultadoCompraFallo />}></Route>
               <Route path="/compraExitosa" element={<ResultadoCompra />}></Route>

@@ -28,10 +28,10 @@ export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
                         return (
 
 
-                            <div>
+                            <div key={item.id}>
 
 
-                                < div className='producto' key={item.id}>
+                                < div className='producto'>
                                     <Link to = {"/agregarProducto"}><img className='imagenDestacaoClarinete' src={item.imagenUrl} alt={item.nombre} /></Link>
                                 </div>
 
