@@ -2,16 +2,34 @@ import { DetalleProducto } from "../detalleProducto/DetalleProducto"
 import { EncabezadoProducto } from "../encabezadoProducto/EncabezadoProducto"
 import { ImagenesProducto } from "../imagenesProducto/ImagenesProducto"
 import { ProductoPrincipal } from "../../interfaces/ProductoPincipal"
-import dataProductoSib from './dataProductoSib.json'
+/* import dataProductoSib from './dataProductoSib.json' */
+import { useEffect, useState } from "react"
 
 
 
 
-export const ProductoSib = (props: { dataProductoSib: ProductoPrincipal[] }) => {
+export const ProductoSib = (/* props: { dataProductoSib: ProductoPrincipal[] } */) => {
 
- console.log(props)
+    const [producto, setProducto] = useState<ProductoPrincipal[]>();
 
-
+    useEffect(() => {
+        fetch("http://localhost:3000/producto", {
+            method: "GET"
+        })
+        .then((response) => {
+            if (response.ok) {
+                console.log("respuesta exitosa")
+                return response.json() as Promise<ProductoPrincipal[]>  ;
+            }else{
+                throw new Error ("no se pudo procesar la peticion")
+            }
+        })
+        .then((json) => 
+            setProducto(json)
+            )
+        .catch((error) => error.message('Hay un error'))
+        })
+        
  
 
 
@@ -19,10 +37,10 @@ export const ProductoSib = (props: { dataProductoSib: ProductoPrincipal[] }) => 
     return (
         <>
 
-            {props.dataProductoSib.map(item => {
+            { producto && producto.map(item => {
                 return(  <EncabezadoProducto
                     nombre={item.nombre}
-                    marca={item.marca}
+                    id_marcas={item.id}
                     modelo={item.modelo}
                     estrellas= {item.estrellas}
 
@@ -30,13 +48,13 @@ export const ProductoSib = (props: { dataProductoSib: ProductoPrincipal[] }) => 
               
             })}
 
-            
-                <ImagenesProducto dataProductoSib={dataProductoSib}/>
+            {producto &&  <ImagenesProducto producto = {producto}/> }
+               
                 
                
           
 
-            {props.dataProductoSib.map(item => {
+            { producto && producto.map(item => {
                 return(  <DetalleProducto 
                     caracteristicasPrincipales={item.caracteristicasPrincipales}
                     descripcion={item.descripcion}
