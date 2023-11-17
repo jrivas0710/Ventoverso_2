@@ -18,7 +18,7 @@ export const ProductoSib = (/* props: { dataProductoSib: ProductoPrincipal[] } *
         })
         .then((response) => {
             if (response.ok) {
-                console.log("respuesta exitosa")
+                console.log(response)
                 return response.json() as Promise<ProductoPrincipal[]>  ;
             }else{
                 throw new Error ("no se pudo procesar la peticion")
@@ -27,8 +27,8 @@ export const ProductoSib = (/* props: { dataProductoSib: ProductoPrincipal[] } *
         .then((json) => 
             setProducto(json)
             )
-        .catch((error) => error.message('Hay un error'))
-        })
+        .catch((error) => error)
+        },[])
         
  
 

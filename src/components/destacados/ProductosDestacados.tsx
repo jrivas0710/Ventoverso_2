@@ -18,6 +18,7 @@ export const Destacados = () => {
         })
             .then(response => {
                 if (response.ok) {
+                    console.log(`Response desde productos destacados ${response.json()}`)
                     return response.json() as Promise<Destacado[]>
                 }
             })
@@ -25,7 +26,7 @@ export const Destacados = () => {
                 setDestacados(data);
             })
             .catch(error => console.log(error.message("la peticion no pudo procesarse")))
-    })
+    },[])
 
 
     return (

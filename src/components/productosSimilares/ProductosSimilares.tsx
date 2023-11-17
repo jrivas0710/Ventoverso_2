@@ -5,7 +5,6 @@ import { RelacionadosSimDest } from '../../interfaces/RelacionadosSimDest'
 
 export const ProductosSimilares = (props: { dataProductosSimilares: RelacionadosSimDest[] }) => {
 
-    console.log(props)
 
     return (
         <>

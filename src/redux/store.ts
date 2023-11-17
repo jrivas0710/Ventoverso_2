@@ -1,19 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { ProductoPrincipal } from "../interfaces/ProductoPincipal";
+import { configureStore } from "@reduxjs/toolkit";
+import carritoReducer from "./carritoSlice"
+import productosReducer from "./productosDisponiblesSlice"
 
+export const store = configureStore({
 
-const initialState:ProductoPrincipal[] = []; // tipe el estado inicial diciendo que recibira elementos como este 
-
- const carritoSLice = createSlice({
-    name:"carrito",
-    initialState,
-    reducers:{
-        //crearCarrito
-       // agregarProducto
-        //eliminarProducto
-       // vaciarCarro
-       // pagar
+    reducer:{
+        carrito: carritoReducer,
+        productos: productosReducer //aqui yo buscare el producto po el id, y lo agregare a mi carro
     }
 })
 
-export default carritoSLice.reducer // lo importare en mi store
+export type RootState = ReturnType<typeof store.getState> 
+
+

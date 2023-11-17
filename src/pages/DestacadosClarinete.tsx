@@ -15,6 +15,7 @@ export const DestacadoClarinetes = () => {
 
       .then(response => {
          if (response.ok) {
+            console.log(response)
             return response.json() as Promise<Destacado[]>
          }
       })
@@ -23,7 +24,7 @@ export const DestacadoClarinetes = () => {
          setProducto(data);
       })
       .catch(error => console.log(error.message("mal")))
-   })
+   },[])
 
 return(
     <>

@@ -25,10 +25,10 @@ export const EncabezadoProducto: React.FC<ProductoPrincipal> = ({ nombre, id, mo
   return (
 
     <>
-      <div className='containerEncabezado'>
+      <div className='containerEncabezado' key={id}>
         <div className="encabezadoProducto">
           <div><h1 className='h1Encabezado'>{nombre}</h1></div>
-          <div><span className='spanEncabezado'>{id}</span></div>
+         {/*  <div><span className='spanEncabezado'>{id}</span></div> */}
           <div><span className='spanEncabezado'>{modelo}</span></div>
         </div>
         <div className='estrellas-marca'>

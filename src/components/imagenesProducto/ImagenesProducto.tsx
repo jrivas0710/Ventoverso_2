@@ -13,12 +13,6 @@ export const ImagenesProducto = (props: { producto: ProductoPrincipal[] }) => {
 
 
 
-    /* 
-        let productoPrincipal = props.dataProductoSib.map(item => item)
-        console.log(productoPrincipal);
-    
-        let imagenes = productoPrincipal.map(item => item.imagenes) //este es el array de imagenes
-        console.log(imagenes) */
 
     return (
         <>
