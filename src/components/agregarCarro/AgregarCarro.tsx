@@ -49,7 +49,7 @@ export const AgregarCarro:React.FC<ProductoPrincipal> = ({precio}) => {
 
                     </div>
                     <div className='botonComprar-like'>
-                        <div> <Link to = {"/productoCarro"}> <button className='botonComprar'>Comprar</button></Link> </div>
+                        <div> <Link to = {"/carro"}> <button className='botonComprar'>Comprar</button></Link> </div>
                         <div className='divLike'><img src="/images/like.png" alt="argegar-producto-deseado" className='like' /></div>
                     </div>
 
