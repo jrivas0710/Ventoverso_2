@@ -1,0 +1,318 @@
+html {
+    box-sizing: border-box;
+    margin: auto 0;
+
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+.agendacontainer {
+
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    Padding: 1440px 1726px;
+
+}
+
+.titulo {
+    width: 467px;
+    color: #000;
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 40px;
+
+
+}
+
+.subtitulo {
+    width: 767px;
+    display: flex;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+}
+
+.titulocalendario {
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tituo_reserva {
+
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+
+}
+
+.subtitulo_reserva {
+
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26.6px;
+
+}
+
+
+.logo_icono {
+
+    width: 24px;
+    height: 24px;
+}
+
+.Calendar2{
+
+    display: flex;
+    width: 700px;
+    height: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+
+
+}
+
+.Padre_reserva {
+    display: flex;
+    flex-direction: row;
+}
+
+.Reserva2 {
+
+
+    margin-left: 70px;
+    height: 300px;
+    width: 280px;
+
+
+}
+
+.Padre_linea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.hora {
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26.6px;
+    text-align: center;
+
+}
+
+.linea1 {
+
+
+    display: flex;
+    width: 50%;
+    height: 3px;
+    background-color: black;
+
+}
+
+.logo_agenda {
+
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+.contenedorcaja {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+
+
+
+
+}
+
+
+.caja1 {
+
+
+    display: flex;
+    width: 64px;
+    height: 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+
+
+}
+
+.caja2 {
+
+    display: flex;
+    margin: 0 10px;
+    width: 64px;
+    height: 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.caja3 {
+
+    display: flex;
+    margin: 0 10px;
+    width: 64px;
+    height: 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.caja4 {
+
+
+    display: flex;
+    margin: 0 10px;
+    width: 64px;
+    height: 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.titulohorario {
+    color: #000;
+
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+
+}
+
+.fecha {
+    color: #000;
+    font-family: Poppins;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26.6px;
+
+}
+
+
+.primerbloque {
+
+    display: flex;
+    width: 328px;
+    height: 80px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26.6px;
+}
+
+
+.segundobloque {
+
+    display: flex;
+    width: 328px;
+    height: 80px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26.6px;
+}
+
+
+.tercerbloque {
+
+    display: flex;
+    width: 328px;
+    height: 80px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26.6px;
+}
+
+.cuartobloque {
+
+    display: flex;
+    width: 328px;
+    height: 80px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26.6px;
+}

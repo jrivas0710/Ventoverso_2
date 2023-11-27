@@ -9,22 +9,30 @@ import dataBlog from '../components/blog/dataBlog.json'
 import Sidesheet2 from "../components/sidesheet/SideSheet2"
 import dataCarrusel from '../components/carrusel/dataCarrusel.json'
 import { ProductosSimilares } from "../components/productosSimilares/ProductosSimilares"
+import { Destacado } from "../interfaces/Destacados"
+import { useEffect, useState } from "react"
+import { Blog } from "../components/blog/InterfaceBlog"
 
 
 //la data se supone que es el json de back para Carrusel y Destacados
 
 const Home = () => {
 
+
+
+
+
+
+
   return (
     <>
      
       <Carrusel dataCarrusel={dataCarrusel}/>
       <Iconos />
-      <ProductosSimilares dataProductosSimilares={dataDestacados}/>
-      {/* <Destacados
-        dataDestacados={dataDestacados} /> */}
+      {/* <ProductosSimilares dataProductosSimilares={dataDestacados}/> */}
+      <Destacados/> 
       <MarcasPopulares/>
-      <Blogs dataBlog={dataBlog} />
+      <Blogs />
       
     </>
   )

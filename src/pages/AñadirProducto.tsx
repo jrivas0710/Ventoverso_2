@@ -19,14 +19,19 @@ import dataProductosSimilares from '../components/productosSimilares/dataProduct
 
 export const PaginaProducto= () => {
 
+
+  
+
+
+
   return (
     <>
     
 
     <div className="containerPaginaProducto">
     <Migas/>
-    <ProductoSib dataProductoSib = {dataProductoSib}/>
-    <ProductosRelacionados dataProductosRelacionados ={dataProductosRelacionados}/>
+    <ProductoSib/>
+    <ProductosRelacionados /* dataProductosRelacionados ={dataProductosRelacionados} *//>
     <EvaluacionPrincipal/>
     <Comentario dataComentario = {dataComentarios}/>
     <ProductosSimilares dataProductosSimilares={dataProductosSimilares}/>

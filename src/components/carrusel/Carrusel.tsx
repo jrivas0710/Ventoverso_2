@@ -27,7 +27,7 @@ const Carrusel= (props:{dataCarrusel: Carrusel[]}) => {
   }, []);
 
 
-  console.log(props)
+  
 
   const settings = {
     centerMode: true,

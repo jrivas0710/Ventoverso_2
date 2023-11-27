@@ -1,0 +1,221 @@
+html {
+    box-sizing: border-box;
+    margin: auto 0;
+
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+.agendacontainer {
+
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    Padding: 1440px 1726px;
+
+}
+
+
+.age {
+
+    color: #000;
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    height: 200px;
+    margin-right: 150px;
+    margin-left: 80px;
+
+
+
+}
+
+.prueba {
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42.6px;
+    text-align: center;
+    height: 100px;
+    margin-right: 372px;
+    margin-left: 372px;
+
+
+
+}
+
+.resumen {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    align-items: center;
+    line-height: 24px;
+
+
+
+
+}
+
+.como {
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    margin-right: 161px;
+    margin-left: 80px;
+
+}
+
+.terminaragenda {
+
+    width: 320px;
+    height: 48px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: #000;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.consulta {
+
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+
+}
+
+.hora {
+
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26.6px;
+    text-align: center;
+    ;
+}
+
+
+.linea1 {
+
+    display: flex;
+    
+    background-color:aqua;x
+    
+    height: 3px;
+
+}
+
+
+
+
+.logo_agenda {
+
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background: #FFF;
+    margin-right: 812px;
+    margin-left: 806px;
+}
+
+.consultar {
+
+    color: var(--Black, #000);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 799px;
+    margin-left: 793px;
+
+}
+
+.contenedorcaja {
+
+    flex-direction: column;
+    display: inline-block;
+
+
+}
+
+.caja1 {
+
+
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 8px;
+    display: inline-block;
+
+
+
+
+
+
+
+}
+
+.caja2 {
+
+    width: 64px;
+    height: 64px;
+    flex-direction: column;
+    gap: 8px;
+    display: inline-block;
+
+
+
+}
+
+.caja3 {
+
+
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 8px;
+    display: inline-block;
+}
+
+.caja4 {
+
+
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 8px;
+    display: inline-block;
+}

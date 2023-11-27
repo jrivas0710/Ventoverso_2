@@ -16,10 +16,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ProductoCarro } from './components/carro/ProductoCarro'
 import { ResultadoCompra } from './components/compra/ResultadoCompraExitosa'
 import { ResultadoCompraFallo } from './components/compra/ResultadoFalloCompra'
-import { Destacados } from './components/destacados/ProductosDestacados'
-import { DestacadosClarinete } from './components/destacadosClarinete/DestacadosClarinete'
 import { NotificationProvider } from './context/notification.context'
 import { CentrodeAyuda } from './pages/CentrodeAyuda'
+import { Agenda } from './components/Agenda/Agenda'
+
 
 
 
@@ -41,10 +41,11 @@ function App() {
 
 
               <Route path="/" element={<Home />}> </Route>
-              <Route path="/productoCategoria" element={<PageProducto />} ></Route>
+              <Route path="/agenda" element={<Agenda/>} ></Route>
+              <Route path="/categoria" element={<PageProducto />} ></Route>
               <Route path="/d_clarinete" element={<DestacadoClarinetes />}> </Route>
               <Route path="/agregarProducto" element={<PaginaProducto />}> </Route>
-              <Route path="/productoCarro" element={<CarroCompras />}> </Route>
+              <Route path="/carro" element={<CarroCompras />}> </Route>
               <Route path="/checkout" element={<Checkout />}></Route>
               <Route path="/algoSalioMal" element={<ResultadoCompraFallo />}></Route>
               <Route path="/compraExitosa" element={<ResultadoCompra />}></Route>
