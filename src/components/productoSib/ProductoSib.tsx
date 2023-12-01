@@ -8,7 +8,7 @@ import { useEffect, useState } from "react"
 
 
 
-export const ProductoSib = (/* props: { dataProductoSib: ProductoPrincipal[] } */) => {
+export const ProductoSib = () => {
 
     const [producto, setProducto] = useState<ProductoPrincipal[]>();
 
