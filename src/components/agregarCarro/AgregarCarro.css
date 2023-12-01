@@ -14,6 +14,7 @@ html {
 
 
 .containerAgregarCarro {
+    
     height: 450px;
     width: 450px;
     border: 1px solid black;
@@ -127,17 +128,6 @@ html {
     margin-left: 30px;
 }
 
-.desplegable {
-    width: 230px;
-    text-align: center;
-    padding: 0;
-    padding-bottom: 30px;
-    -webkit-box-shadow: 1px 1px 10px -4px rgba(0, 0, 0, 0.48);
-    -moz-box-shadow: 1px 1px 10px -4px rgba(0, 0, 0, 0.48);
-    box-shadow: 1px 1px 10px -4px rgba(0, 0, 0, 0.48);
-    z-index: 2;
-
-}
 
 ul {
     list-style: none;

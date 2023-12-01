@@ -1,51 +1,61 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './AgregarCarro.css'
 import { ProductoPrincipal } from '../../interfaces/ProductoPincipal';
-import { Link } from 'react-router-dom';
+import { Link, json } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { agregarProducto } from '../../redux/carritoSlice';
+import { CrearCarro, ProductoCarro } from '../../interfaces/crearCarro';
 
 
 
-export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio }) => {
+export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { //este es el id del producto
+
+    const dispatch = useDispatch();
+
+    const [crearCarro, setCrearCarro] = useState<CrearCarro[]>();
+
+
     const [isOpen, setIsOpen] = useState(true);
     const estadoDiv = isOpen ? true : false
     const openClose = () => {
         setIsOpen(!isOpen)
     }
 
-    const dispatch = useDispatch();
 
-    const agregarNuevoProducto= () => {
+    const crearCarrito = async() => { //esto hace el post con el rut del cliente
 
-        const nuevoProducto = {
-            id_categoria: 1,
-            id_subcategoria: 1,
-            id_marcas: 1,
-            id: 1,
-            nombre: "Clarinete Sib Modelo 1",
-            modelo: "Modelo 1",
-            descripcio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto, beatae atque impedit obcaecati molestiae inventore, a voluptates deleniti nam nemo eligendi reiciendis cupiditate dicta laboriosam at, architecto sequi. Dolorum. Dolorem eius debitis laborum? Facere labore harum vero, accusamus possimus sint explicabo, quasi eos laboriosam est dolores dignissimos minus iusto voluptas, enim sapiente suscipit autem aliquam natus tempore assumenda quo! Nemo perferendis facilis ea recusandae nesciunt omnis dolorem error dolorum neque numquam?",
-            precio: 1000,
-            stock: 3,
-            caracteristicasProincipales: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ipsa rem quam amet eaque tenetur temporibus hic illo? Cumque reiciendis doloribus dignissimos nihil error ex ducimus assumenda ipsa aut nesciunt? Ipsum repudiandae temporibus voluptatem, ab cum exercitationem quae ut sed itaque vero at expedita blanditiis? Reprehenderit earum, ex, eum libero ipsa, repellendus maxime alias est minus necessitatibus ipsam tempora? Molestiae. Officia id quo obcaecati reiciendis totam aut?",
-            estrellas: 3,
-            imagenes:
-                ["https://ejemplo.com/imagen-1-1.jpg",
-                    "https://ejemplo.com/imagen-2-1.jpg",
-                    "https://ejemplo.com/imagen-3-1.jpg",
-                    "https://ejemplo.com/imagen-4-1.jpg",
-                    "https://ejemplo.com/imagen-5-1.jpg"
-                ]
-        }
-        console.log("me apretaron")
-        dispatch(agregarProducto(nuevoProducto)); //le envio a mi reduces agregarproducto mi nuevo Producto
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ rutCliente: '12227463' })
+        };
+
+        //fetch("http://localhost:3000/carrito", requestOptions)
+        fetch("http://localhost:3000/carrito", {
+            method: "GET"
+        })
+
+
+            .then(response => {
+                if (response.ok) {
+                    console.log(response)
+                    return response.json() as Promise<CrearCarro[]>
+                }
+            })
+            .then(data => setCrearCarro(data)/* setCrearCarro(data) esto trae el response: un rut, el id, el status y la fecha*/)
+
+        
+
     }
+
+
+
+
 
     return ( //aqui voy a hacer el dipatch que agregara el producto a mi array de estado inicial
         <>
 
-            <div className='containerAgregarCarro'>
+            <div key={id} className='containerAgregarCarro'>
 
                 <div className='precios'>
                     <span className='precioPrincipal'>{precio}</span>
@@ -78,7 +88,7 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio }) => {
                     </div>
                     <div className='botonComprar-like'>
                         <div> {/* <Link to = {"/carro"}> esto debe agregar sin llevar al carro */}
-                            <button className='botonComprar' onClick={agregarNuevoProducto}>
+                            <button className='botonComprar' onClick={crearCarrito}   >
                                 Agregar al Carrito
                             </button>{/* </Link> */} </div>
                         <div className='divLike'><img src="/images/like.png" alt="argegar-producto-deseado" className='like' /></div>

@@ -19,7 +19,7 @@ export type ProductoSibtipo = {
  */
 
 
-export const EncabezadoProducto: React.FC<ProductoPrincipal> = ({ nombre, id, modelo, estrellas }) => {
+export const EncabezadoProducto: React.FC<ProductoPrincipal> = ({ nombre, id, modelo, estrellas}) => {
 
 
   return (
@@ -30,6 +30,7 @@ export const EncabezadoProducto: React.FC<ProductoPrincipal> = ({ nombre, id, mo
           <div><h1 className='h1Encabezado'>{nombre}</h1></div>
          {/*  <div><span className='spanEncabezado'>{id}</span></div> */}
           <div><span className='spanEncabezado'>{modelo}</span></div>
+          
         </div>
         <div className='estrellas-marca'>
           <div className='estrellasEncabezadoProducto'>

@@ -9,20 +9,24 @@ html {
     box-sizing: inherit;
 }
 
+
+
+
 .imagenesProducto{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: 3rem;
+    margin-left: 2rem;
     margin-top: 2rem;
     
 }
 
 .imagenPrincipal{
+    
     width: 500px;
     height: 500px;
-    background-color: rgb(211, 210, 210);
-    border: 1px solid black;
+    background-color: white;
+   /*  border: 1px solid black; */
     margin-left: 17px;
     
 
@@ -31,6 +35,21 @@ html {
 .imagenesSecundarias{
     display: flex;
     margin-top: 2rem;
+    
+    
+}
+
+
+.imagenProducto{
+    width: 100%;
+    height: 80%;
+    
+}
+
+.imagenSecundaria{
+    width: 100%;
+    height: 85%;
+    margin-top: 10px;
     
 }
 
@@ -41,12 +60,13 @@ html {
     height: 90px;
     border: 1px solid black;
     align-items: center;
-    background-color: rgb(211, 210, 210);
+    background-color: white
 }
 
 
 .containerCarroImagenes{
     display: flex;
     gap: 100px;
+    margin: 50px
 }
 

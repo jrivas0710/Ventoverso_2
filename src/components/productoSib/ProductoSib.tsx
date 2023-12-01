@@ -13,7 +13,7 @@ export const ProductoSib = (/* props: { dataProductoSib: ProductoPrincipal[] } *
     const [producto, setProducto] = useState<ProductoPrincipal[]>();
 
     useEffect(() => {
-        fetch("http://localhost:3000/producto", {
+        fetch("http://localhost:3000/productos", { //esto me retorna el producto y tiene un id
             method: "GET"
         })
         .then((response) => {
@@ -39,18 +39,19 @@ export const ProductoSib = (/* props: { dataProductoSib: ProductoPrincipal[] } *
 
             { producto && producto.map(item => {
                 return(  <EncabezadoProducto
-                    nombre={item.nombre}
+                    nombre={item.nombreProducto}
                     id_marcas={item.id}
                     modelo={item.modelo}
                     estrellas= {item.estrellas}
+                    
 
                 />)
               
             })}
 
-            {producto &&  <ImagenesProducto producto = {producto}/> }
-               
-                
+            {/* {producto &&  <ImagenesProducto producto = {producto}/> }
+                */}
+                <ImagenesProducto />
                
           
 

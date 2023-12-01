@@ -1,18 +1,23 @@
 
 
 export interface ProductoPrincipal {
-    id_categoria?: number, 
-    id_subcategoria?: number, 
-    id_marcas?: number, 
-    id?: number,
-    nombre?:string,
-    modelo?:string,
-    descripcion?:string
-    precio?:number,
-    stock?:number,
-    caracteristicasPrincipales?:string,
-    imagenes?:string[],
-    estrellas?:number,
-
+    id_categoria?: number | undefined,
+    id_subcategoria?: number | undefined,
+    id_marcas?: number | undefined,
+    id?: number| undefined,
+    nombreProducto?: string,
+    modelo?: string,
+    descripcion?: string
+    precio?: number | undefined,
+    stock?: number | undefined,
+    nombre?: string,
+    base64?: string
+    caracteristicasPrincipales?: string,
+    imagenes?:[],
+    estrellas?: number,
 }
 
+/* export interface Imagen {
+    nombre: string,
+    base64: string
+} */

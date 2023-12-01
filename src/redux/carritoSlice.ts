@@ -21,6 +21,6 @@ const initialState:ProductoPrincipal[] = []; // tipe el estado inicial diciendo 
     }
 })
 
-export default carritoSLice.reducer // lo importare en mi store
+export default carritoSLice.reducer // lo exortare a mi store
 export const {agregarProducto} = carritoSLice.actions
 

@@ -18,7 +18,7 @@ export const Destacados = () => {
         })
             .then(response => {
                 if (response.ok) {
-                    console.log(`Response desde productos destacados ${response.json()}`)
+                    console.log(response)
                     return response.json() as Promise<Destacado[]>
                 }
             })

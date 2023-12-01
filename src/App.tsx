@@ -19,6 +19,7 @@ import { ResultadoCompraFallo } from './components/compra/ResultadoFalloCompra'
 import { NotificationProvider } from './context/notification.context'
 import { CentrodeAyuda } from './pages/CentrodeAyuda'
 import { Agenda } from './components/Agenda/Agenda'
+import { ImagenFormulario } from './pages/ImagenFormulario'
 
 
 
@@ -52,6 +53,8 @@ function App() {
               <Route path="/registro" element={<CrearUser />}></Route>
               <Route path="/registroExitoso" element={<RegtoExitoso />}></Route>
               <Route path="/centroAyuda" element={<CentrodeAyuda />}></Route>
+              <Route path="/imagenFormulario" element={<ImagenFormulario/>}></Route>
+
 
             </Routes>
 
