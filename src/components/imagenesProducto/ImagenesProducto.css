@@ -28,6 +28,7 @@ html {
     background-color: white;
    /*  border: 1px solid black; */
     margin-left: 17px;
+    display: flex;
     
 
 }
@@ -45,6 +46,26 @@ html {
     height: 80%;
     
 }
+
+.img-container {
+    overflow: hidden; /* Oculta el exceso de imagen fuera del contenedor */
+    position: relative;
+  }
+  
+  .img-zoom {
+    transition: transform 0.3s;
+  }
+  
+  .img-container:hover .img-zoom {
+    transform: scale(1.2);
+  }
+  
+  /* Establece el punto de origen en el centro superior de la imagen */
+  .img-container:hover .img-zoom {
+    transform-origin: 50% 0;
+  }
+  
+ 
 
 .imagenSecundaria{
     width: 100%;
@@ -67,6 +88,7 @@ html {
 .containerCarroImagenes{
     display: flex;
     gap: 100px;
-    margin: 50px
+    margin: 50px;
+    position: relative;
 }
 

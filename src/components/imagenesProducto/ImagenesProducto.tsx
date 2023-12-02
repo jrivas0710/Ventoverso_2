@@ -1,107 +1,73 @@
-import { AgregarCarro } from '../agregarCarro/AgregarCarro'
-import './ImagenesProducto.css'
-import { ProductoPrincipal } from '../../interfaces/ProductoPincipal'
-import { useEffect, useState } from 'react';
+// ImagenesProducto.js
+import React, { useState, useEffect } from 'react';
+import { AgregarCarro } from '../agregarCarro/AgregarCarro';
+import { ProductoPrincipal } from '../../interfaces/ProductoPincipal';
+import { Button, Modal, Paper } from '@mui/material';
+import Lupa from './Lupa'; // Asegúrate de ajustar la ruta correcta
 
+import './ImagenesProducto.css';
 
+export const ImagenesProducto = () => {
+  const [productos, setProductos] = useState<ProductoPrincipal[]>([]);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [openModal, setOpenModal] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+  useEffect(() => {
+    fetch('http://localhost:3000/productos', {
+      method: 'GET',
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json() as Promise<ProductoPrincipal[]>;
+        } else {
+          throw new Error('No se pudo procesar la petición');
+        }
+      })
+      .then((json) => setProductos(json))
+      .catch((error) => error);
+  }, []);
 
+  const handleOpenModal = (imageUrl: string, event: React.MouseEvent<HTMLImageElement>) => {
+    setSelectedImage(imageUrl);
+    setMousePosition({ x: event.nativeEvent.offsetX, y: event.nativeEvent.offsetY });
+    setOpenModal(true);
+  };
 
+  
+  return (
+    <>
+      {productos.map((item) => (
+        <div key={item.id} className="containerCarroImagenes">
+          <div className="imagenesProducto">
+            <div className="imagenPrincipal img-container" onMouseMove={(event) => setMousePosition({ x: event.nativeEvent.offsetX, y: event.nativeEvent.offsetY })}>
+              <img
+                src={item.imagenes?.[0].base64}
+                alt={item.imagenes?.[0].nombre}
+                className="imagenProducto"
+                onClick={(event) => handleOpenModal(item.imagenes?.[0].base64, event)}
+              />
+              {selectedImage && <Lupa image={selectedImage} position={mousePosition} />}
+            </div>
+            <div className="imagenesSecundarias">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <div key={index}>
+                  <img
+                    src={item.imagenes?.[0].base64}
+                    alt={item.imagenes?.[0].nombre}
+                    className="imagenSecundaria "
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <AgregarCarro precio={item.precio} id={item.id} />
+          </div>
+        </div>
+      ))}
 
-
-export const ImagenesProducto = (/* props: { producto: ProductoPrincipal[] } */) => {
-
-
-    const [productos, setProductos] = useState<ProductoPrincipal[]>();
-
-    useEffect(() => {
-        fetch("http://localhost:3000/productos", { //esto me retorna el producto y tiene un id
-            method: "GET"
-        })
-        .then((response) => {
-            if (response.ok) {
-                console.log(response)
-                return response.json() as Promise<ProductoPrincipal[]>  ;
-            }else{
-                throw new Error ("no se pudo procesar la peticion")
-            }
-        })
-        .then((json) => {
-            console.log(json)
-            setProductos(json)}
-            )
-        .catch((error) => error)
-        },[])
-        
-
-
-
-
-    return (
-        <>
-
-            {productos &&  productos.map(item => {
-                return (
-
-                    <div className='containerCarroImagenes'>
-                        <div className='imagenesProducto'>
-                            <div className='imagenPrincipal'>
-                                <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className='imagenProducto'/>
-                            </div>
-                            <div className='imagenesSecundarias'>
-
-
-                                <div>
-                                    <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className='imagenSecundaria'/>
-                                </div>
-                                <div>
-                                    <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className='imagenSecundaria'/>
-                                </div>
-                                <div>
-                                    <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className='imagenSecundaria'/>
-                                </div>
-                                <div>
-                                    <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className='imagenSecundaria'/>
-                                </div>
-                                <div>
-                                    <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className='imagenSecundaria'/>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div>
-                            { productos.map(item => {
-                                return (
-
-                                    <AgregarCarro 
-                                    precio={item.precio} 
-                                    id={item.id}/>
-                                )
-                            })}
-                        </div>
-                    </div>
-
-
-                )
-            })}
-
-        </>
-    )
-}
-
-               
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     
+    </>
+  );
+};
