@@ -1,10 +1,7 @@
-// ImagenesProducto.js
 import React, { useState, useEffect } from 'react';
 import { AgregarCarro } from '../agregarCarro/AgregarCarro';
 import { ProductoPrincipal } from '../../interfaces/ProductoPincipal';
-import { Button, Modal, Paper } from '@mui/material';
-import Lupa from './Lupa'; // Asegúrate de ajustar la ruta correcta
-
+import Lupa  from './Lupa'; // Asegúrate de ajustar la ruta correcta
 import './ImagenesProducto.css';
 
 export const ImagenesProducto = () => {
@@ -34,29 +31,46 @@ export const ImagenesProducto = () => {
     setOpenModal(true);
   };
 
-  
+  const handleCloseZoom = () => {
+    setSelectedImage(null);
+    setOpenModal(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (openModal && event.target instanceof Element && !event.target.closest('.img-container')) {
+        handleCloseZoom();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [openModal]);
+
   return (
     <>
       {productos.map((item) => (
         <div key={item.id} className="containerCarroImagenes">
           <div className="imagenesProducto">
-            <div className="imagenPrincipal img-container" onMouseMove={(event) => setMousePosition({ x: event.nativeEvent.offsetX, y: event.nativeEvent.offsetY })}>
+            <div
+              className="imagenPrincipal img-container"
+              onMouseMove={(event) => setMousePosition({ x: event.nativeEvent.offsetX, y: event.nativeEvent.offsetY })}
+            >
               <img
                 src={item.imagenes?.[0].base64}
                 alt={item.imagenes?.[0].nombre}
                 className="imagenProducto"
                 onClick={(event) => handleOpenModal(item.imagenes?.[0].base64, event)}
               />
-              {selectedImage && <Lupa image={selectedImage} position={mousePosition} />}
+              {selectedImage && <Lupa image={selectedImage} position={mousePosition} onClose={handleCloseZoom} />}
             </div>
             <div className="imagenesSecundarias">
               {Array.from({ length: 5 }).map((_, index) => (
                 <div key={index}>
-                  <img
-                    src={item.imagenes?.[0].base64}
-                    alt={item.imagenes?.[0].nombre}
-                    className="imagenSecundaria "
-                  />
+                  <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className="imagenSecundaria" />
                 </div>
               ))}
             </div>
@@ -66,8 +80,6 @@ export const ImagenesProducto = () => {
           </div>
         </div>
       ))}
-
-     
     </>
   );
 };
