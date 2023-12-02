@@ -13,11 +13,10 @@ export interface ProductoPrincipal {
     nombre?: string,
     base64?: string
     caracteristicasPrincipales?: string,
-    imagenes?:[],
+    imagenes?:Imagen[],
     estrellas?: number,
 }
 
-/* export interface Imagen {
+export interface Imagen {
     nombre: string,
-    base64: string
-} */
+    base64: string}

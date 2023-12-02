@@ -26,9 +26,9 @@ export const ImagenesProducto = (/* props: { producto: ProductoPrincipal[] } */)
                 throw new Error ("no se pudo procesar la peticion")
             }
         })
-        .then((json) => 
-        
-            setProductos(json)
+        .then((json) => {
+            console.log(json)
+            setProductos(json)}
             )
         .catch((error) => error)
         },[])
@@ -46,29 +46,26 @@ export const ImagenesProducto = (/* props: { producto: ProductoPrincipal[] } */)
                     <div className='containerCarroImagenes'>
                         <div className='imagenesProducto'>
                             <div className='imagenPrincipal'>
-                                <img src={item.base64} alt={item.nombre} className='imagenProducto'/>
+                                <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className='imagenProducto'/>
                             </div>
                             <div className='imagenesSecundarias'>
 
 
                                 <div>
-                                    <img src={item.base64} alt={item.nombre} className='imagenSecundaria'/>
+                                    <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className='imagenSecundaria'/>
                                 </div>
                                 <div>
-                                    <img src={item.base64} alt={item.nombre} className='imagenSecundaria'/>
+                                    <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className='imagenSecundaria'/>
                                 </div>
                                 <div>
-                                    <img src={item.base64} alt={item.nombre} className='imagenSecundaria'/>
+                                    <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className='imagenSecundaria'/>
                                 </div>
                                 <div>
-                                    <img src={item.base64} alt={item.nombre} className='imagenSecundaria'/>
+                                    <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className='imagenSecundaria'/>
                                 </div>
                                 <div>
-                                    <img src={item.base64} alt={item.nombre} className='imagenSecundaria'/>
+                                    <img src={item.imagenes?.[0].base64} alt={item.imagenes?.[0].nombre} className='imagenSecundaria'/>
                                 </div>
-
-               
-
                             </div>
 
                         </div>
@@ -89,16 +86,19 @@ export const ImagenesProducto = (/* props: { producto: ProductoPrincipal[] } */)
                 )
             })}
 
-
-
-
-
-
-
-
         </>
     )
 }
+
+               
+
+
+
+
+
+
+
+
 
 
 
