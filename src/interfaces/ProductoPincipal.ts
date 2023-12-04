@@ -1,20 +1,20 @@
 
 
 export interface ProductoPrincipal {
-    id_categoria?: number | undefined,
-    id_subcategoria?: number | undefined,
-    id_marcas?: number | undefined,
-    id?: number| undefined,
+    id_categoria?: string,
+    id_subcategoria?: string,
+    id_marcas?: string,
+    id?: string,
     nombreProducto?: string,
     modelo?: string,
     descripcion?: string
-    precio?: number | undefined,
-    stock?: number | undefined,
+    precio?: string,
+    stock?: string,
     nombre?: string,
     base64?: string
     caracteristicasPrincipales?: string,
     imagenes?:Imagen[],
-    estrellas?: number,
+    estrellas?: string,
 }
 
 export interface Imagen {

@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import { ProductoPrincipal } from "../interfaces/ProductoPincipal"
 import { useNotification } from "../context/notification.context";
 import { useFormik } from "formik";
+import { object } from "yup";
 
 
 const VisuallyHiddenInput = styled('input')({
@@ -28,16 +29,16 @@ export const ImageForm = () => {
     const formik = useFormik<ProductoPrincipal>({
 
         initialValues: {
-            id_categoria: undefined,
-            id_subcategoria: undefined,
-            id_marcas: undefined,
-            id: undefined,
+            id_categoria: '',
+            id_subcategoria: '',
+            id_marcas: '',
+            id: '',
             nombreProducto: '',
             modelo: '',
             descripcion: '',
             caracteristicasPrincipales: '',
-            precio: undefined,
-            stock: undefined,
+            precio: '',
+            stock: '',
             nombre: '',
             base64: ''
         },
@@ -50,16 +51,16 @@ export const ImageForm = () => {
 
             
            const objeto = {
-                id_categoria : values.id_categoria,
-                id_subcategoria : values.id_subcategoria,
-                id_marcas: values.id_marcas,
-                id: values.id,
+                id_categoria : parseInt(values.id_categoria),
+                id_subcategoria : parseInt(values.id_subcategoria),
+                id_marcas: parseInt(values.id_marcas),
+                id: parseInt(values.id),
                 descripcion: values.descripcion,
                 nombreProducto : values.nombreProducto,
                 modelo : values.modelo,
                 caracteristicasPrincipales : values.caracteristicasPrincipales,
-                precio : values.precio,
-                stock : values.stock,
+                precio : parseInt(values.precio),
+                stock : parseInt(values.stock),
                 imagenes: [{
                     nombre: values.nombre,
                     base64: values.base64
@@ -77,11 +78,13 @@ export const ImageForm = () => {
 
             console.log('me diste')
             console.log(values)
+            console.log( "antes", objeto   )
             formik.resetForm();
+            console.log ( "despues", objeto)
         },
     });
 
-    //const { errors, touched } = formik
+   
 
 
 
