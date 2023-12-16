@@ -1,19 +1,18 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './AgregarCarro.css'
 import { ProductoPrincipal } from '../../interfaces/ProductoPincipal';
-import { Link, json } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { CrearCarro } from '../../interfaces/crearCarro';
 import { agregarProducto } from '../../redux/carritoSlice';
-import { CrearCarro, ProductoCarro } from '../../interfaces/crearCarro';
+
 
 
 
 export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { //este es el id del producto
 
     const dispatch = useDispatch();
-
+    //voy a hacer un contador para capturar la cantidad del producto
     const [crearCarro, setCrearCarro] = useState<CrearCarro[]>();
-
 
     const [isOpen, setIsOpen] = useState(true);
     const estadoDiv = isOpen ? true : false
@@ -22,29 +21,60 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
     }
 
 
-    const crearCarrito = async() => { //esto hace el post con el rut del cliente
+
+    const crearCarrito = () => { //esto hace el post con el rut del cliente
+
 
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ rutCliente: '12227463' })
+            body: JSON.stringify({ rutCliente: 187990084, id: 0 })
         };
 
-        //fetch("http://localhost:3000/carrito", requestOptions)
-        fetch("http://localhost:3000/carrito", {
-            method: "GET"
-        })
 
+        fetch("http://localhost:3000/carrito", requestOptions)
 
             .then(response => {
                 if (response.ok) {
                     console.log(response)
                     return response.json() as Promise<CrearCarro[]>
+                } else {
+                    throw new Error("hubo un error en la peticion")
                 }
             })
-            .then(data => setCrearCarro(data)/* setCrearCarro(data) esto trae el response: un rut, el id, el status y la fecha*/)
 
-        
+            .catch(error => console.log(error.message))
+
+        fetch("http://localhost:3000/carrito", {
+            method: "GET"
+        })
+            .then(response => {
+                if (response.ok) {
+                    console.log(response)
+                    return response.json() as Promise<CrearCarro[]>
+                } else {
+                    throw new Error("hubo un error en el get")
+                }
+            })
+            .then(data => setCrearCarro(data))
+            .catch(error => console.log(error.message))
+
+        //tengo que crear el objeto del producto que se envia al carro
+        agregarProductoNuevo(crearCarro);
+    }
+
+    const agregarProductoNuevo = (crearCarro) => {
+
+        const nuevoProducto = {
+
+            rutCliente: crearCarro.rutCliente,
+            carritoId: crearCarro.carritoId,
+            productoId: id 
+           // cantidad:  como hago esto  con un contador 
+        }
+
+
+        dispatch(agregarProducto(nuevoProducto))
 
     }
 

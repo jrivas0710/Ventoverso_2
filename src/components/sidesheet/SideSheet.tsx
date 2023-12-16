@@ -1,79 +1,47 @@
-import { useState } from 'react';
+
 import './SideSheet.css'; // Importa los estilos CSS
 import { Login } from '../../interfaces/Login';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Box, TextField } from '@mui/material';
-import React from 'react';
 import { useNotification } from '../../context/notification.context';
 import { LoginValidate } from '../utils/validateForm';
 import { useFormik } from 'formik';
+import { jwtDecode } from 'jwt-decode';
+import { Md5 } from 'ts-md5';
+import { useDispatch } from 'react-redux';
+import { login, logout } from '../../redux/userSlice';
 
 
-/* interface SideSheetProps {
-  isOpen?: boolean;
-  onClose?: () => void;
+
+
+interface LoginResponse {
+  token: string
 }
- */
+
+export interface TokenClaims { //esto es lo que viene dentro del token decodificado
+  idCliente:string | number,
+  rutCliente: string | number,// o string
+  nombre: string,
+  apellido: string,
+  correo: string,
+  roles: string[],
+  iat: string | number,
+  exp: string | number,
+  isAuthenticate: boolean,
+  token:string
+}
+
+
+type LoginType = {
+  email: string,
+  password: string,
+}
 
 export const SideSheet = ({ isOpen, onClose }: Login) => {
   const { getSucces } = useNotification(); //esto es un customHook
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  /* //esto es para usar la alerta de error
-  
-  const handleclick = () => {
-    getSucces('login exitoso')
-  } 
-  
-  
-    const [email, setEmail] = useState('');
-    const [contraseña, setContraseña] = useState('');
-  
-    const [mostrarPassword, setMostrarPassword] = useState(false)
-  
-    const [loginData, setLoginData] = React.useState({
-      email: "",
-      contraseña: "",
-    })
-  
-  
-    const dataLogin = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setLoginData({ ...loginData, [e.target.name]: e.target.value })
-    }
-  
-  
-    const handleSubmit = (e: React.FormEvent) => {
-      e.preventDefault();
-      console.log(loginData)
-  
-      LoginValidate.validate(loginData).then(()=> {
-        getSucces(JSON.stringify(loginData))
-  
-      }).catch((error) => {
-        getError(error.message);
-      })
-  
-  
-      //logica del profesor: 
-      const form = e.target as HTMLFormElement;
-      const formData = new FormData(form);
-  
-      const email = formData.get('email') as string;
-      const contraseña = formData.get('userName') as string;
-      //fin logica del profesor    
-  
-    };
-  
-  
-  
-    const passwordVisivility = () => {
-      setMostrarPassword(!mostrarPassword)
-    }
-   */
-
-  type LoginType = {
-    email: string,
-    password: string,
-  }
 
   const formik = useFormik<LoginType>({
     initialValues: {
@@ -82,7 +50,64 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
     },
     validationSchema: LoginValidate,
     onSubmit: (values: LoginType) => {
+
+      console.log('hola mundo')
       getSucces(JSON.stringify(values));
+
+      const passwordEncriptado = Md5.hashStr(values.password);
+
+      fetch('http://localhost:3000/login', { //con esto hago un post al backend de mi usuario. debe ir la ruta de mi backend
+        method: "GET",
+       /*  body: JSON.stringify({
+          "email": values.email,
+          "password": passwordEncriptado //le envio mi pass en md5
+        }),
+        headers: {
+          "Content-type": "application/json"
+        } */
+      })
+        .then(response => {
+          if (response.ok) {
+            return response.json() as Promise<LoginResponse>
+          } else {
+            throw new Error(`Error en la llamada http, no fue ok`)
+          }
+        })
+        .then(json => {
+          
+          const jwtPayloand = jwtDecode<TokenClaims>(json.token);
+
+          console.log(json.token)
+
+          dispatch(login({  //lo envio a mi estado de reduce
+            idCliente: jwtPayloand.idCliente,
+            rutCompleto: jwtPayloand.rutCliente,
+            nombre: jwtPayloand.nombre,
+            apellido: jwtPayloand.apellido,
+            correo: jwtPayloand.correo,
+            roles: jwtPayloand.roles,
+            iat: jwtPayloand.iat,
+            exp: jwtPayloand.exp,
+            isAuthenticate: true,
+            token: json.token 
+
+         })) //le envio el response a mi estado global. 
+
+          // aca tengo que hacer que el sidesheet se cierre cuando el submit es exitoso 
+
+          navigate(-1);
+
+
+        })
+
+        .catch(error => { // si hay un error, mantiene el estado inicial 
+
+         // dispatch(logout());
+          
+          console.log(error);
+        })
+
+
       formik.resetForm();
       console.log(values)
     },
@@ -102,13 +127,13 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
         <Box component="form" onSubmit={formik.handleSubmit}>
 
           <div className="form-group">
-            {/*  <label htmlFor="email">Correo Electrónico</label> */}
+
             <TextField
-             
+
               id="email"
               name="email"
               label='Dirección e-mail'
-              className='inputMail'   
+              className='inputMail'
               value={formik.values.email}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -136,13 +161,17 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
           </div>
           <div className='botonEnlaces'>
             <div>
-              <button type="submit" className='botonLogin'>Iniciar Sesión</button>
-              
+              <button type="submit" /* onClick={() => navigate(-1)} */
+                className='botonLogin'>Iniciar Sesión</button>
+
+
             </div>
             <div className='enlaces'>
               <div className='recuperarContraseña'> <a href='#' className='enlace1'>Olvidé mi contraseña</a></div>
               <div><a href='#' className='enlace2' >¿No tienes cuenta?</a></div>
-              <div> <button className="cierreRegistro"onClick={onClose}><Link to={"/registro"}><span className='registrate'>Regístrate</span></Link></button> </div>
+              <div> <button className="cierreRegistro" onClick={onClose}>
+                <Link to={"/registro"}><span className='registrate'>Regístrate</span></Link></button>
+              </div>
             </div>
 
           </div>

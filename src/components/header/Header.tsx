@@ -1,12 +1,15 @@
 
 import { Link } from "react-router-dom";
 import "./Header.css"
-import { useState} from "react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
+import { DropdownUser } from "../dropdown/DropdownUser";
 
 
 function Header({ evento }: any) {
 
- 
+  const user = useSelector((state: RootState) => state.user) //usare mi user true para que muestre mi perfil en el nav
 
   const [cerrado, setCerrado] = useState(false);
 
@@ -35,16 +38,25 @@ function Header({ evento }: any) {
 
           <div className="icons">
 
-            <div>
+            {user && user.isAuthenticate && <div> 
+              <DropdownUser/>
+            </div>}
+
+
+          {user && !user.isAuthenticate &&
+              <div>
               <button type="submit" onClick={evento} className="botonUser">
                 <span className="material-symbols-outlined">
                   account_circle
                 </span>
               </button>
+
             </div>
+          }
+          
 
             <div>
-              <Link to= {"/Agenda"}>
+              <Link to={"/Agenda"}>
                 <span className="material-symbols-outlined agenda">
                   calendar_month
                 </span>
@@ -82,10 +94,10 @@ function Header({ evento }: any) {
                 {cerrado && (
                   <div className="desplegableMaderas">
                     <ul className="listaDesplegableMaderas">
-                     <li className="opcionClarinetes" onClick={toggleDropdown}> <Link to={"/categoria"}>Clarinetes</Link></li>
+                      <li className="opcionClarinetes" onClick={toggleDropdown}> <Link to={"/categoria"}>Clarinetes</Link></li>
                       <li className="opcionClarinetes" onClick={toggleDropdown}><Link to={"/categoria"}>Fagotes</Link></li>
-                    <li className="opcionClarinetes" onClick={toggleDropdown}>  <Link to={"/categoria"}>Flautas dulces</Link></li>
-                     <li className="opcionClarinetes" onClick={toggleDropdown}> <Link to={"/categoria"}>Flautas traversas</Link></li>
+                      <li className="opcionClarinetes" onClick={toggleDropdown}>  <Link to={"/categoria"}>Flautas dulces</Link></li>
+                      <li className="opcionClarinetes" onClick={toggleDropdown}> <Link to={"/categoria"}>Flautas traversas</Link></li>
                       <li className="opcionClarinetes" onClick={toggleDropdown}><Link to={"/categoria"}>Oboes</Link></li>
                     </ul>
                   </div>

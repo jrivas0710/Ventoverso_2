@@ -78,7 +78,7 @@ export const Checkout = () => {
                         <div style={{marginBottom:"25px"}}><span className='datos'>Ingresa tus datos</span></div>
 
                         <div className="nombre">
-                            <TextField type="text" label="Nombre "
+                            <TextField type="text" label="Nombre " 
                                 style={{ marginBottom: "30px" }}
 
                                 name='name'

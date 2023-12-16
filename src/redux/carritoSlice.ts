@@ -3,7 +3,7 @@ import { ProductoPrincipal } from "../interfaces/ProductoPincipal";
 
 
 const initialState:ProductoPrincipal[] = []; // tipe el estado inicial diciendo que recibira elementos como este 
-
+//lo de arriba setiene que agregar a la ruta de prductos con un post
  const carritoSLice = createSlice({
     name:"carrito",
     initialState,

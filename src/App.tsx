@@ -20,6 +20,9 @@ import { NotificationProvider } from './context/notification.context'
 import { CentrodeAyuda } from './pages/CentrodeAyuda'
 import { Agenda } from './components/Agenda/Agenda'
 import { ImagenFormulario } from './pages/ImagenFormulario'
+import { MiPerfil } from './components/miPerfil/MiPerfil'
+import { ProtectedComponent } from './components/protectedComponent/ProtectedComponent'
+import { EditAdmin } from './components/administrador/EditAdmin'
 
 
 
@@ -40,8 +43,16 @@ function App() {
             <Routes>
 
 
+              <Route path='miPerfil' element = {
+              <ProtectedComponent>
+                <MiPerfil/>
+              </ProtectedComponent>
+                }/>
 
-              <Route path="/" element={<Home />}> </Route>
+            
+
+              <Route path="/" element={<Home/>}/>
+              <Route path="/editAdmin" element={<EditAdmin/>}/> 
               <Route path="/agenda" element={<Agenda/>} ></Route>
               <Route path="/categoria" element={<PageProducto />} ></Route>
               <Route path="/d_clarinete" element={<DestacadoClarinetes />}> </Route>
