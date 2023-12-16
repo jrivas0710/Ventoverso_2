@@ -38,12 +38,12 @@ function Header({ evento }: any) {
 
           <div className="icons">
 
-            {user && user.isAuthenticate && <div> 
+            {user && !user.isAuthenticate && <div> 
               <DropdownUser/>
             </div>}
 
 
-          {user && !user.isAuthenticate &&
+          {user && user.isAuthenticate &&
               <div>
               <button type="submit" onClick={evento} className="botonUser">
                 <span className="material-symbols-outlined">

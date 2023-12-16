@@ -102,7 +102,7 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
 
         .catch(error => { // si hay un error, mantiene el estado inicial 
 
-         // dispatch(logout());
+         dispatch(logout());
           
           console.log(error);
         })

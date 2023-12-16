@@ -7,6 +7,7 @@ const persistLocalStorage: Middleware = (store) => (next) => (action) => {
 
     console.log('llamando midleware')
 
+    next(action);
 
     console.log(action.type)
     const estado = store.getState()
@@ -19,7 +20,7 @@ const persistLocalStorage: Middleware = (store) => (next) => (action) => {
         localStorage.setItem('token',token) 
 
     } else if (action.type == "user/logout") {
-        //  localStorage.removeItem('token');
+         localStorage.removeItem('token');
     }
 
 
