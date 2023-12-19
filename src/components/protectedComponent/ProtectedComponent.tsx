@@ -9,9 +9,9 @@ interface Props {
 export const ProtectedComponent = (props:Props ) => {
     
     const user = useSelector((state:RootState) => state.user) // esto me trae el estado del usuario guardado en mi redux
-    console.log(!user.isAuthenticate)
+  
     
-    if (user && !user.isAuthenticate) { //si es true 
+    if (user.roles?.[0] == "ADMINISTRADOR") { //si es true 
         
         return(
             <>

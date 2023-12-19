@@ -17,7 +17,7 @@ interface UserState {
     token: string
 }
 
-const initialState: UserState = { // cuando el usuario no este logueado, este sera el estado.
+const defaultInitialState: UserState = { // cuando el usuario no este logueado, este sera el estado.
     idCliente: '',
     rutCompleto: '',
     correo: '',
@@ -31,18 +31,18 @@ const initialState: UserState = { // cuando el usuario no este logueado, este se
 }
 
 //mi esto inicial debo obtenerlo del storage para que al recargar sea persistente el user logueado
-//const initialState = () => {
+const initialState = () => {
 
- /*    const token = localStorage.getItem("token") ?? '';
+   const token = localStorage.getItem("token") ?? '';
     
     if (token == "") {
         return defaultInitialState;
     }
- */
+ 
 
-    //const jwtPayloand = jwtDecode<TokenClaims>(token) //digo que si existe el token, retorne al usuario como estado inicial
+    const jwtPayloand = jwtDecode<TokenClaims>(token) //digo que si existe el token, retorne al usuario como estado inicial
 
-  /*   const estadoPersistente = {
+  const estadoPersistente = {
         idCliente:jwtPayloand.idCliente,
         rutCliente: jwtPayloand.rutCliente,
         nombre: jwtPayloand.nombre,
@@ -53,12 +53,12 @@ const initialState: UserState = { // cuando el usuario no este logueado, este se
         exp: jwtPayloand.exp,
         isAuthenticate: true,
         token
-    } */
+    } 
 
-    //return estadoPersistente
+    return estadoPersistente
 
     //mientras el token exista en el local, este sera mi estado inicial
-//}
+}
 
 export const userSlice = createSlice({
     name: 'user',
@@ -70,7 +70,7 @@ export const userSlice = createSlice({
             return newState
         },
         logout: (state) => {
-            state = { ...initialState };
+            state = { ...defaultInitialState };
             console.log(state);
         }
     }

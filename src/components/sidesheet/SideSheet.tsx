@@ -8,8 +8,10 @@ import { LoginValidate } from '../utils/validateForm';
 import { useFormik } from 'formik';
 import { jwtDecode } from 'jwt-decode';
 import { Md5 } from 'ts-md5';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { login, logout } from '../../redux/userSlice';
+import { RootState } from '../../redux/store';
+import { useState } from 'react';
 
 
 
@@ -19,7 +21,7 @@ interface LoginResponse {
 }
 
 export interface TokenClaims { //esto es lo que viene dentro del token decodificado
-  idCliente:string | number,
+  idCliente: string | number,
   rutCliente: string | number,// o string
   nombre: string,
   apellido: string,
@@ -28,7 +30,7 @@ export interface TokenClaims { //esto es lo que viene dentro del token decodific
   iat: string | number,
   exp: string | number,
   isAuthenticate: boolean,
-  token:string
+  token: string
 }
 
 
@@ -38,9 +40,10 @@ type LoginType = {
 }
 
 export const SideSheet = ({ isOpen, onClose }: Login) => {
+  const [isSideSheetOpen, setIsSideSheetOpen] = useState(false);
+  const user = useSelector((state: RootState) => state.user)
   const { getSucces } = useNotification(); //esto es un customHook
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
 
   const formik = useFormik<LoginType>({
@@ -58,23 +61,24 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
 
       fetch('http://localhost:3000/login', { //con esto hago un post al backend de mi usuario. debe ir la ruta de mi backend
         method: "GET",
-       /*  body: JSON.stringify({
-          "email": values.email,
-          "password": passwordEncriptado //le envio mi pass en md5
-        }),
-        headers: {
-          "Content-type": "application/json"
-        } */
+        /*  body: JSON.stringify({
+           "email": values.email,
+           "password": passwordEncriptado //le envio mi pass en md5
+         }),
+         headers: {
+           "Content-type": "application/json"
+         } */
       })
         .then(response => {
           if (response.ok) {
+            setIsSideSheetOpen(false);
             return response.json() as Promise<LoginResponse>
           } else {
             throw new Error(`Error en la llamada http, no fue ok`)
           }
         })
         .then(json => {
-          
+
           const jwtPayloand = jwtDecode<TokenClaims>(json.token);
 
           console.log(json.token)
@@ -89,21 +93,16 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
             iat: jwtPayloand.iat,
             exp: jwtPayloand.exp,
             isAuthenticate: true,
-            token: json.token 
+            token: json.token
 
-         })) //le envio el response a mi estado global. 
-
+          })) //le envio el response a mi estado global. 
+          
           // aca tengo que hacer que el sidesheet se cierre cuando el submit es exitoso 
-
-          navigate(-1);
-
-
         })
 
         .catch(error => { // si hay un error, mantiene el estado inicial 
 
-         dispatch(logout());
-          
+          dispatch(logout());
           console.log(error);
         })
 
@@ -142,7 +141,7 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
             />
           </div>
           <div className="form-group">
-            {/*  <label htmlFor="password">Contraseña</label> */}
+           
             <TextField
               type="password"
               id="password"
@@ -161,8 +160,8 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
           </div>
           <div className='botonEnlaces'>
             <div>
-              <button type="submit" /* onClick={() => navigate(-1)} */
-                className='botonLogin'>Iniciar Sesión</button>
+              <button type="submit"
+                className='botonLogin' onClick={() => isSideSheetOpen}>Iniciar Sesión</button>
 
 
             </div>

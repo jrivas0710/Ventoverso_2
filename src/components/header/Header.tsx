@@ -19,6 +19,8 @@ function Header({ evento }: any) {
 
 
 
+
+
   return (
 
     <div className="grid-container">
@@ -38,22 +40,23 @@ function Header({ evento }: any) {
 
           <div className="icons">
 
-            {user && !user.isAuthenticate && <div> 
-              <DropdownUser/>
-            </div>}
-
-
-          {user && user.isAuthenticate &&
+            {user && user.isAuthenticate == true &&
               <div>
-              <button type="submit" onClick={evento} className="botonUser">
-                <span className="material-symbols-outlined">
-                  account_circle
-                </span>
-              </button>
+                <DropdownUser/>
+              </div>}
 
-            </div>
-          }
-          
+
+            {user.isAuthenticate == false &&
+              <div>
+                <button type="submit" onClick={evento} className="botonUser">
+                  <span className="material-symbols-outlined">
+                    account_circle
+                  </span>
+                </button>
+
+              </div>
+            }
+
 
             <div>
               <Link to={"/Agenda"}>

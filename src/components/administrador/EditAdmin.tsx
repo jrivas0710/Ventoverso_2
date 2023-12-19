@@ -1,13 +1,11 @@
-import { Button, Grid, makeStyles } from "@mui/material"
+import { Button, Grid } from "@mui/material"
+import { Link } from "react-router-dom"
 
-interface Styles {
-  action: string,
 
-}
 
 const styles = {
   border: '1px solid #ffffff',
-   width: '200px',
+  width: '200px',
   height: '70px',
   margin: '40px'
 
@@ -16,7 +14,7 @@ const styles = {
 
 
 
-export const EditAdmin = () => {
+export const FormEditAdmin = () => {
 
 
 
@@ -28,11 +26,15 @@ export const EditAdmin = () => {
         direction="column"
         justifyContent="center"
         alignItems="center"
-        
+
       >
-        <Button sx = {{...styles}}>Agregar producto</Button>
-        <Button sx = {{...styles}}>Editar Producto</Button>
-        <Button sx = {{...styles}}>Eliminar producto</Button>
+
+
+        <Button sx={{ ...styles }}><Link to={'/agregarProducto'}>Agregar Producto</Link></Button>
+        <Button sx={{ ...styles }}><Link to={'/editarProducto'}>Editar Producto</Link></Button>
+        <Button sx={{ ...styles }}><Link to={'/eliminarProducto'}>Eliminar Producto</Link></Button>
+
+
 
       </Grid>
 

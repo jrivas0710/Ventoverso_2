@@ -18,9 +18,11 @@ const persistLocalStorage: Middleware = (store) => (next) => (action) => {
         console.log('middleware logueado')
         const token = JSON.stringify(estado.user.token)    // preguntar
         localStorage.setItem('token',token) 
+        window.location.reload()
 
     } else if (action.type == "user/logout") {
          localStorage.removeItem('token');
+         window.location.reload();
     }
 
 
