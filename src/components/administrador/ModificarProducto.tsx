@@ -8,7 +8,7 @@ import { editFormValidate } from "../utils/editFormValidate";
 
 
 
-export const CrearProducto = () => {
+export const ModificarProducto = () => {
     const { getSucces } = useNotification();
 
     const formik = useFormik<EditProducto>({
@@ -17,7 +17,7 @@ export const CrearProducto = () => {
             id_categoria: '',
             id_subcategoria: '',
             id_marcas: '',
-            id:'',
+            id: '',
             nombreProducto: '',
             modelo: '',
             descripcion: '',
@@ -53,6 +53,7 @@ export const CrearProducto = () => {
                 id_categoria: parseInt(values.id_categoria),
                 id_subcategoria: parseInt(values.id_subcategoria),
                 id_marcas: parseInt(values.id_marcas),
+                id: parseInt(values.id), // esto lo agregue yo
                 descripcion: values.descripcion,
                 nombreProducto: values.nombreProducto,
                 modelo: values.modelo,
@@ -81,14 +82,14 @@ export const CrearProducto = () => {
 
 
             fetch(`http://localhost:3000/productos`, {
-                method: "POST",
+                method: "PATCH",
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ ...objetoProducto })
             })
 
-            console.log('me diste desde crear ')
+            console.log('me diste desde Moficar')
 
 
             formik.resetForm();
@@ -96,17 +97,34 @@ export const CrearProducto = () => {
         },
     });
 
-    
-    return (
+     return (
         <>
             <HeaderAdmin />
             <Box component="form" onSubmit={formik.handleSubmit}>
 
                 <div style={{ margin: "30px", width: "100vw", borderBottom: "1px solid #ffffff" }}   >
-                    <h1 style={{ marginBottom: "40px" }} >Crear Producto</h1>
-                    <h2>1. Identificacion Producto</h2>
+                    <h1 style={{ marginBottom: "40px" }} >Modifica el producto</h1>
+                    <h2>1. Identificacion Producto: <small>Ingresa el id del producto que quieres modificar</small></h2>
                 </div>
                 <Grid container sx={{ textAlign: "center" }}>
+                    <Grid item xs={12} sm={6}>
+
+                        <TextField
+                            sx={{ width: '400px', margin: '50px' }}
+                            id="standard-read-only-input"
+                            label="id"
+                            name='id'
+                            value={formik.values.id}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            error={formik.touched.id && Boolean(formik.errors.id)}
+                            helperText={formik.touched.id && formik.errors.id}
+                            />
+
+
+                    </Grid>
+
+
                     <Grid item xs={12} sm={6}>
                         <TextField
                             sx={{ width: '400px', margin: '50px' }}
@@ -118,10 +136,10 @@ export const CrearProducto = () => {
                             onBlur={formik.handleBlur}
                             error={formik.touched.id_categoria && Boolean(formik.errors.id_categoria)}
                             helperText={formik.touched.id_categoria && formik.errors.id_categoria}
-
-
                         />
                     </Grid>
+
+
                     <Grid item xs={12} sm={6} >
                         <TextField
                             sx={{ width: '400px', margin: '50px' }}
@@ -367,9 +385,9 @@ export const CrearProducto = () => {
                                     checked={formik.values.incluyeCanas}
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
-                                    />
-                                    <small style={{ color: "#D32F2F", fontSize: "13px", display: "flex", flexDirection: "column", paddingLeft: "11px" }} >Recuerda marcar esta casilla si lo requiere</small>
-                                    
+                                />
+                                <small style={{ color: "#D32F2F", fontSize: "13px", display: "flex", flexDirection: "column", paddingLeft: "11px" }} >Recuerda marcar esta casilla si lo requiere</small>
+
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 Incluye Maleta <Checkbox
@@ -377,8 +395,8 @@ export const CrearProducto = () => {
                                     checked={formik.values.incluyeMaleta}
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
-                                    />
-                                    <small style={{ color: "#D32F2F", fontSize: "13px", display: "flex", flexDirection: "column", paddingLeft: "11px" }} >Recuerda marcar esta casilla si lo requiere</small>
+                                />
+                                <small style={{ color: "#D32F2F", fontSize: "13px", display: "flex", flexDirection: "column", paddingLeft: "11px" }} >Recuerda marcar esta casilla si lo requiere</small>
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 Incluye Boquilla <Checkbox
@@ -386,9 +404,9 @@ export const CrearProducto = () => {
                                     checked={formik.values.incluyeBoquilla}
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
-                                    />
-                                    <small style={{ color: "#D32F2F", fontSize: "13px", display: "flex", flexDirection: "column", paddingLeft: "11px" }} >Recuerda marcar esta casilla si lo requiere</small>
-                                  
+                                />
+                                <small style={{ color: "#D32F2F", fontSize: "13px", display: "flex", flexDirection: "column", paddingLeft: "11px" }} >Recuerda marcar esta casilla si lo requiere</small>
+
                             </Grid>
 
                         </div>
@@ -414,8 +432,8 @@ export const CrearProducto = () => {
                                 value={formik.values.descripcion}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                              
-                                
+                               
+
 
                             />
                         </Grid>
@@ -436,7 +454,7 @@ export const CrearProducto = () => {
                                 onBlur={formik.handleBlur}
                                 error={formik.touched.nombre && Boolean(formik.errors.nombre)}
                                 helperText={formik.touched.nombre && formik.errors.nombre}
-                                
+
                             />
 
                             <TextField
@@ -547,7 +565,7 @@ export const CrearProducto = () => {
                 <div style={{ width: "1000px", textAlign: "center", margin: "0 auto" }}   >
                     <Button variant="contained" type="submit" color="secondary"
                         style={{ width: "300px", height: "80px" }}
-                    >Enviar</Button>
+                    >Editar produto</Button>
                 </div>
 
 

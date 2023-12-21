@@ -8,7 +8,6 @@ export interface ProductoPrincipal{
     descripcion: string,
     nombreProducto: string,
     modelo: string,
-    caracteristicasPrincipales: string,
     precio: string,
     stock: string,
     imagenes: Imagen[],

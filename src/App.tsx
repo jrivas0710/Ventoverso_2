@@ -18,10 +18,11 @@ import { Agenda } from './components/Agenda/Agenda'
 import { ImagenFormulario } from './pages/ImagenFormulario'
 import { ProtectedComponent } from './components/protectedComponent/ProtectedComponent'
 import { AdminEdit } from './pages/AdminEdit'
-import { EditarProducto } from './components/administrador/EditarProducto'
+import { CrearProducto } from './components/administrador/EditarProducto'
 import { useSelector } from 'react-redux'
 import { RootState } from './redux/store'
 import { EliminarProducto } from './components/administrador/EliminarProducto'
+import { ModificarProducto } from './components/administrador/ModificarProducto'
 
 
 
@@ -48,13 +49,13 @@ function App() {
 
               <Route path='editarProducto' element={
                 <ProtectedComponent>
-                  <EditarProducto />
+                  <ModificarProducto/>
                 </ProtectedComponent>
               } />
 
               <Route path='agregarProducto' element={
                 <ProtectedComponent>
-                  <EditarProducto />
+                  <CrearProducto />
                 </ProtectedComponent>
               } />
 

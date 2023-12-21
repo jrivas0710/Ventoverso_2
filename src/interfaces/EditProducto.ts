@@ -10,7 +10,6 @@ export interface EditProducto {
     descripcion: string
     precio: string,
     stock: string,
-    caracteristicasPrincipales: string,
     estrellas: string,
     clave: string,
     sistema: string,
