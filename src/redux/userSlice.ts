@@ -66,7 +66,6 @@ export const userSlice = createSlice({
     reducers: {
         login: (state, action: PayloadAction<UserState>) => {
             const newState = { ...action.payload }
-            console.log('desde el estado',state); //todo lo que manden despuesd e hacer login lo voy a conservar en ese estado
             return newState
         },
         logout: (state) => {

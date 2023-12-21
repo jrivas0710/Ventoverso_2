@@ -1,7 +1,7 @@
 
 import './SideSheet.css'; // Importa los estilos CSS
 import { Login } from '../../interfaces/Login';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { Box, TextField } from '@mui/material';
 import { useNotification } from '../../context/notification.context';
 import { LoginValidate } from '../utils/validateForm';
@@ -41,9 +41,11 @@ type LoginType = {
 
 export const SideSheet = ({ isOpen, onClose }: Login) => {
   const [isSideSheetOpen, setIsSideSheetOpen] = useState(false);
+
   const user = useSelector((state: RootState) => state.user)
   const { getSucces } = useNotification(); //esto es un customHook
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
 
   const formik = useFormik<LoginType>({
@@ -54,7 +56,7 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
     validationSchema: LoginValidate,
     onSubmit: (values: LoginType) => {
 
-      console.log('hola mundo')
+      
       getSucces(JSON.stringify(values));
 
       const passwordEncriptado = Md5.hashStr(values.password);
@@ -96,7 +98,12 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
             token: json.token
 
           })) //le envio el response a mi estado global. 
-          
+
+          if(jwtPayloand.roles?.[0] == "ADMINISTRADOR"){
+            navigate("/editAdmin")
+          }
+
+
           // aca tengo que hacer que el sidesheet se cierre cuando el submit es exitoso 
         })
 

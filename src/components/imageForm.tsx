@@ -1,19 +1,32 @@
 import { Box, Button, Grid, TextField } from "@mui/material"
-import { ProductoPrincipal } from "../interfaces/ProductoPincipal"
 import { useNotification } from "../context/notification.context";
 import { useFormik } from "formik";
+import { ProductoPrincipal } from "../interfaces/ProductoPincipal";
 
 
 
-
-
+interface Producto {
+   
+        id_categoria : string,
+        id_subcategoria : string,
+        id_marcas: string
+        id: string,
+        descripcion: string,
+        nombreProducto : string,
+        modelo : string,
+        caracteristicasPrincipales : string,
+        precio : string,
+        stock : string,
+        nombre: string,
+        base64: string
+}
 
 
 
 export const ImageForm = () => {
     const { getSucces } = useNotification();
 
-    const formik = useFormik<ProductoPrincipal>({
+    const formik = useFormik<Producto>({
 
         initialValues: {
             id_categoria: '',
@@ -33,7 +46,7 @@ export const ImageForm = () => {
 
 
         validationSchema: '',
-        onSubmit: (values: ProductoPrincipal) => {
+        onSubmit: (values: Producto) => {
             getSucces(JSON.stringify(values));
 
             

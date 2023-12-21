@@ -19,56 +19,50 @@ import { ImagenFormulario } from './pages/ImagenFormulario'
 import { ProtectedComponent } from './components/protectedComponent/ProtectedComponent'
 import { AdminEdit } from './pages/AdminEdit'
 import { EditarProducto } from './components/administrador/EditarProducto'
-
-
-
-
+import { useSelector } from 'react-redux'
+import { RootState } from './redux/store'
+import { EliminarProducto } from './components/administrador/EliminarProducto'
 
 
 
 function App() {
 
+  const user = useSelector((state: RootState) => state.user)
+
   return (
     <>
       <div>
         <NotificationProvider>
-
-
           <BrowserRouter>
-            <Sidesheet2 />
+            {user.roles?.[0] != "ADMINISTRADOR" &&
+              <Sidesheet2 />}
 
             <Routes>
 
 
               <Route path='editAdmin' element={
                 <ProtectedComponent>
-                  <AdminEdit/>
+                  <AdminEdit />
                 </ProtectedComponent>
               } />
 
               <Route path='editarProducto' element={
                 <ProtectedComponent>
-                  <EditarProducto/>
+                  <EditarProducto />
                 </ProtectedComponent>
               } />
 
               <Route path='agregarProducto' element={
                 <ProtectedComponent>
-                  <EditarProducto/>
+                  <EditarProducto />
                 </ProtectedComponent>
               } />
 
               <Route path='eliminarProducto' element={
                 <ProtectedComponent>
-                  <EditarProducto/>
+                  <EliminarProducto/>
                 </ProtectedComponent>
               } />
-                  
-                  
-             
-
-
-
 
 
               <Route path="/" element={<Home />} />
@@ -94,29 +88,7 @@ function App() {
         </NotificationProvider>
       </div>
 
-
-
-
-
-
-
-
-
-
-      {/* <Home/>  */}
-      {/* <AñadirProducto/>  */}
-      {/* <DestacadoClarinetes/> */}
-      {/* <PageProducto/>   */}
-
-      {/* <CarroCompras/>  */}
-      {/*  <PagResultadoCompra/>  */}
-      {/* <CrearUser/>  
-      <Alerta /> */}
-      {/* <RegtoExitoso/> */}
-      {/* <Prueba /> */}
-
-
-    </>
+ </>
   )
 }
 
