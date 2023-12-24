@@ -37,8 +37,11 @@ export const ModificarProducto = () => {
             incluyeCanas: false,
             incluyeMaleta: false,
             origen: '',
-            nombre: '',
-            base64: '',
+
+            imagenes: [{
+                nombre: '',
+                base64: '',
+            }]
         },
 
 
@@ -97,7 +100,7 @@ export const ModificarProducto = () => {
         },
     });
 
-     return (
+    return (
         <>
             <HeaderAdmin />
             <Box component="form" onSubmit={formik.handleSubmit}>
@@ -119,7 +122,7 @@ export const ModificarProducto = () => {
                             onBlur={formik.handleBlur}
                             error={formik.touched.id && Boolean(formik.errors.id)}
                             helperText={formik.touched.id && formik.errors.id}
-                            />
+                        />
 
 
                     </Grid>
@@ -432,7 +435,7 @@ export const ModificarProducto = () => {
                                 value={formik.values.descripcion}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
-                               
+
 
 
                             />

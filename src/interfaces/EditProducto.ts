@@ -25,11 +25,17 @@ export interface EditProducto {
     incluyeMaleta: boolean,
     origen: string,
     nombre:string,
-    base64:string
+    base64:string,
+    imagenes:Imagen[],
+
+}
    
 
 
-}
+    interface Imagen {
+        nombre:string,
+        base64 : string
+    }
 
 
 

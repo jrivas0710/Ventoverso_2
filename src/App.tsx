@@ -23,6 +23,7 @@ import { useSelector } from 'react-redux'
 import { RootState } from './redux/store'
 import { EliminarProducto } from './components/administrador/EliminarProducto'
 import { ModificarProducto } from './components/administrador/ModificarProducto'
+import { ImagenesProductoAdmin } from './components/administrador/ImagenesBase64'
 
 
 
@@ -79,6 +80,7 @@ function App() {
               <Route path="/registroExitoso" element={<RegtoExitoso />}></Route>
               <Route path="/centroAyuda" element={<CentrodeAyuda />}></Route>
               <Route path="/imagenFormulario" element={<ImagenFormulario />}></Route>
+             <Route path='/imagenesProductoAdmin' element = {<ImagenesProductoAdmin/> } />
 
 
 
