@@ -18,12 +18,11 @@ import { Agenda } from './components/Agenda/Agenda'
 import { ImagenFormulario } from './pages/ImagenFormulario'
 import { ProtectedComponent } from './components/protectedComponent/ProtectedComponent'
 import { AdminEdit } from './pages/AdminEdit'
-import { CrearProducto } from './components/administrador/EditarProducto'
 import { useSelector } from 'react-redux'
 import { RootState } from './redux/store'
 import { EliminarProducto } from './components/administrador/EliminarProducto'
 import { ModificarProducto } from './components/administrador/ModificarProducto'
-import { ImagenesProductoAdmin } from './components/administrador/ImagenesBase64'
+import { AgregarProducto } from './pages/AgregarProducto'
 
 
 
@@ -51,12 +50,13 @@ function App() {
               <Route path='editarProducto' element={
                 <ProtectedComponent>
                   <ModificarProducto/>
+                  
                 </ProtectedComponent>
               } />
 
               <Route path='agregarProducto' element={
                 <ProtectedComponent>
-                  <CrearProducto />
+                  <AgregarProducto />
                 </ProtectedComponent>
               } />
 
@@ -80,7 +80,7 @@ function App() {
               <Route path="/registroExitoso" element={<RegtoExitoso />}></Route>
               <Route path="/centroAyuda" element={<CentrodeAyuda />}></Route>
               <Route path="/imagenFormulario" element={<ImagenFormulario />}></Route>
-             <Route path='/imagenesProductoAdmin' element = {<ImagenesProductoAdmin/> } />
+            
 
 
 

@@ -22,9 +22,20 @@ export const editFormValidate = yup.object().shape({
     reposaPulgar: yup.string().trim().required("este campo no puede estar vacio"),
     cantAnillos: yup.string().trim().required("debe ingresar la cantidad de anillos del producto"),
     stock: yup.string().trim().required("debe ingresar el stock disponible del producto"),
-    nombre: yup.string().trim().required("debe ingresar el nombrede la imagen del producto"),
-    base64: yup.string().trim().required("ingresa la imagen"),
     
+    nombre1: yup.string().trim().required("debe ingresar el nombrede la imagen del producto"),
+    nombre2: yup.string().trim().required("debe ingresar el nombrede la imagen del producto"),
+    nombre3: yup.string().trim().required("debe ingresar el nombrede la imagen del producto"),
+    nombre4: yup.string().trim().required("debe ingresar el nombrede la imagen del producto"),
+    nombre5: yup.string().trim().required("debe ingresar el nombrede la imagen del producto"),
+
+    base1: yup.string().trim().required("ingresa la imagen"),
+    base2: yup.string().trim().required("ingresa la imagen"),
+    base3: yup.string().trim().required("ingresa la imagen"),
+    base4: yup.string().trim().required("ingresa la imagen"),
+    base5: yup.string().trim().required("ingresa la imagen"),
+
+
     origen: yup.string().trim().required("debe ingresar el modelo del producto"),
 
 })

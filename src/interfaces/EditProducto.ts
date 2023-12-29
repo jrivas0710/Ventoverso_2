@@ -24,18 +24,29 @@ export interface EditProducto {
     incluyeCanas: boolean,
     incluyeMaleta: boolean,
     origen: string,
-    nombre:string,
-    base64:string,
-    imagenes:Imagen[],
+    nombre: string,
+    base64: string,
+    imagenes: Imagen[],
+
+    base1: string,
+    base2: string,
+    base3: string,
+    base4: string,
+    base5: string,
+    nombre1: string,
+    nombre2: string
+    nombre3: string
+    nombre4: string
+    nombre5: string
 
 }
-   
 
 
-    interface Imagen {
-        nombre:string,
-        base64 : string
-    }
+
+interface Imagen {
+    nombre: string,
+    base64: string
+}
 
 
 

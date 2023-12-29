@@ -1,17 +1,11 @@
 import { Box, Button, Grid, TextField, TextareaAutosize, Checkbox } from "@mui/material"
 import { HeaderAdmin } from "./HeaderAdmin";
-import { ErrorMessage, Field, FieldArray, Form, Formik, useFormik } from "formik";
+import { useFormik } from "formik";
 import { EditProducto } from "../../interfaces/EditProducto";
 import { useNotification } from "../../context/notification.context";
 import { editFormValidate } from "../utils/editFormValidate";
-import { ImagenesProductoAdmin } from "./ImagenesBase64";
 
 
-interface Imagenes{
-    imagen: [{
-        name:string,
-        base64:string
-    }] }
 
 
 
@@ -49,15 +43,25 @@ export const CrearProducto = () => {
             imagenes: [{
                 nombre: '',
                 base64: ''
-            }]
+            }],
+            base1: "",
+            base2: "",
+            base3: "",
+            base4: "",
+            base5: "",
+            nombre1: "",
+            nombre2: "",
+            nombre3: "",
+            nombre4: "",
+            nombre5: ""
         },
 
 
-        validationSchema: editFormValidate,
+        validationSchema:  editFormValidate ,
         onSubmit: (values: EditProducto) => {
             getSucces(JSON.stringify(values));
 
-
+            
 
             const objetoProducto = {
 
@@ -70,10 +74,31 @@ export const CrearProducto = () => {
                 precio: parseInt(values.precio),
                 stock: values.stock,
                 imagenes: [{
-                    nombre: values.nombre,
-                    base64: values.base64
-                    
-                }],
+                    nombre: values.nombre1,
+                    base64: values.base1
+                },
+                {
+                    nombre: values.nombre2,
+                    base64: values.base2
+
+                },
+                {
+                    nombre: values.nombre3,
+                    base64: values.base3
+
+                },
+                {
+                    nombre: values.nombre4,
+                    base64: values.base4
+
+                },
+                {
+                    nombre: values.nombre5,
+                    base64: values.base5
+
+                }
+
+                ],
                 detalle: {
                     clave: values.clave,
                     sistema: values.sistema,
@@ -90,6 +115,8 @@ export const CrearProducto = () => {
                     origen: values.origen
                 }
             }
+
+            console.log(objetoProducto)
 
 
             fetch(`http://localhost:3000/productos`, {
@@ -297,9 +324,7 @@ export const CrearProducto = () => {
 
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6}>
-
-                    </Grid>
+                   
                     <Grid item xs={12} sm={6}>
                         <TextField
                             sx={{ width: '400px', margin: '50px' }}
@@ -371,7 +396,10 @@ export const CrearProducto = () => {
                             helperText={formik.touched.origen && formik.errors.origen}
 
                         />
-                        <div style={{ width: "100%", display: "flex" }}>
+                   
+                    </Grid>
+
+                    <div style={{ width: "100%", display: "flex",  }}>
                             <Grid item xs={12} sm={6}>
                                 Incluye Cañas
                                 <Checkbox
@@ -404,13 +432,12 @@ export const CrearProducto = () => {
                             </Grid>
 
                         </div>
-                    </Grid>
 
                     <div style={{ margin: "30px", width: "100vw", borderBottom: "1px solid #ffffff", textAlign: "left" }}   >
                         <h2> 4. Descripcion del producto</h2>
                     </div>
 
-                    <Grid container  >
+                    <Grid container>
 
 
                         <Grid item xs={12} sm={5} >
@@ -440,18 +467,139 @@ export const CrearProducto = () => {
                     <div style={{ display: "flex", flexWrap: "wrap", gap: "30px", justifyContent: "space-around" }}>
 
                         <div>
-                         <ImagenesProductoAdmin 
-                           imagen = {imagenes}  />
+                            <TextField
+                                label="Nombre" sx={{ marginTop: '20px' }}
+                                name='nombre1'
+                                value={formik.values.nombre1}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                error={formik.touched.nombre1 && Boolean(formik.errors.nombre1)}
+                                helperText={formik.touched.nombre1 && formik.errors.nombre1}
+
+                            />
+
+                            <TextField
+                                label="Base64" sx={{ marginTop: '20px', marginBottom: '20px' }}
+                                name='base1'
+                                value={formik.values.base1}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                error={formik.touched.base1 && Boolean(formik.errors.base1)}
+                                helperText={formik.touched.base1 && formik.errors.base1}
+                            />
+
+
+                        </div>
+
+                        <div>
+                            <TextField
+                                label="Nombre" sx={{ marginTop: '20px' }}
+                                name='nombre2'
+                                value={formik.values.nombre2}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                error={formik.touched.nombre2 && Boolean(formik.errors.nombre2)}
+                                helperText={formik.touched.nombre2 && formik.errors.nombre2}
+
+                            />
+
+                            <TextField
+                                label="Base64" sx={{ marginTop: '20px', marginBottom: '20px' }}
+                                name='base2'
+                                value={formik.values.base2}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                error={formik.touched.base2 && Boolean(formik.errors.base2)}
+                                helperText={formik.touched.base2 && formik.errors.base2}
+                            />
+
+
+                        </div>
+
+                        <div>
+                            <TextField
+                                label="Nombre" sx={{ marginTop: '20px' }}
+                                name='nombre3'
+                                value={formik.values.nombre3}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                error={formik.touched.nombre3 && Boolean(formik.errors.nombre3)}
+                                helperText={formik.touched.nombre3 && formik.errors.nombre3}
+
+                            />
+
+                            <TextField
+                                label="Base64" sx={{ marginTop: '20px', marginBottom: '20px' }}
+                                name='base3'
+                                value={formik.values.base3}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                error={formik.touched.base3 && Boolean(formik.errors.base3)}
+                                helperText={formik.touched.base3 && formik.errors.base3}
+                            />
+
+
+                        </div>
+
+                        <div>
+                            <TextField
+                                label="Nombre" sx={{ marginTop: '20px' }}
+                                name='nombre4'
+                                value={formik.values.nombre4}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                error={formik.touched.nombre4 && Boolean(formik.errors.nombre4)}
+                                helperText={formik.touched.nombre4 && formik.errors.nombre4}
+
+                            />
+
+                            <TextField
+                                label="Base64" sx={{ marginTop: '20px', marginBottom: '20px' }}
+                                name='base4'
+                                value={formik.values.base4}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                error={formik.touched.base4 && Boolean(formik.errors.base4)}
+                                helperText={formik.touched.base4 && formik.errors.base4}
+                            />
+
+
+                        </div>
+
+                        <div>
+                            <TextField
+                                label="Nombre" sx={{ marginTop: '20px' }}
+                                name='nombre5'
+                                value={formik.values.nombre5}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                error={formik.touched.nombre5 && Boolean(formik.errors.nombre5)}
+                                helperText={formik.touched.nombre5 && formik.errors.nombre5}
+
+                            />
+
+                            <TextField
+                                label="Base64" sx={{ marginTop: '20px', marginBottom: '20px' }}
+                                name='base5'
+                                value={formik.values.base5}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                error={formik.touched.base5 && Boolean(formik.errors.base5)}
+                                helperText={formik.touched.base5 && formik.errors.base5}
+                            />
+
+
                         </div>
 
 
 
 
+
                     </div>
-                    <div style={{ margin: "30px", width: "100vw", borderBottom: "1px solid #ffffff", textAlign: "left" }}   >
+                  {/*   <div style={{ margin: "30px", width: "100vw", borderBottom: "1px solid #ffffff", textAlign: "left" }}   >
                         <h2> Historial</h2>
                     </div>
-
+ */}
                     {/*  <Grid item xs={12} sm={6}>
                         <TextField
                             sx={{ width: '400px', margin: '50px' }}
@@ -466,7 +614,7 @@ export const CrearProducto = () => {
                             
                     </Grid> */}
 
-                    
+
 
 
 
@@ -475,7 +623,7 @@ export const CrearProducto = () => {
 
                 <div style={{ width: "1000px", textAlign: "center", margin: "0 auto" }}   >
                     <Button variant="contained" type="submit" color="secondary"
-                        style={{ width: "300px", height: "80px" }}
+                        style={{ width: "300px", height: "80px", marginTop: "160px" }}
                     >Enviar</Button>
                 </div>
 
