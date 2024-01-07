@@ -26,7 +26,6 @@ export interface EditProducto {
     origen: string,
     nombre: string,
     base64: string,
-    imagenes: Imagen[],
 
     base1: string,
     base2: string,
@@ -38,6 +37,7 @@ export interface EditProducto {
     nombre3: string
     nombre4: string
     nombre5: string
+    productoLocal?: string
 
 }
 

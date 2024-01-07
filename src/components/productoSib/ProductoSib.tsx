@@ -39,7 +39,7 @@ export const ProductoSib = () => {
 
             { producto && producto.map(item => {
                 return(  <EncabezadoProducto
-                    nombre={item.nombreProducto}
+                    nombreProducto={item.nombreProducto}
                     id_marcas={item.id}
                     modelo={item.modelo}
                     estrellas= {item.estrellas}
@@ -57,7 +57,7 @@ export const ProductoSib = () => {
 
             { producto && producto.map(item => {
                 return(  <DetalleProducto 
-                    caracteristicasPrincipales={item.caracteristicasPrincipales}
+                    
                     descripcion={item.descripcion}
 
                 />)

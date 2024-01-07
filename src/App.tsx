@@ -23,6 +23,7 @@ import { RootState } from './redux/store'
 import { EliminarProducto } from './components/administrador/EliminarProducto'
 import { ModificarProducto } from './components/administrador/ModificarProducto'
 import { AgregarProducto } from './pages/AgregarProducto'
+import { EditarProducto } from './pages/EditarProducto'
 
 
 
@@ -49,7 +50,7 @@ function App() {
 
               <Route path='editarProducto' element={
                 <ProtectedComponent>
-                  <ModificarProducto/>
+                  <EditarProducto/>
                   
                 </ProtectedComponent>
               } />

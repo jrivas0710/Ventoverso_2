@@ -4,7 +4,7 @@ import { ProductoPrincipal } from '../../interfaces/ProductoPincipal'
 
 
 
-export const DetalleProducto:React.FC<ProductoPrincipal> = ( {caracteristicasPrincipales, descripcion}) => {
+export const DetalleProducto:React.FC<ProductoPrincipal> = ( { descripcion}) => {
 
 
     return (
@@ -17,7 +17,7 @@ export const DetalleProducto:React.FC<ProductoPrincipal> = ( {caracteristicasPri
                     <div className='caracteristicas'>
                         <h2>Caracteristicas principales</h2>
                         <p>
-                        {caracteristicasPrincipales}
+                        
                         </p>
                     </div>
                     <div className='descripcion'>
