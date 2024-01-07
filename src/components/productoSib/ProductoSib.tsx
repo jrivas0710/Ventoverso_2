@@ -4,22 +4,24 @@ import { ImagenesProducto } from "../imagenesProducto/ImagenesProducto"
 import { ProductoPrincipal } from "../../interfaces/ProductoPincipal"
 /* import dataProductoSib from './dataProductoSib.json' */
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 
 
 
 
 export const ProductoSib = () => {
 
-    const [producto, setProducto] = useState<ProductoPrincipal[]>();
+    const [producto, setProducto] = useState<ProductoPrincipal>();
+    const { id } = useParams<{ id: string }>();
 
     useEffect(() => {
-        fetch("http://localhost:3000/productos", { //esto me retorna el producto y tiene un id
+        fetch(`http://localhost:3000/productos/1`, { //esto me retorna el producto y tiene un id
             method: "GET"
         })
         .then((response) => {
             if (response.ok) {
                 console.log(response)
-                return response.json() as Promise<ProductoPrincipal[]>  ;
+                return response.json() as Promise<ProductoPrincipal>  ;
             }else{
                 throw new Error ("no se pudo procesar la peticion")
             }
@@ -37,32 +39,29 @@ export const ProductoSib = () => {
     return (
         <>
 
-            { producto && producto.map(item => {
-                return(  <EncabezadoProducto
-                    nombreProducto={item.nombreProducto}
-                    id_marcas={item.id}
-                    modelo={item.modelo}
-                    estrellas= {item.estrellas}
+            { producto &&  
+                  <EncabezadoProducto
+                    nombreProducto={producto.nombreProducto}
+                    id_marcas={producto.id_marcas}
+                    modelo={producto.modelo}
+                    estrellas= {producto.estrellas}
                     
 
-                />)
+                />
               
-            })}
+            }
 
-            {/* {producto &&  <ImagenesProducto producto = {producto}/> }
-                */}
                 <ImagenesProducto />
                
           
 
-            { producto && producto.map(item => {
-                return(  <DetalleProducto 
+            { producto &&   <DetalleProducto 
                     
-                    descripcion={item.descripcion}
+                    descripcion={producto.descripcion}
 
-                />)
+                />
               
-            })}
+            }
 
 
 

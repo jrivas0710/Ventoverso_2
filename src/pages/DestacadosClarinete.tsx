@@ -23,16 +23,14 @@ export const DestacadoClarinetes = () => {
       .then(data => {
          setProducto(data);
       })
-      .catch(error => console.log(error.message("mal")))
+      .catch(error => console.log(error.message))
    },[])
 
 return(
     <>
   {producto && <DestacadosClarinete producto={producto}/> }
    
-   
-
-    </>
+   </>
     
  )
 

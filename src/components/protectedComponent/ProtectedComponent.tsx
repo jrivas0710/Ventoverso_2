@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux"
 import { RootState } from "../../redux/store"
+import { useNavigate } from "react-router-dom";
 
 
 interface Props { 
@@ -8,7 +9,7 @@ interface Props {
 
 
 export const ProtectedComponent = (props:Props ) => {
-    
+    const navigate = useNavigate();
     const user = useSelector((state:RootState) => state.user) // esto me trae el estado del usuario guardado en mi redux
   
     

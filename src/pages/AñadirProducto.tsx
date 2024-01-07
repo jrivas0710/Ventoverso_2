@@ -20,10 +20,6 @@ import dataProductosSimilares from '../components/productosSimilares/dataProduct
 export const PaginaProducto= () => {
 
 
-  
-
-
-
   return (
     <>
     
@@ -34,7 +30,7 @@ export const PaginaProducto= () => {
     <ProductosRelacionados /* dataProductosRelacionados ={dataProductosRelacionados} *//>
     <EvaluacionPrincipal/>
     <Comentario dataComentario = {dataComentarios}/>
-    <ProductosSimilares dataProductosSimilares={dataProductosSimilares}/>
+    <ProductosSimilares />
     </div>
 
 

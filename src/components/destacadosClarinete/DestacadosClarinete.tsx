@@ -1,11 +1,14 @@
 import './DestacadosClarinete.css'
 import { Filter } from '../filtro/Filter'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Destacado } from '../../interfaces/Destacados'
 
 
 
+
 export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
+
+  const {idProducto} = useParams();
 
     return (
         <>
@@ -20,7 +23,7 @@ export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
 
 
 
-                <Filter/>
+                <Filter />
 
                 <div className='productos-destacados'>
 
@@ -32,18 +35,22 @@ export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
 
 
                                 < div className='producto'>
-                                    <Link to = {"/agregarProducto"}><img className='imagenDestacaoClarinete' src={item.imagenUrl} alt={item.nombre} /></Link>
+
+                                    <img className='imagenDestacaoClarinete' src={item.imagenUrl} alt={item.nombre}
+                                    />
                                 </div>
 
                                 < div className='nombre-precio-ranking'>
 
                                     <span className='spanEstrellasClarinete'>
-                                        <img className='estrellasClarineteDestacado' src="./public/images/estrellas.png" alt="" />
+                                        <Link to={`/agregarProductoCarro`}>
+                                            <img className='imagenDestacoClarinete' src={item.imagenUrl} alt={item.nombre} />
+                                        </Link>
                                         <span hidden>{item.estrellas}</span>
-                                         
+
                                     </span>
 
-                                   <Link to = {"/agregarProducto"}><span className='nombre-producto' > {item.nombre} </span></Link> 
+                                    <Link to={`/agregarProductoCarro`}><span className='nombre-producto' > {item.nombre} </span></Link>
                                     <span className='precio' > {item.precio}</span>
 
                                 </div>
@@ -56,7 +63,7 @@ export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
 
 
 
-          
+
 
                 </div>
             </div>

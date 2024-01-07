@@ -50,8 +50,8 @@ function App() {
 
               <Route path='editarProducto' element={
                 <ProtectedComponent>
-                  <EditarProducto/>
-                  
+                  <EditarProducto />
+
                 </ProtectedComponent>
               } />
 
@@ -63,25 +63,31 @@ function App() {
 
               <Route path='eliminarProducto' element={
                 <ProtectedComponent>
-                  <EliminarProducto/>
+                  <EliminarProducto />
                 </ProtectedComponent>
               } />
 
 
               <Route path="/" element={<Home />} />
-              <Route path="/agenda" element={<Agenda />} ></Route>
-              <Route path="/categoria" element={<PageProducto />} ></Route>
-              <Route path="/d_clarinete" element={<DestacadoClarinetes />}> </Route>
-              <Route path="/agregarProductoCarro" element={<PaginaProducto />}> </Route>
-              <Route path="/carro" element={<CarroCompras />}> </Route>
-              <Route path="/checkout" element={<Checkout />}></Route>
-              <Route path="/algoSalioMal" element={<ResultadoCompraFallo />}></Route>
-              <Route path="/compraExitosa" element={<ResultadoCompra />}></Route>
-              <Route path="/registro" element={<CrearUser />}></Route>
-              <Route path="/registroExitoso" element={<RegtoExitoso />}></Route>
-              <Route path="/centroAyuda" element={<CentrodeAyuda />}></Route>
-              <Route path="/imagenFormulario" element={<ImagenFormulario />}></Route>
+              <Route path="/agenda" element={<Agenda />} />
+              <Route path="/categoria" element={<PageProducto />} />
+
+              <Route path="/d_clarinete/" element={<DestacadoClarinetes />}>
+              </Route>
+
+
+              <Route path="/agregarProductoCarro/" element={<PaginaProducto />}/>
+
             
+              <Route path="/carro" element={<CarroCompras />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/algoSalioMal" element={<ResultadoCompraFallo />} />
+              <Route path="/compraExitosa" element={<ResultadoCompra />} />
+              <Route path="/registro" element={<CrearUser />} />
+              <Route path="/registroExitoso" element={<RegtoExitoso />} />
+              <Route path="/centroAyuda" element={<CentrodeAyuda />} />
+              <Route path="/imagenFormulario" element={<ImagenFormulario />} />
+
 
 
 
@@ -92,7 +98,7 @@ function App() {
         </NotificationProvider>
       </div>
 
- </>
+    </>
   )
 }
 

@@ -1,75 +1,69 @@
 import { Box, Button, Grid, TextField, TextareaAutosize, Checkbox } from "@mui/material"
+import { HeaderAdmin } from "./HeaderAdmin";
 import { useFormik } from "formik";
 import { EditProducto } from "../../interfaces/EditProducto";
 import { useNotification } from "../../context/notification.context";
-import { useNavigate } from "react-router-dom";
+import { editFormValidate } from "../utils/editFormValidate";
 
 
 
-export const ModificarProducto = () => {
 
+
+export const CrearProducto = () => {
     const { getSucces } = useNotification();
-    const navigate = useNavigate();
-    let productoLocal = localStorage.getItem("producto");
-
-    let jsonProducto;
-
-    productoLocal ? jsonProducto = JSON.parse(productoLocal) : '';
-
 
     const formik = useFormik<EditProducto>({
 
         initialValues: {
-
-            id_categoria: jsonProducto.id_categoria,
-            id_subcategoria: jsonProducto.id_subcategoria,
-            id_marcas: jsonProducto.id_marcas,
-            id: jsonProducto.id_marcas, //arreglar esto 
-            nombreProducto: jsonProducto.nombreProducto,
-            modelo: jsonProducto.modelo,
-            descripcion: jsonProducto.descripcion,
-            precio: jsonProducto.precio,
-            stock: jsonProducto.stock,
-            estrellas: jsonProducto.estrellas,
-            clave: jsonProducto.detalle.clave,
-            sistema: jsonProducto.detalle.sistema,
-            cantLlaves: jsonProducto.detalle.cantLlaves,
-            materialLlave: jsonProducto.detalle.materialLlave,
-            materialCuerpo: jsonProducto.detalle.materialCuerpo,
-            cantBarriles: jsonProducto.detalle.cantBarriles,
-            largoBarril: jsonProducto.detalle.largoBarril,
-            reposaPulgar: jsonProducto.detalle.reposaPulgar,
-            cantAnillos: jsonProducto.detalle.cantAnillos,
-            incluyeBoquilla: jsonProducto.detalle.incluyeBoquilla,
-            incluyeCanas: jsonProducto.detalle.incluyeCanas,
-            incluyeMaleta: jsonProducto.detalle.incluyeMaleta,
-            origen: jsonProducto.detalle.origen,
-            nombre: jsonProducto,
-            base64: jsonProducto,
-            base1: jsonProducto.imagenes?.[0].base64,
-            base2: jsonProducto.imagenes?.[1].base64,
-            base3: jsonProducto.imagenes?.[2].base64,
-            base4: jsonProducto.imagenes?.[3].base64,
-            base5: jsonProducto.imagenes?.[4].base64,
-            nombre1: jsonProducto.imagenes?.[0].nombre,
-            nombre2: jsonProducto.imagenes?.[1].nombre,
-            nombre3: jsonProducto.imagenes?.[2].nombre,
-            nombre4: jsonProducto.imagenes?.[3].nombre,
-            nombre5: jsonProducto.imagenes?.[4].nombre
+            id_categoria: '',
+            id_subcategoria: '',
+            id_marcas: '',
+            id: '',
+            nombreProducto: '',
+            modelo: '',
+            descripcion: '',
+            precio: '',
+            stock: '',
+            estrellas: '',
+            clave: '',
+            sistema: '',
+            cantLlaves: '',
+            materialLlave: '',
+            materialCuerpo: '',
+            incluyeBoquilla: false,
+            cantBarriles: '',
+            largoBarril: '',
+            reposaPulgar: '',
+            cantAnillos: '',
+            incluyeCanas: false,
+            incluyeMaleta: false,
+            origen: '',
+            nombre: '',
+            base64: '',
+            base1: "",
+            base2: "",
+            base3: "",
+            base4: "",
+            base5: "",
+            nombre1: "",
+            nombre2: "",
+            nombre3: "",
+            nombre4: "",
+            nombre5: ""
         },
 
-        validationSchema: '',
+
+        validationSchema:  '' ,
         onSubmit: (values: EditProducto) => {
-            getSucces('El producto fue modificado con exito');
-
-
+            getSucces(JSON.stringify(values));
+            console.log("mediste click desde crear producto")
+            
 
             const objetoProducto = {
 
                 id_categoria: parseInt(values.id_categoria),
                 id_subcategoria: parseInt(values.id_subcategoria),
                 id_marcas: parseInt(values.id_marcas),
-                id: parseInt(values.id), // esto lo agregue yo, tengo que ARREGLARLO
                 descripcion: values.descripcion,
                 nombreProducto: values.nombreProducto,
                 modelo: values.modelo,
@@ -118,40 +112,41 @@ export const ModificarProducto = () => {
                 }
             }
 
+            console.log(objetoProducto)
+
 
             fetch(`http://localhost:3000/productos`, {
-                method: "PUT",
+                method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ ...objetoProducto })
             })
 
-            console.log('me diste desde Moficar');
+            console.log('me diste desde crear ')
 
-            localStorage.removeItem("producto"); //esto remueve el item que estoy modificando del local. 
-            navigate('/editarProducto');
+
             formik.resetForm();
 
         },
     });
 
+
     return (
         <>
-
-
+            <HeaderAdmin />
             <Box component="form" onSubmit={formik.handleSubmit}>
 
                 <div style={{ margin: "30px", width: "100vw", borderBottom: "1px solid #ffffff" }}   >
-
-                    <h2 style={{ marginTop: "80px" }}  >1. Identificacion Producto</h2>
+                    <h1 style={{ marginBottom: "40px" }} >Crear Producto</h1>
+                    <h2>1. Identificacion Producto</h2>
                 </div>
                 <Grid container sx={{ textAlign: "center" }}>
                     <Grid item xs={12} sm={6}>
-                        <label>Categoria</label>
                         <TextField
                             sx={{ width: '400px', margin: '50px' }}
                             id="standard-read-only-input"
+                            label="Categoria"
                             name='id_categoria'
                             value={formik.values.id_categoria}
                             onChange={formik.handleChange}
@@ -325,7 +320,7 @@ export const ModificarProducto = () => {
 
                         />
                     </Grid>
-
+                   
                     <Grid item xs={12} sm={6}>
                         <TextField
                             sx={{ width: '400px', margin: '50px' }}
@@ -397,42 +392,42 @@ export const ModificarProducto = () => {
                             helperText={formik.touched.origen && formik.errors.origen}
 
                         />
-
+                   
                     </Grid>
 
-                    <div style={{ width: "100%", display: "flex", }}>
-                        <Grid item xs={12} sm={6}>
-                            Incluye Cañas
-                            <Checkbox
-                                name='incluyeCanas'
-                                checked={formik.values.incluyeCanas}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                            />
-                            <small style={{ color: "#D32F2F", fontSize: "13px", display: "flex", flexDirection: "column", paddingLeft: "11px" }} >Recuerda marcar esta casilla si lo requiere</small>
+                    <div style={{ width: "100%", display: "flex",  }}>
+                            <Grid item xs={12} sm={6}>
+                                Incluye Cañas
+                                <Checkbox
+                                    name='incluyeCanas'
+                                    checked={formik.values.incluyeCanas}
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                />
+                                <small style={{ color: "#D32F2F", fontSize: "13px", display: "flex", flexDirection: "column", paddingLeft: "11px" }} >Recuerda marcar esta casilla si lo requiere</small>
 
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            Incluye Maleta <Checkbox
-                                name='incluyeMaleta'
-                                checked={formik.values.incluyeMaleta}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                            />
-                            <small style={{ color: "#D32F2F", fontSize: "13px", display: "flex", flexDirection: "column", paddingLeft: "11px" }} >Recuerda marcar esta casilla si lo requiere</small>
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            Incluye Boquilla <Checkbox
-                                name='incluyeBoquilla'
-                                checked={formik.values.incluyeBoquilla}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                            />
-                            <small style={{ color: "#D32F2F", fontSize: "13px", display: "flex", flexDirection: "column", paddingLeft: "11px" }} >Recuerda marcar esta casilla si lo requiere</small>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                Incluye Maleta <Checkbox
+                                    name='incluyeMaleta'
+                                    checked={formik.values.incluyeMaleta}
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                />
+                                <small style={{ color: "#D32F2F", fontSize: "13px", display: "flex", flexDirection: "column", paddingLeft: "11px" }} >Recuerda marcar esta casilla si lo requiere</small>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                Incluye Boquilla <Checkbox
+                                    name='incluyeBoquilla'
+                                    checked={formik.values.incluyeBoquilla}
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                />
+                                <small style={{ color: "#D32F2F", fontSize: "13px", display: "flex", flexDirection: "column", paddingLeft: "11px" }} >Recuerda marcar esta casilla si lo requiere</small>
 
-                        </Grid>
+                            </Grid>
 
-                    </div>
+                        </div>
 
                     <div style={{ margin: "30px", width: "100vw", borderBottom: "1px solid #ffffff", textAlign: "left" }}   >
                         <h2> 4. Descripcion del producto</h2>
@@ -597,6 +592,28 @@ export const ModificarProducto = () => {
 
 
                     </div>
+                  {/*   <div style={{ margin: "30px", width: "100vw", borderBottom: "1px solid #ffffff", textAlign: "left" }}   >
+                        <h2> Historial</h2>
+                    </div>
+ */}
+                    {/*  <Grid item xs={12} sm={6}>
+                        <TextField
+                            sx={{ width: '400px', margin: '50px' }}
+                            id="standard-read-only-input"
+
+                        />
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                        <TextField
+                            sx={{ width: '400px', margin: '50px' }}
+                            id="standard-read-only-input" />
+                            
+                    </Grid> */}
+
+
+
+
+
 
                 </Grid>
 

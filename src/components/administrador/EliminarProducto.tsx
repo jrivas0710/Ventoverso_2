@@ -27,16 +27,14 @@ export const EliminarProducto = () => {
             formik.resetForm();
             console.log(values);
 
-            const id = {
-                id: parseInt(values.id)
-            }
+            const id =  parseInt(values.id);
+            console.log(id)
 
             fetch(`http://localhost:3000/productos/${id}`, {
-                method: "PATCH",
+                method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ ...id }) // no se si es necesario
             })
 
             console.log('me diste desde Moficar')
@@ -62,8 +60,8 @@ export const EliminarProducto = () => {
         <HeaderAdmin/>
 
             <div style={{ margin: "30px", width: "100vw", borderBottom: "1px solid #ffffff" }}   >
-                <h1 style={{ marginBottom: "40px" }} >Modifica el producto</h1>
-                <h2>1. Elimina un Producto: <small>Ingresa el id del producto que deseas eliminar</small></h2>
+                <h1 style={{ marginBottom: "40px" }} >Elimina el producto</h1>
+                <h2>Ingresa el id del producto que deseas eliminar</h2>
             </div>
             
             <Box component="form" onSubmit={formik.handleSubmit}>
@@ -71,7 +69,7 @@ export const EliminarProducto = () => {
                 <Grid item xs={12} sm={6}>
 
                     <TextField
-                        sx={{ width: '400px', margin: '50px' }}
+                        sx={{ width: '400px', margin: '20px' }}
                         id="standard-read-only-input"
                         label="id"
                         name='id'
@@ -81,9 +79,9 @@ export const EliminarProducto = () => {
                     />
                 </Grid>
 
-                <div style={{ width: "1000px", textAlign: "center", margin: "0 auto" }}   >
+                <div style={{ width: "1000px", textAlign: "center", margin: "20px"}}   >
                     <Button variant="contained" type="submit" color="secondary"
-                        style={{ width: "300px", height: "40px" }}
+                        style={{ width: "300px", height: "70px" }}
                     >Enviar</Button>
                 </div>
             </Grid>
