@@ -43,14 +43,14 @@ export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
                                 < div className='nombre-precio-ranking'>
 
                                     <span className='spanEstrellasClarinete'>
-                                        <Link to={`/agregarProductoCarro`}>
+                                        <Link to={`/agregarProductoCarro/${item.id}`}>
                                             <img className='imagenDestacoClarinete' src={item.imagenUrl} alt={item.nombre} />
                                         </Link>
                                         <span hidden>{item.estrellas}</span>
 
                                     </span>
 
-                                    <Link to={`/agregarProductoCarro`}><span className='nombre-producto' > {item.nombre} </span></Link>
+                                    <Link to={`/agregarProductoCarro/${item.id}`}><span className='nombre-producto' > {item.nombre} </span></Link>
                                     <span className='precio' > {item.precio}</span>
 
                                 </div>

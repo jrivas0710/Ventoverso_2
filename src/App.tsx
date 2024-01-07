@@ -76,7 +76,7 @@ function App() {
               </Route>
 
 
-              <Route path="/agregarProductoCarro/" element={<PaginaProducto />}/>
+              <Route path="/agregarProductoCarro/:id" element={<PaginaProducto />}/>
 
             
               <Route path="/carro" element={<CarroCompras />} />

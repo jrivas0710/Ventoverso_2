@@ -12,10 +12,12 @@ import { useParams } from "react-router-dom"
 export const ProductoSib = () => {
 
     const [producto, setProducto] = useState<ProductoPrincipal>();
+
     const { id } = useParams<{ id: string }>();
+    console.log(id)
 
     useEffect(() => {
-        fetch(`http://localhost:3000/productos/1`, { //esto me retorna el producto y tiene un id
+        fetch(`http://localhost:3000/productos/${id}`, { //esto me retorna el producto y tiene un id
             method: "GET"
         })
         .then((response) => {
