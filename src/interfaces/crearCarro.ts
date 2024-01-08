@@ -8,3 +8,9 @@ export interface  CrearCarro {
     
 } 
 
+export interface ProductoCarrito {
+        carritoId:number,
+        productoId:number,
+        cantidad:number,
+        id:number
+}

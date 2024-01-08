@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './AgregarCarro.css'
 import { ProductoPrincipal } from '../../interfaces/ProductoPincipal';
 import { useDispatch, useSelector } from 'react-redux';
-import { CrearCarro } from '../../interfaces/crearCarro';
+import { CrearCarro, ProductoCarrito } from '../../interfaces/crearCarro';
 import { agregarProducto } from '../../redux/carritoSlice';
 import { RootState } from '../../redux/store';
 
@@ -15,7 +15,9 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
 
     console.log(user.rutCompleto)
     const dispatch = useDispatch();
-    //voy a hacer un contador para capturar la cantidad del producto
+    
+    const [productoCarrito, setProductoCarrito] = useState<ProductoCarrito>();
+   
     const [crearCarro, setCrearCarro] = useState<CrearCarro>();
 
     const [isOpen, setIsOpen] = useState(true);
@@ -70,18 +72,22 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
         }
 
 
-        fetch(`http://localhost:3000/carrito/producto`,{ //con esto envio el producto
+        fetch(`http://localhost:3000/carrito/producto`,{ //con esto envio el producto al carro
            method: "POST",
            headers: { 'Content-Type': 'application/json' },
            body: JSON.stringify({...nuevoProducto})
         })
+        .then(response => {
+            if(response.ok){
+                return response.json() as Promise<ProductoCarrito>
+            }
+        })
+        .then(json => {
+            setProductoCarrito(json)
+        })
 
       
-
-
-       // dispatch(agregarProducto(nuevoProducto))
-
-    }
+}
 
 
    
