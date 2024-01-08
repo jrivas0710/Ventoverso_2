@@ -8,7 +8,9 @@ import { Carrusel } from '../../interfaces/Carrusel';  //este es el typo carruse
 
 
 
+
 const Carrusel= (props:{dataCarrusel: Carrusel[]}) => {
+console.log(props)
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef<Slider | null>(null);

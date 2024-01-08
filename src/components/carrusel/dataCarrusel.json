@@ -4,21 +4,21 @@
       "id": 1,
       "titulo": "Nueva Promoción de Verano",
       "descripcion": "Disfruta de nuestros descuentos de verano en toda la tienda.",
-      "imagenUrl": "https://s3-alpha-sig.figma.com/img/ed8f/e10b/195a16fd8261b475ba9213a56a61356f?Expires=1701043200&Signature=clR1MZxvPS~ffGQiL3GU37AoaufY8XwLkz9OUrKzmeMVbXh8gMMVE7HTAyKLBnY9mJr8-OLpOxefMQUGFXxP5cKi639cIz7NlqK41WE9z5zHbpjjorlGSbHMFfI9k4yMWKicoKv50gVYtkERMLGSemiXz-s9eu9VcWsNPDuHsRS1cY~15M80mEX4xYPvvKapn4SAMTCHYTj1pTPjVEPGNsrQw-YWkTV3OO79f534y6cz6VTtRbN~vU1TToXFSzGMb5qY3aeXt03uEIeY8IiCFsNHUjsJkBuPzgcecTC0KXCjzN21uKLCD9AwoG6UGq267s2xQgeRgf6vJgLuP2kGMg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "imagenUrl": "https://s3-alpha-sig.figma.com/img/b632/e0de/1a7db70228beaaefe3d21936fa356a6e?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BbVprQPhzEcsApy6DZ0tACuOlQF0-o-y4FiyPMXMlzwBgFIt8dB2WekwENNGB1iSTxNtrS2JNt6wdbDeHeesr091IPp3GPEOCeoMF~R2Pv3jGeJ5LaGw98b44dOk0~38hm7HhB8jzC4U4W~h1PYKzOTlGhIUj5aZ~iRPdW0VhF-BmNh7M7Vt8m3NJ~-qh6YH1lsIn8703kuX3pr6XNXxBAFS50R7a3QNDBOH5D3uoAVS3ijintZYnyjc~uJ~8~4QAYdBE-jGvajHg64WNj1eVQQMla4cu7-hHpgLBzECDfNAYraxYP5aiQiRGBHWXLJ4AKFfFW28HAvOJgmgxCLu7w__",
       "linkDetalle": "https://ejemplo.com/promocion-verano"
     },
     {
       "id": 2,
       "titulo": "Lanzamiento Exclusivo: Producto X",
       "descripcion": "Conoce el nuevo producto X, exclusivo en nuestra tienda.",
-      "imagenUrl": "https://s3-alpha-sig.figma.com/img/b632/e0de/1a7db70228beaaefe3d21936fa356a6e?Expires=1701043200&Signature=IZTdKLBr9AmsbXOpFPTFfhpdG6DhESirR-wtx1Cx69JJMR-tRkVCOgBQXsr1ElUhyA7jOUSqg1GLbWOsMQSGB3I7E9aRW4vIxc0EkN3r6ZBX7c5VAy4VgdoBic4YiYxOKlsvc8TRXbJeRn9L1H-APM2TMaAmUUfAlLk6JWkF7-ZTWsJABxtglUvGDyANR3ehf~RbkRyXN-wmnTedU8PR8EVCkBpk2ihLhBWRdG1C78~5GhYDOvJUTPUfQgdwQ4FnlE8Q~RnWfhPsk1p2cNGB-Gw1ALRF78wB2CUb634IA~hU6o~c9MU6dwzU3FigihDAT~n-XMSVa01LGAYcavppQw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "imagenUrl": "https://s3-alpha-sig.figma.com/img/856e/5569/1346619a51ffe349a06b66a4597b882b?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jHjyA1bs~EFo1kVdRR9gSi581yX2fZj4N8SYHC5~UXZvVtmBZfdPjBU0JjfYCG0Zh0OsXb~MeGmIrUtull9WGg2thzvO~1jl5aYCiX1b0hHte8zTuNBUOhG6drS4qwMECy~m32Pi3cX6RRrsKx2CQfyAiqLLgRx-UZZfeOQl8bKPhoOMsFdFsPbYMhNYwKe0k2e7MVe7RU8lSr~~79dpr5t3abv1gwZ8hthB4VJ9vnfP2BJZUCP4ADnHrAMO-Gh4FIW3cSwciYx3ZMAqxQgtc1mv764h5TtFEN6v0Fay-9WoGyZhVw2hGMNmUjrDeA56q-St7LNOQ1hFlhjomkYwBw__",
       "linkDetalle": "https://ejemplo.com/producto-x"
     },
     {
       "id": 3,
       "titulo": "¡Participa en nuestro Gran Concurso de Invierno!",
       "descripcion": "Compra cualquier producto y entra en el sorteo de un fabuloso premio. No te pierdas esta oportunidad.",
-      "imagenUrl": "https://s3-alpha-sig.figma.com/img/856e/5569/1346619a51ffe349a06b66a4597b882b?Expires=1701043200&Signature=ZSIGB2NgWToUzcxqm~PKqNL3hh019-WyjgXnCPzYItMHzIC-zsFweHTV7Pnetejds6fwjPt78u4pBfO3Ee0kmiAybx8SPNWd1u6E5eZe3ujyedmmOzcLPAiYzQcsxEELBU8e44ohW5dQQkBqpwA7430yQG~uAlHl0d2BlDPJ89CqC0yQinNpA4C0YYcamWvmfN9HCeEOMYe55h~M4uxJuqYzMcV6FeYK8XyiM9Ys9B5tOxeBRu0wn1zzmHvdHKDpzjy4rDl5HBgRuD-47cdAJGUPiY8dPTYyFLoeHe9qUR1shF9FbI688ln~jutZeiM5HuhdqANTauJXGMI~8Z5lWQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "imagenUrl": "https://s3-alpha-sig.figma.com/img/ed8f/e10b/195a16fd8261b475ba9213a56a61356f?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cC1pmV9GLTly~iI80fIA7k5W5MOJJBwSePAQCTiVFH4XSBPP345L2Y6c1ZD~ACE2PVNmYOOH5VUMFoBm-wydSfKwajHv0e3Z4hlz-H23IxHvwKVi6luUpVRnrq91izqc7c4zcL9oGBC98qUmh7o7j5ETuKwn6EluUXw7HgTpyXwX0UGDVGw7GOmy3s~4UHMgwa6XaAxhS2WfutsX5ioyxjeDQcxmqeF8r0j1nP2JnRDPw52btSLo3NDAXxZVk7WphTjTxZ7WvGsie0njzPas1piIwxJLYQ2ApGD~dZR55PoqVQirL0-V-Jqb7DFGZ2YrphIeE1g6bZx6d1KqaKFAcg__",
       "linkDetalle": "https://ejemplo.com/concurso-invierno"
     },
     
@@ -26,7 +26,7 @@
     "id":4,
     "titulo": "Participa y gana: Concurso XYZ",
     "descripcion": "Participa en nuestro concurso XYZ y gana premios increíbles.",
-    "imagenUrl": "https://s3-alpha-sig.figma.com/img/856e/5569/1346619a51ffe349a06b66a4597b882b?Expires=1701043200&Signature=ZSIGB2NgWToUzcxqm~PKqNL3hh019-WyjgXnCPzYItMHzIC-zsFweHTV7Pnetejds6fwjPt78u4pBfO3Ee0kmiAybx8SPNWd1u6E5eZe3ujyedmmOzcLPAiYzQcsxEELBU8e44ohW5dQQkBqpwA7430yQG~uAlHl0d2BlDPJ89CqC0yQinNpA4C0YYcamWvmfN9HCeEOMYe55h~M4uxJuqYzMcV6FeYK8XyiM9Ys9B5tOxeBRu0wn1zzmHvdHKDpzjy4rDl5HBgRuD-47cdAJGUPiY8dPTYyFLoeHe9qUR1shF9FbI688ln~jutZeiM5HuhdqANTauJXGMI~8Z5lWQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+    "imagenUrl": "https://s3-alpha-sig.figma.com/img/ed8f/e10b/195a16fd8261b475ba9213a56a61356f?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cC1pmV9GLTly~iI80fIA7k5W5MOJJBwSePAQCTiVFH4XSBPP345L2Y6c1ZD~ACE2PVNmYOOH5VUMFoBm-wydSfKwajHv0e3Z4hlz-H23IxHvwKVi6luUpVRnrq91izqc7c4zcL9oGBC98qUmh7o7j5ETuKwn6EluUXw7HgTpyXwX0UGDVGw7GOmy3s~4UHMgwa6XaAxhS2WfutsX5ioyxjeDQcxmqeF8r0j1nP2JnRDPw52btSLo3NDAXxZVk7WphTjTxZ7WvGsie0njzPas1piIwxJLYQ2ApGD~dZR55PoqVQirL0-V-Jqb7DFGZ2YrphIeE1g6bZx6d1KqaKFAcg__",
     "linkDetalle": "https://ejemplo.com/concurso-xyz"
   }
 

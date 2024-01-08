@@ -29,30 +29,28 @@ export const Blogs = () => {
     return (
 
         <>
-            <Grid container columns={ { md: 4 }}>
+            <Grid container columns={ { md: 4 }} sx={{display:"flex", justifyContent:"space-around", marginTop:"150px"}}>
 
                 {blog && blog.map(item => {
 
                     return (
                         
-                        <Card key={item.id} sx={{ maxWidth: 300 }}>
+                        
+                        <Card key={item.id} sx={{ width: 260 }}>
                             <CardMedia
-                                sx={{ height: 140 }}
+                                sx={{ height: 130, border:"1px solid black" }}
                                 image={item.imagen}
                                 title="ventoNew"
                             />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    {item.titulo}
+                            <CardContent sx={{height:"40px"}}>
+                                <Typography gutterBottom variant="h5" component="div" sx={{fontSize:''}}>
+                                   Guia 1
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                                    species, ranging across all continents except Antarctica
-                                </Typography>
+                                
                             </CardContent>
                             <CardActions>
-                                <Button size="small">Share</Button>
-                                <Button size="small">Learn More</Button>
+                                <Button size="small" sx={{fontSize:'16px', marginBottom:"10px", color:'black'}}>{item.titulo}</Button>
+                                
                             </CardActions>
                         </Card>
 

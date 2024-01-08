@@ -164,7 +164,7 @@ align-self: stretch; */
 
 
 .logo-header {
-  background-color: rgb(86, 212, 212);
+  background-color: #56d4d4;
   padding: 0.5rem;
   border-radius: 1rem;
 }
@@ -209,9 +209,13 @@ align-self: stretch; */
 
 .icons {
   display: flex;
-  Padding: 0px 48px;
-  align-items: flex-start;
+  Padding: 0px 40px;
+  align-items: center;
   gap: 32px;
+  height: 150px;
+  margin-top: 20px;
+  
+  
 }
 
 
