@@ -10,8 +10,8 @@ import { Migas } from "../components/migas/Migas"
 import dataComentarios from "../components/comentarios/dataComentarios.json"
 import dataProductoSib from '../components/productoSib/dataProductoSib.json'
 import { ProductoSib } from "../components/productoSib/ProductoSib"
-import dataProductosRelacionados from '../components/productosRelacionados/dataProductosRelacionados.json'
-import dataProductosSimilares from '../components/productosSimilares/dataProductosSimilares.json'
+
+import { useParams } from "react-router-dom"
 
 
 
@@ -19,14 +19,17 @@ import dataProductosSimilares from '../components/productosSimilares/dataProduct
 
 export const PaginaProducto= () => {
 
+  const { id } = useParams<{ id: string }>();
 
+  console.log(id)
+   
   return (
     <>
     
 
     <div className="containerPaginaProducto">
     <Migas/>
-    <ProductoSib/>
+    {id && <ProductoSib id = {id}/> }  
     <ProductosRelacionados /* dataProductosRelacionados ={dataProductosRelacionados} *//>
     <EvaluacionPrincipal/>
     <Comentario dataComentario = {dataComentarios}/>

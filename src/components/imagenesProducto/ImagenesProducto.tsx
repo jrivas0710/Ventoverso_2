@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { AgregarCarro } from '../agregarCarro/AgregarCarro';
 import { ProductoPrincipal } from '../../interfaces/ProductoPincipal';
 import './ImagenesProducto.css';
+import { Id } from '../productoSib/ProductoSib';
 
-export const ImagenesProducto = () => {
+export const ImagenesProducto = ({id}:Id) => {
   const [productos, setProductos] = useState<ProductoPrincipal>();
+  //console.log(id)
  
   useEffect(() => {
-    fetch('http://localhost:3000/productos/', {
+    fetch(`http://localhost:3000/productos/`, { //recordar agregar el id
       method: 'GET',
     })
       .then((response) => {
@@ -17,7 +19,7 @@ export const ImagenesProducto = () => {
           throw new Error('No se pudo procesar la petición');
         }
       })
-      .then((json) => setProductos(json))
+      .then((json) => setProductos(json)) //me va a gusardar aca el producto que traiga por el id
       .catch((error) => error);
   }, []);
 
@@ -59,7 +61,7 @@ export const ImagenesProducto = () => {
             </div>
           </div>
           <div>
-            <AgregarCarro precio={productos.precio} id={productos.id} />
+            <AgregarCarro precio={productos.precio} id = {id} />
           </div>
         </div>}
       

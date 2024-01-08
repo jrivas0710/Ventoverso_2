@@ -44,7 +44,7 @@ const initialState = () => {
 
   const estadoPersistente = {
         idCliente:jwtPayloand.idCliente,
-        rutCliente: jwtPayloand.rutCliente,
+        rutCompleto: jwtPayloand.rutCompleto,
         nombre: jwtPayloand.nombre,
         apellido: jwtPayloand.apellido,
         correo: jwtPayloand.correo,

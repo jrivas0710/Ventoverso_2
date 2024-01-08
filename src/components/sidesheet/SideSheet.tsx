@@ -22,7 +22,7 @@ interface LoginResponse {
 
 export interface TokenClaims { //esto es lo que viene dentro del token decodificado
   idCliente: string | number,
-  rutCliente: string | number,// o string
+  rutCompleto: string | number,// o string
   nombre: string,
   apellido: string,
   correo: string,
@@ -87,7 +87,7 @@ export const SideSheet = ({ isOpen, onClose }: Login) => {
 
           dispatch(login({  //lo envio a mi estado de reduce
             idCliente: jwtPayloand.idCliente,
-            rutCompleto: jwtPayloand.rutCliente,
+            rutCompleto: jwtPayloand.rutCompleto,
             nombre: jwtPayloand.nombre,
             apellido: jwtPayloand.apellido,
             correo: jwtPayloand.correo,

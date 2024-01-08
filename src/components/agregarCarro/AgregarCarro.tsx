@@ -1,18 +1,22 @@
 import { useState } from 'react'
 import './AgregarCarro.css'
 import { ProductoPrincipal } from '../../interfaces/ProductoPincipal';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { CrearCarro } from '../../interfaces/crearCarro';
 import { agregarProducto } from '../../redux/carritoSlice';
+import { RootState } from '../../redux/store';
 
 
 
 
 export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { //este es el id del producto
+    
+    const user = useSelector((state:RootState) => state.user);
 
+    console.log(user.rutCompleto)
     const dispatch = useDispatch();
     //voy a hacer un contador para capturar la cantidad del producto
-    const [crearCarro, setCrearCarro] = useState<CrearCarro[]>();
+    const [crearCarro, setCrearCarro] = useState<CrearCarro>();
 
     const [isOpen, setIsOpen] = useState(true);
     const estadoDiv = isOpen ? true : false
@@ -21,14 +25,15 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
     }
 
 
-
+      
     const crearCarrito = () => { //esto hace el post con el rut del cliente
 
+        const rutUsuario = user.rutCompleto
 
         const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ rutCliente: 187990084, id: 0 })
+            method: 'GET', //recordar cambiar esto por un POST
+          /*   headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({rutUsuario}) */
         };
 
 
@@ -37,33 +42,24 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
             .then(response => {
                 if (response.ok) {
                     console.log(response)
-                    return response.json() as Promise<CrearCarro[]>
+                    return response.json() as Promise<CrearCarro>
                 } else {
-                    throw new Error("hubo un error en la peticion")
+                    throw new Error("hubo un error en el post del rut")
                 }
             })
-
-            .catch(error => console.log(error.message))
-
-        fetch("http://localhost:3000/carrito", {
-            method: "GET"
-        })
-            .then(response => {
-                if (response.ok) {
-                    console.log(response)
-                    return response.json() as Promise<CrearCarro[]>
-                } else {
-                    throw new Error("hubo un error en el get")
-                }
+            .then(json => {
+                setCrearCarro(json)
+                //console.log(crearCarro) //se supone que esto es el json del carro creado
+              
             })
-            .then(data => setCrearCarro(data))
             .catch(error => console.log(error.message))
 
+     
         //tengo que crear el objeto del producto que se envia al carro
-        agregarProductoNuevo(crearCarro);
+        {crearCarro && agregarProductoNuevo(crearCarro);}   
     }
 
-    const agregarProductoNuevo = (crearCarro) => {
+    const agregarProductoNuevo = (crearCarro:CrearCarro) => {
 
         const nuevoProducto = {
 
@@ -74,12 +70,21 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
         }
 
 
-        dispatch(agregarProducto(nuevoProducto))
+        fetch(`http://localhost:3000/carrito/producto`,{ //con esto envio el producto
+           method: "POST",
+           headers: { 'Content-Type': 'application/json' },
+           body: JSON.stringify({...nuevoProducto})
+        })
+
+      
+
+
+       // dispatch(agregarProducto(nuevoProducto))
 
     }
 
 
-
+   
 
 
     return ( //aqui voy a hacer el dipatch que agregara el producto a mi array de estado inicial

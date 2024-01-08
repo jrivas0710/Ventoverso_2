@@ -8,13 +8,17 @@ import { useParams } from "react-router-dom"
 
 
 
+export interface Id {
+    id:string
+}
 
-export const ProductoSib = () => {
+
+export const ProductoSib = ({id}:Id) => {
 
     const [producto, setProducto] = useState<ProductoPrincipal>();
 
-    const { id } = useParams<{ id: string }>();
-    console.log(id)
+    
+    //console.log(id)
 
     useEffect(() => {
         fetch(`http://localhost:3000/productos/${id}`, { //esto me retorna el producto y tiene un id
@@ -47,19 +51,18 @@ export const ProductoSib = () => {
                     id_marcas={producto.id_marcas}
                     modelo={producto.modelo}
                     estrellas= {producto.estrellas}
-                    
-
-                />
+                    />
               
             }
 
-                <ImagenesProducto />
+                <ImagenesProducto id = {id} />
                
           
 
             { producto &&   <DetalleProducto 
                     
                     descripcion={producto.descripcion}
+                    id={id}
 
                 />
               

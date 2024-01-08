@@ -8,7 +8,7 @@ import { Destacado } from '../../interfaces/Destacados'
 
 export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
 
-  const {idProducto} = useParams();
+  
 
     return (
         <>
