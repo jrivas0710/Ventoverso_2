@@ -1,37 +1,41 @@
 
 
-.productos-destacados{
-    display: flex;
-}
+
 
 .productosRelacionados{
    
     display: flex;
     width: 100%;
     justify-content: space-around;
-    position: relative;
     padding-top: 3rem;
-    margin-bottom: 4rem;
-    position: relative;
-    margin-top: 4rem;
+
+
    
    
 }
 
 .productos-relacionados > div {
     
-    height: 13rem;
-    width: 15rem;
-    margin-top: 2rem;
+  
+
+    align-items: center;
     
 }
 
-.producto{
-    background-color: rgb(211, 210, 210);
-    height: 12rem;
-    width: 14rem;
+.productoImagen{
+ 
+    width:100px;
+    height:170px;
+    align-items: center
     
     
+}
+
+.cardProducto{
+    width: 328px;
+    height: 501px;
+ 
+    align-items: center
 }
 
 
@@ -59,12 +63,6 @@
     flex-direction: column;
 }
 
-.texto-productos-relacionados{
-    position: absolute;
-    bottom: 96%;
-    right: 40%;
-    margin: 0 auto
-}
- 
+
     
     

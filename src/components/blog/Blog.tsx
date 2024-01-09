@@ -29,39 +29,45 @@ export const Blogs = () => {
     return (
 
         <>
-            <Grid container columns={ { md: 4 }} sx={{display:"flex", justifyContent:"space-around", marginTop:"150px"}}>
-
-                {blog && blog.map(item => {
-
-                    return (
-                        
-                        
-                        <Card key={item.id} sx={{ width: 260 }}>
-                            <CardMedia
-                                sx={{ height: 130, border:"1px solid black" }}
-                                image={item.imagen}
-                                title="ventoNew"
-                            />
-                            <CardContent sx={{height:"40px"}}>
-                                <Typography gutterBottom variant="h5" component="div" sx={{fontSize:''}}>
-                                   Guia 1
-                                </Typography>
-                                
-                            </CardContent>
-                            <CardActions>
-                                <Button size="small" sx={{fontSize:'16px', marginBottom:"10px", color:'black'}}>{item.titulo}</Button>
-                                
-                            </CardActions>
-                        </Card>
-
-                    )
+            <div style={{display:"flex", flexDirection:"column", alignItems: "center", marginTop: "110px"}}>
 
 
+                <div style={{ marginBottom:"40px"}}><h2>Vento News</h2></div>
+                <Grid container columns={{ md: 4 }} sx={{ display: "flex", justifyContent: "space-around" }}>
+                    {blog && blog.map(item => {
 
-                })}
+                        return (
 
-            </Grid>
 
+                            <Card key={item.id} sx={{ width: "288px" }}>
+                                <CardMedia
+                                    sx={{
+                                        width: " 288px",
+                                        height: " 188px",
+                                    }}
+                                    image={item.imagen}
+                                    title="ventoNew"
+                                />
+                                <CardContent sx={{ height: "40px" }}>
+                                    <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '' }}>
+                                        Guia 1
+                                    </Typography>
+
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small" sx={{ fontSize: '16px', marginBottom: "10px", color: 'black' }}>{item.titulo}</Button>
+
+                                </CardActions>
+                            </Card>
+
+                        )
+
+
+
+                    })}
+
+                </Grid>
+            </div>
         </>
     );
 

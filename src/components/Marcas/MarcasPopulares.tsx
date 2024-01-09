@@ -8,7 +8,7 @@ export const MarcasPopulares = () => {
       <>
           <div className='containerMarcasPopulares'>
 
-          <div><h2>Marcas Populares</h2></div>
+          <div><h2>Nuestras Marcas</h2></div>
          
        
           <div className='seccion-populares'>

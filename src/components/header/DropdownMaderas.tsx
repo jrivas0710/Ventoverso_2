@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
+import './cssMaderas.css'
 
 
 
@@ -37,17 +38,11 @@ export const DropdownMaderas = (/* aqui tiene que venir mi user.nombre */) => { 
                     style={{ fontFamily:""}}
                 >
                     <div style={{ display: "flex", height: "60px" } }>
-                        <span style={{ color: "#D9B9FF", fontFamily:''}} >
+                        <span style={{ color: "#D9B9FF"}} className='fuenteMaderas' >
                             Maderas
                         </span>
 
-                        <div >
-                            <span style={{marginBottom:"10px"}}>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32" fill="none">
-                                    <path d="M16 20.5L8 12.5L9.86667 10.6333L16 16.7667L22.1333 10.6333L24 12.5L16 20.5Z" fill="#D9B9FF" />
-                                </svg>
-                            </span>
-                        </div>
+                       
 
                     </div>
 

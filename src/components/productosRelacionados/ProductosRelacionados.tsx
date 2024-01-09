@@ -42,10 +42,10 @@ export const ProductosRelacionados = () => {
                     return (
 
                         <div key={item.id}>
-                            <div className='producto'><img src={item.imagenUrl} alt={item.nombre} /></div>
+                            <div className='producto'><img src={item.imagen} alt={item.nombre} /></div>
                             <div className='nombre-precio-ranking'>
                                 {item.estrellas}
-                                <a href="#"><img src={item.imagenUrl} alt="ranking" className='ranking' /></a>
+                                <a href="#"><img src={item.imagen} alt="ranking" className='ranking' /></a>
                                 <span className='nombre-producto'>{item.nombre}</span>
                                 <span className='precio'>{item.precio}</span>
                             </div>
