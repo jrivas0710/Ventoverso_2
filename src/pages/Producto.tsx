@@ -6,6 +6,7 @@ import dataCategories from '../components/categories/dataCategories.json'
 import dataProductosSimilares from '../components/productosSimilares/dataProductosSimilares.json'
 import './Producto.css'
 import { ProductosRelacionados } from "../components/productosRelacionados/ProductosRelacionados"
+import { MarcasPopulares } from "../components/Marcas/MarcasPopulares"
 
 
 
@@ -36,7 +37,7 @@ export const PageProducto = () => {
 
                 <PlantillaCategoria dataProducto={dataCategories} />
                 <Destacados/>
-                <ProductosSimilares dataProductosSimilares={dataProductosSimilares}/>
+                <MarcasPopulares/>
                 <Blogs/>
             </div>
        
