@@ -309,7 +309,7 @@ export const Checkout = () => {
                                         onChange={formik.handleChange}
                                         onBlur={formik.handleBlur}
                                         className="tarea" aria-label="minimum height" minRows={8} placeholder="Agrega comentarios sobre tu pedido o solicitudes especiales" style={{ fontSize: "16px" }} />
-                                    <button type='submit' className='terminarCompra' disabled={!validateRut(formik.values.rut) && true} >Comprar Ahora</button>
+                                  <Link to={"/compraExitosa"}>  <button type='submit' className='terminarCompra' disabled={!validateRut(formik.values.rut) && true} >Comprar Ahora</button></Link>
 
                                 </div>
 

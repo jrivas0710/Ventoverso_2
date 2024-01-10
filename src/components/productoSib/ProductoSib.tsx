@@ -61,7 +61,7 @@ export const ProductoSib = ({id}:Id) => {
 
             { producto &&   <DetalleProducto 
                     
-                    descripcion={producto.descripcion}
+                    detalle={producto.detalle}
                     id={id}
 
                 />

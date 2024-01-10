@@ -9,7 +9,10 @@ export const ResultadoCompra = () => {
             <div className="containerResultadoCompra">
                 <div><span className='textoResultadoCompra'>Compra Exitosa</span></div>
                 <div><span className='numeroPedido'>Pedido N 99999999</span></div>
-                <div className="imagenCompra"></div>
+                <div className="imagenCompra">
+                    <img src="https://s3-alpha-sig.figma.com/img/5c38/5fea/9950806e3f72bcbf6694fd6ddc9e207d?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jJhfBhVLn1w5rrYvZq~t8Ra7E9upYwYvebjCKrexIg27SGIvw2OVNgnurCtC~RPjj6YKVWeZ9FO-INPOzTAzjQkX3dDLevba3o6~m6ZqQ8QOTLhwS5cbhRreVs~cZr0ubq7I5FZCz0Yf8GSrDmbKrfT2ncor13lNgqCBRuupTXjmjhG3V2dNh6Vtt9kFtkoQ9U5z6CQimaRUvyhopYjjcr-Ww4fA4o8EyI62IQvhOnhr75gwxxtazNGQ7NyBbypKcWulDfgrP09iZy9j027kmXIN~X9M0DKW1NnXiM4QZ2waawIYmiBls7EKWk~rb3qS-SRQZKIfASrnL8z7bB1P7w__" alt=""
+                     style={{width:"100%", height:"100%"}}  />
+                </div>
                 <div><span>{`Gracias por preferir Ventoverso :)`}</span></div>
                 <div><p>Puedes descargar el comprobante de tu compra acá. También te lo enviamos al e-mail con que realizaste tu compra.</p></div>
                 <div className='containerButtons'>

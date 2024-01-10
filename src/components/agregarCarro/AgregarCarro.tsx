@@ -10,14 +10,14 @@ import { RootState } from '../../redux/store';
 
 
 export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { //este es el id del producto
-    
-    const user = useSelector((state:RootState) => state.user);
 
+    const user = useSelector((state: RootState) => state.user);
+    const [contador, setContador] = useState(0);
     console.log(user.rutCompleto)
     const dispatch = useDispatch();
-    
+
     const [productoCarrito, setProductoCarrito] = useState<ProductoCarrito>();
-   
+
     const [crearCarro, setCrearCarro] = useState<CrearCarro>();
 
     const [isOpen, setIsOpen] = useState(true);
@@ -27,15 +27,15 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
     }
 
 
-      
+
     const crearCarrito = () => { //esto hace el post con el rut del cliente
 
         const rutUsuario = user.rutCompleto
 
         const requestOptions = {
             method: 'GET', //recordar cambiar esto por un POST
-          /*   headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({rutUsuario}) */
+            /*   headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({rutUsuario}) */
         };
 
 
@@ -52,45 +52,45 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
             .then(json => {
                 setCrearCarro(json)
                 //console.log(crearCarro) //se supone que esto es el json del carro creado
-              
+
             })
             .catch(error => console.log(error.message))
 
-     
+
         //tengo que crear el objeto del producto que se envia al carro
-        {crearCarro && agregarProductoNuevo(crearCarro);}   
+        { crearCarro && agregarProductoNuevo(crearCarro); }
     }
 
-    const agregarProductoNuevo = (crearCarro:CrearCarro) => {
+    const agregarProductoNuevo = (crearCarro: CrearCarro) => {
 
         const nuevoProducto = {
 
-            rutCliente: crearCarro.rutCliente,
+            rutCliente: crearCarro.rutCliente, //es el rut del usuario logueado
             carritoId: crearCarro.carritoId,
-            productoId: id 
-           // cantidad:  como hago esto  con un contador 
+            productoId: id,
+            cantidad: contador
         }
 
 
-        fetch(`http://localhost:3000/carrito/producto`,{ //con esto envio el producto al carro
-           method: "POST",
-           headers: { 'Content-Type': 'application/json' },
-           body: JSON.stringify({...nuevoProducto})
+        fetch(`http://localhost:3000/carritoCompras`, { //con esto envio el producto al carro
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ...nuevoProducto })
         })
-        .then(response => {
-            if(response.ok){
-                return response.json() as Promise<ProductoCarrito>
-            }
-        })
-        .then(json => {
-            setProductoCarrito(json)
-        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json() as Promise<ProductoCarrito>
+                }
+            })
+            .then(json => {
+                setProductoCarrito(json)
+            })
 
-      
-}
+          console.log("producto agregado con exito", nuevoProducto)
+    }
 
 
-   
+
 
 
     return ( //aqui voy a hacer el dipatch que agregara el producto a mi array de estado inicial
@@ -110,23 +110,19 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
                 </div>
 
                 <div>
-                    <div className='cantidad'>
-                        <button onClick={openClose} className='botonCantidad'>Cantidad:&nbsp;<b> 1 unidad</b>&nbsp;&nbsp; <div className='flecha'> <span className="material-symbols-outlined">
-                            keyboard_control_key
-                        </span></div>
+                    <div style={{display:"flex", gap: "5px", alignItems:"center"}}>
+
+
+                        <div><p> Cantidad: ${contador} </p></div>
+
+                        <button onClick={() => setContador(contador + 1)} className='botonCantidad'><b></b>
+                            +
+
                         </button>
-
-                        <div className='desplegable' hidden={estadoDiv}>
-                            <ul>
-                                <li>2 unidades</li>
-                                <li>3 unidades</li>
-                                <li>4 unidades</li>
-                                <li>5 unidades</li>
-                                <li>6 unidades</li>
-                            </ul>
-                        </div>
-
+                        <button onClick={() => setContador(contador - 1)} className='botonCantidad'> - </button>
                     </div>
+
+
                     <div className='botonComprar-like'>
                         <div> {/* <Link to = {"/carro"}> esto debe agregar sin llevar al carro */}
                             <button className='botonComprar' onClick={crearCarrito}   >

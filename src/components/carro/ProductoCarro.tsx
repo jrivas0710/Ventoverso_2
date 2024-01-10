@@ -1,25 +1,33 @@
+import { ProductoPrincipal } from '../../interfaces/ProductoPincipal'
+import { ProductoCarrito } from '../../interfaces/crearCarro'
 import './Carro.css'
 
 
 
 
-export const ProductoCarro = () => {
+export const ProductoCarro = (props:{producto:ProductoPrincipal[]}) => {
 
+    console.log(props)
 
-
-
-    return (
+return (
         <>
-            
-            <div className="containerCarro">
-                <div className="containerProductoCarro">
+
+         <div className="containerCarro">
+
+                {props.producto.map(item=> {
+                    return(
+                         <div className="containerProductoCarro">
                     <div className='check'> <input type="checkbox" /></div>
-                    <div className='imagenProductoCarro'></div>
+                    <div className='imagenProductoCarro'>
+                        <img src={item.imagenes?.[0].base64} alt={item.nombreProducto} />
+                    </div>
                     <div className='detalleProductoCarro'>
                         <div className='productoPrecioCantidad'>
-                            <span>Producto Marca Modelo</span>
-                            <span>$99.999</span>
-                            <span>Cantidad</span>
+                            <span>{item.nombreProducto}</span>
+                            <span>{item.modelo}</span>
+                            <span>Modelo</span>
+                            <span>{item.precio}</span>
+                            <span>{'4'}</span>
                         </div>
                         <div className='eliminarDeseo'>
                             <div>
@@ -44,6 +52,10 @@ export const ProductoCarro = () => {
                     </div>
 
                 </div>
+                    )
+                })}
+      
+               
             </div>
 
 

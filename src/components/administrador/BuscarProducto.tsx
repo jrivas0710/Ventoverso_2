@@ -35,7 +35,7 @@ export const BuscarProducto = () => {
 
             console.log(idProducto)
 
-            fetch(`http://localhost:3000/productos/${idProducto}`, {
+            fetch(`http://localhost:3000/productos/`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json',

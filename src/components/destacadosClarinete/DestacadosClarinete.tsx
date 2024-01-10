@@ -8,7 +8,7 @@ import { Destacado } from '../../interfaces/Destacados'
 
 export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
 
-  
+  console.log(props)
 
     return (
         <>
@@ -25,47 +25,41 @@ export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
 
                 <Filter />
 
-                <div className='productos-destacados'>
-
-                    {props.producto.map(item => {
+                <div className='productosRelacionados'>
+                    {props.producto && props.producto.map(item => {
                         return (
 
+                            <div key={item.id} className='cardProducto' style={{ marginLeft:"40p" }} >
 
-                            <div key={item.id}>
-
-
-                                < div className='producto'>
-
-                                    <img className='imagenDestacaoClarinete' src={item.imagenUrl} alt={item.nombre}
-                                    />
+                                <div style={{ display: "flex", justifyContent: "space-around" }}>
+                                <Link to={`/agregarProductoCarro/${item.id}`} > <img src={item.imagen} alt={item.nombre}
+                                        style={{ width: "100px", height: "250px"}}
+                                    /></Link>  
                                 </div>
-
-                                < div className='nombre-precio-ranking'>
-
-                                    <span className='spanEstrellasClarinete'>
-                                        <Link to={`/agregarProductoCarro/${item.id}`}>
-                                            <img className='imagenDestacoClarinete' src={item.imagenUrl} alt={item.nombre} />
-                                        </Link>
+                                <div className='nombre-precio-ranking' style={{ textAlign: "center", paddingLeft:"30px", marginTop:"20px" }}>
+                                   <span hidden>{item.estrellas}</span> 
+                                    <div style={{ display: "flex", width:"150px", gap:"8px"}}>
+                                        <img src="../images/Star.png" alt="ranking" className='ranking' style={{ width: '20px', height: '20px' }} />
+                                        <img src="../images/Star.png" alt="ranking" className='ranking' style={{ width: '20px', height: '20px' }} />
+                                        <img src="../images/Star.png" alt="ranking" className='ranking' style={{ width: '20px', height: '20px' }} />
+                                        <img src="../images/Star.png" alt="ranking" className='ranking' style={{ width: '20px', height: '20px' }} />
+                                        <img src="../images/Star.png" alt="ranking" className='ranking' style={{ width: '20px', height: '20px' }} />
+                                    </div>
+                                    <div style={{  display:"flex", flexDirection:"column", textAlign:"left" }}>
                                         <span hidden>{item.estrellas}</span>
-
-                                    </span>
-
-                                    <Link to={`/agregarProductoCarro/${item.id}`}><span className='nombre-producto' > {item.nombre} </span></Link>
-                                    <span className='precio' > {item.precio}</span>
+                                        {/* TODO: a donde lleva productos destacados? cual es el link al apretarlos? */}
+                                        <span className='nombre-producto'>{item.nombre}</span>
+                                        <span>{item.descripcion}</span>
+                                        <span className='precio'>${item.precio}</span>
+                                    </div>
 
                                 </div>
-
-                            </div>
-
-                        )
-                    })}
-
-
-
-
-
+                            </div>)
+                    })
+                    }
 
                 </div>
+
             </div>
 
 

@@ -2,27 +2,7 @@ import './Comentarios.css'
 
 import { Comentario } from '../../interfaces/Comentarios'
 
-/* export type ComentarioTipo = {
-    productoId : string,
-    cliente: string,
-    fotoClienteUrl: string,
-    nombreCliente:string,
-    estrellas:number,
-    titulo:string,
-    comentario:string
 
-    calificaciones:{
-        caracteristicas:number,
-        sonido:number,
-        fabricacion:number
-    },
-    reacciones:{
-        MeGusta:number,
-        NoMeGusta:number,
-        Denunciar:number
-    }
-}
- */
 
 const Comentario = (props:{dataComentario: Comentario[] }) => {
 
@@ -36,10 +16,10 @@ const Comentario = (props:{dataComentario: Comentario[] }) => {
                 <div className='containerComentario'>
 
                     <div className='avatarTexto'>
-                        <div className='avatarUser'>
+                       {/*  <div className='avatarUser'>
                             <img src={item.fotoClienteUrl} alt="avatarUser" />
                             <span>{item.nombreCliente}</span>
-                        </div>
+                        </div> */}
                         <div className='textoUser'><span className='spanUser'>{item.titulo}</span></div>
                     </div>
 

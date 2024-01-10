@@ -56,7 +56,9 @@ export const ImagenesProducto = ({id}:Id) => {
                 <div key={productos.id}>
                   <img src={productos.imagenes?.[4].base64} alt={productos.imagenes?.[4].nombre} className="imagenSecundaria" />
                 </div>
-            
+                <div key={productos.id}>
+                  <img src={productos.imagenes?.[5].base64} alt={productos.imagenes?.[5].nombre} className="imagenSecundaria" />
+                </div>
              
             </div>
           </div>

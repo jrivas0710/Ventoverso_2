@@ -10,15 +10,10 @@ html {
   box-sizing: inherit;
 
 }
-
-
-
 .categoryContainer{
   width: 100vw;
   z-index: 0;
-  
-
-}
+  }
 
 .ContainerCategoryTitle{
   display: flex;
@@ -32,6 +27,9 @@ html {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  background-image: url("https://s3-alpha-sig.figma.com/img/dd88/810e/79f5811b82bf41a0cbd76d189c6813e7?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NhXLYFNi5Uk0ubjWS9pE1pB0JBp8f5gU~2EOk0sokecyygdRikQc5zjxXJaDF8S0A4dxS0K8kAvVkUS88RJEO0Xk7-5w46B2~KvgYUVpoJtyByEUgvSUe7e8wehMOvryUbLHATLlAw8tC-3Km4qEyJABVxb59PPhYcz8RqAovrYzGTvODtitq5p5hyLfED6CiSCCaR~GZL7ejQnGR~x5dLIsGuyKbAXMT-ESOioSvoavO9LnbUkgdr3wV4r2a6QsMP11c5LOq1ALF~-MsSIqyiZnhSsg3-E-sHXjwm9WXyMYOB~lulIaiQGnOeuo7TdAtQ0xpX-ABPTwfjyMvsn4bg__");
+  width: 100vw; 
+  height: 256px;
 }
 
 
@@ -60,5 +58,8 @@ html {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border: 1px solid black;
+  width: 150px;
+  border-radius: 40px;
+  background-color: #180D26;
+  color: #A8E9FE;
 }

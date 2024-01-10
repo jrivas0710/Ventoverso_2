@@ -60,7 +60,7 @@ export const DropdownUser = (/* aqui tiene que venir mi user.nombre */) => { //e
         }}
       >
         <MenuItem onClick={handleClose}><Link to={"/miPerfil"} > Mi perfil</Link></MenuItem>
-        <MenuItem onClick={handleClose}>Mi carro</MenuItem>
+     <Link to={"/carro"}><MenuItem onClick={handleClose} style={{color:"black"}}   >Mi carro</MenuItem></Link> 
         <MenuItem onClick={() => dispatch(logout())}>Salir</MenuItem>
       </Menu>
     </div>

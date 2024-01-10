@@ -15,6 +15,7 @@ html {
     display: flex;
     flex-direction: column;
     width: 800px;
+    margin: 0;
    
     
 }
@@ -51,7 +52,7 @@ html {
 
 .tituloEvaluacion{
     text-align: center;
-    margin-left: 100px;
+    
 }
 
 .tituloEvaluacionCentro{
@@ -67,7 +68,7 @@ html {
     border: 1px solid transparent;
     font-size: 19px;
     padding: 0;
-    margin: 0;
+    margin-left: 200px;
     font-weight: 500;
     font-family: inherit;
     cursor: pointer;
@@ -75,7 +76,7 @@ html {
     height: 50px;
     text-align: center;
     align-self: flex-end;
-    left: 146%;
+    
     }
 
   
