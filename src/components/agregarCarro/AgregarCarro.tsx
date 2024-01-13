@@ -36,13 +36,13 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
         const rutUsuario = user.rutCompleto
 
         const requestOptions = {
-            method: 'GET', //recordar cambiar esto por un POST
-            /*   headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({rutUsuario}) */
+            method: 'POST', //esto envia el rut del usuario al agregar un producto al carro
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({rutUsuario}) 
         };
 
 
-        fetch("http://localhost:3000/carrito", requestOptions)
+        fetch(`http://localhost:3000/carrito/`, requestOptions) // esto me devuelve un json con el rut del cliente, el id del carro, el status y la fecha
 
             .then(response => {
                 if (response.ok) {
@@ -53,31 +53,32 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
                 }
             })
             .then(json => {
-                setCrearCarro(json)
+                setCrearCarro(json) //esto guarda el el carro en el crearCarro
                 //console.log(crearCarro) //se supone que esto es el json del carro creado
 
             })
             .catch(error => console.log(error.message))
 
 
-        //tengo que crear el objeto del producto que se envia al carro
+      
         { crearCarro && agregarProductoNuevo(crearCarro); }
+        //si existe el carro llamo a una funcion que crea al  producto que se envia al carro con un post 
     }
 
     const agregarProductoNuevo = (crearCarro: CrearCarro) => {
 
        
 
-        const nuevoProducto = {
+        const nuevoProducto = { //este el el json del producto que envio a back 
 
             rutCliente: crearCarro.rutCliente, //es el rut del usuario logueado
             carritoId: crearCarro.carritoId,
             productoId: id,
-            cantidad: contador
+            cantidad: contador // la cantidad 
         }
 
 
-        fetch(`http://localhost:3000/carritoCompras`, { //con esto envio el producto al carro
+        fetch(`http://localhost:3000/carrito/producto`, { //con esto envio el producto al carro
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ ...nuevoProducto })
