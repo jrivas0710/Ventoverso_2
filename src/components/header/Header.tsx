@@ -71,7 +71,7 @@ function Header({ evento }: any) {
 
 
               <div style={{ display: "flex", flexDirection: 'column', alignItems: "center", color: "#A8E9FE" }}>
-                <Link to={"/Agenda"}>
+                <Link to={"/agenda"}>
                   <span className="material-symbols-outlined agenda">
                     calendar_month
                   </span>

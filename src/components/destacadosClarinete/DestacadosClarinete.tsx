@@ -23,7 +23,7 @@ export const DestacadosClarinete = (props: { producto: Destacado[] }) => {
 
 
 
-                <Filter />
+                {/* <Filter /> */}
 
                 <div className='productosRelacionados'>
                     {props.producto && props.producto.map(item => {

@@ -38,8 +38,11 @@ export const PlantillaCategoria = () => {
                         return (
 
                             <div key={item.id} className='categories'>
-                                <div className='imagesCategories'>
-                                    <Link to={"/d_clarinete"}><img src={item.imagenUrl} alt={item.nombre} /></Link>
+                                <div className='imagesCategories' >
+                                    <Link to={"/d_clarinete"}>
+                                        <img src={item.imagenUrl} alt={item.nombre} 
+                                        style={{width:"152px", height:"152px"}}/>
+                                        </Link>
                                 </div>
                                 <div className='namesCategories'>
 

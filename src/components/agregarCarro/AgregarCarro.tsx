@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { CrearCarro, ProductoCarrito } from '../../interfaces/crearCarro';
 import { agregarProducto } from '../../redux/carritoSlice';
 import { RootState } from '../../redux/store';
+import { useNotification } from '../../context/notification.context';
 
 
 
@@ -15,7 +16,7 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
     const [contador, setContador] = useState(0);
     console.log(user.rutCompleto)
     const dispatch = useDispatch();
-
+    const { getSucces } = useNotification();
     const [productoCarrito, setProductoCarrito] = useState<ProductoCarrito>();
 
     const [crearCarro, setCrearCarro] = useState<CrearCarro>();
@@ -29,6 +30,8 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
 
 
     const crearCarrito = () => { //esto hace el post con el rut del cliente
+
+       getSucces("Producto agregado con exito")
 
         const rutUsuario = user.rutCompleto
 
@@ -63,6 +66,8 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
 
     const agregarProductoNuevo = (crearCarro: CrearCarro) => {
 
+       
+
         const nuevoProducto = {
 
             rutCliente: crearCarro.rutCliente, //es el rut del usuario logueado
@@ -86,7 +91,7 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
                 setProductoCarrito(json)
             })
 
-          console.log("producto agregado con exito", nuevoProducto)
+        console.log("producto agregado con exito", nuevoProducto)
     }
 
 
@@ -110,16 +115,18 @@ export const AgregarCarro: React.FC<ProductoPrincipal> = ({ precio, id }) => { /
                 </div>
 
                 <div>
-                    <div style={{display:"flex", gap: "5px", alignItems:"center"}}>
+                    <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
 
 
                         <div><p> Cantidad: ${contador} </p></div>
 
-                        <button onClick={() => setContador(contador + 1)} className='botonCantidad'><b></b>
+                        <button onClick={() => setContador(contador + 1)} className='botonCantidad'
+                            style={{ border: "1px solid black", width: "30px", height: "30px", textAlign: "center" }}><b></b>
                             +
 
                         </button>
-                        <button onClick={() => setContador(contador - 1)} className='botonCantidad'> - </button>
+                        <button onClick={() => setContador(contador - 1)} className='botonCantidad'
+                            style={{ border: "1px solid black", width: "30px", height: "30px", textAlign: "center" }}> - </button>
                     </div>
 
 

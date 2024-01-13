@@ -23,7 +23,7 @@ export const PageProducto = () => {
 
                 <div className="ContainerCategoryTitle">
                     <div className="categoryTitle" >
-                        <h1 className="categoryTitleH1">Clarinetes{/* Categoria */}</h1>
+                        <h1 className="categoryTitleH1" style={{color:"white", fontSize:"48px"}}>Clarinetes{/* Categoria */}</h1>
                     </div>
 
                 </div>
