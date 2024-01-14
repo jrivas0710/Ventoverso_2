@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import './Carro.css'
+import { ResumenCompra } from './ResumenCompra'
 
 
 
 
-interface Producto { //la interface del producto que viene del carro
+export interface Producto { //la interface del producto que viene del carro
    idProducto:number,
    idCarro:number,
    nombreProducto:string,
@@ -109,7 +110,7 @@ return (
       
                
             </div>
-
+           {producto && <ResumenCompra producto = {producto} />} 
 
 
         </>

@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom"
+import { Producto } from "./ProductoCarro"
 
 
-export const ResumenCompra = () => {
+export const ResumenCompra = (producto:Producto[]) => {
 
+    let valorTotal =  0
+    
+    
+    producto.map(item => {
+      valorTotal = item.precio + valorTotal
+      return valorTotal
+    })
 
 
     return (
@@ -24,7 +32,7 @@ export const ResumenCompra = () => {
                     </div>
                     <div className="precioFinal">
                         <div><span>Total compra</span></div>
-                        <div><span className="totalPro">$100.000</span></div>
+                        <div><span className="totalPro">{valorTotal}</span></div>
                     </div>
                 </div>
 

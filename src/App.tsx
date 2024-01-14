@@ -79,7 +79,7 @@ function App() {
               <Route path="/agregarProductoCarro/:id" element={<PaginaProducto />}/>
 
             
-              <Route path="/carro" element={<CarroCompras />} />
+              <Route path="/carro/:rut" element={<CarroCompras />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/algoSalioMal" element={<ResultadoCompraFallo />} />
               <Route path="/compraExitosa" element={<ResultadoCompra />} />

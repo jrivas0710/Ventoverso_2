@@ -20,8 +20,7 @@ export const CarroCompras = () => {
             <div className="containerFlexCarro">
             <ProductoCarro rut = {rut}/>
 
-                <ResumenCompra
-                />
+               
             </div>
 
         </>
