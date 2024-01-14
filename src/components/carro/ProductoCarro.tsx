@@ -1,25 +1,74 @@
-import { ProductoPrincipal } from '../../interfaces/ProductoPincipal'
-import { ProductoCarrito } from '../../interfaces/crearCarro'
+import { useEffect, useState } from 'react'
 import './Carro.css'
 
 
 
 
-export const ProductoCarro = (props:{producto:ProductoPrincipal[]}) => {
+interface Producto { //la interface del producto que viene del carro
+   idProducto:number,
+   idCarro:number,
+   nombreProducto:string,
+   cantidad:number,
+   precio:number,
+   imagen: string,
+   modelo:string
+}
 
-    console.log(props)
+
+export const ProductoCarro = (rut:string) => {
+
+    
+    
+
+
+    const [producto, setProducto] = useState<Producto[]>()
+
+    useEffect(() => {
+ 
+        fetch(`htttp://localhost:3000/rutaquenoesta/${rut}`)//back no me dio la ruta de como obtener el producto del carro, esto deberia traer
+        .then(response => {                          //la ruta trae el carro por el rut del usuario y lo pinta
+            if (response.ok) {
+                return response.json() as Promise<Producto[]>
+            }
+        })
+        .then(json => {
+            setProducto(json)
+        })
+
+    },[])
+
+    const eliminarProducto = (idProducto:number) => { //al apretar el icono del tarro, se elimina el producto del carro por el id
+
+        fetch(`htttp://localhost:3000/rutaquenoesta/${idProducto}`,{
+            method:"DELETE",
+            headers:{ "Content-type":"application-json"}
+
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json()
+            }
+        })
+        .then(json => {
+            setProducto(json); //actualiza los producto en el carro para quitar el que ya no esta
+        })
+
+    }
+  
+
+    
 
 return (
         <>
 
          <div className="containerCarro">
 
-                {props.producto.map(item=> {
+                {producto && producto.map(item=> {
                     return(
                          <div className="containerProductoCarro">
                     <div className='check'> <input type="checkbox" /></div>
                     <div className='imagenProductoCarro'>
-                        <img src={item.imagenes?.[0].base64} alt={item.nombreProducto} />
+                        <img src={item.imagen} alt={item.nombreProducto} />
                     </div>
                     <div className='detalleProductoCarro'>
                         <div className='productoPrecioCantidad'>
@@ -27,11 +76,14 @@ return (
                             <span>{item.modelo}</span>
                             <span>Modelo</span>
                             <span>{item.precio}</span>
-                            <span>{'4'}</span>
+                            <span>{item.cantidad}</span>
                         </div>
                         <div className='eliminarDeseo'>
                             <div>
-                               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" 
+                               fill="none"  
+                               onClick={() => eliminarProducto(item.idProducto)}
+                               >
                                 <mask id="mask0_197_16264" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
                                     <rect width="36" height="36" fill="#D9D9D9"/>
                                 </mask>

@@ -9,7 +9,7 @@ export const ImagenesProducto = ({ id }: Id) => {
   //console.log(id)
 
   useEffect(() => {
-    fetch(`http://localhost:3000/productos`, { //recordar agregar el id
+    fetch(`http://localhost:3000/productos/${id}`, { //esto pintara a mi producto traido por el id del producto seleccionado en d-clarinete
       method: 'GET',
     })
       .then((response) => {

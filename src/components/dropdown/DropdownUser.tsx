@@ -12,6 +12,10 @@ import { RootState } from '../../redux/store';
 
 export const DropdownUser = (/* aqui tiene que venir mi user.nombre */) => { //esto va arecibir el nombre de usuario se lo mando del header
   const user = useSelector((state: RootState) => state.user)
+  const rut = user.rutCompleto;
+
+
+
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -59,8 +63,9 @@ export const DropdownUser = (/* aqui tiene que venir mi user.nombre */) => { //e
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}><Link to={"/miPerfil"} > Mi perfil</Link></MenuItem>
-     <Link to={"/carro"}><MenuItem onClick={handleClose} style={{color:"black"}}   >Mi carro</MenuItem></Link> 
+        <MenuItem onClick={handleClose}><Link to={"/miPerfil"}>Mi perfil</Link></MenuItem>
+      
+     <Link to={`/carro/${rut}`}><MenuItem onClick={handleClose} style={{color:"black"}}>Mi carro</MenuItem></Link> 
         <MenuItem onClick={() => dispatch(logout())}>Salir</MenuItem>
       </Menu>
     </div>
