@@ -3,7 +3,7 @@ import carritoReducer from "./carritoSlice"
 import userReducer from './userSlice'
 
 
-const persistLocalStorage: Middleware = (store) => (next) => (action) => {
+const persistLocalStorage: Middleware = (store) => (next) => (action) => { //este middleware es para persistir el token en el local storage
 
     console.log('llamando midleware')
 

@@ -65,7 +65,7 @@ export const userSlice = createSlice({
     initialState,
     reducers: {
         login: (state, action: PayloadAction<UserState>) => {
-            const newState = { ...action.payload }
+            const newState = { ...action.payload } //esto me trae el token desencriptado y lo guarda en el estado
             return newState
         },
         logout: (state) => {

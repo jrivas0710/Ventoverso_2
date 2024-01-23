@@ -74,11 +74,7 @@ function App() {
 
               <Route path="/d_clarinete/" element={<DestacadoClarinetes />}>
               </Route>
-
-
-              <Route path="/agregarProductoCarro/:id" element={<PaginaProducto />}/>
-
-            
+              <Route path="/agregarProductoCarro/:id" element={<PaginaProducto />} />
               <Route path="/carro/:rut" element={<CarroCompras />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/algoSalioMal" element={<ResultadoCompraFallo />} />
